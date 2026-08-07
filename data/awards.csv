@@ -23,6 +23,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1500692,2014-11-04,40600,Standard Grant,Workshop on partial differential equations and several complex variables,Temple University
 1446400,2014-11-07,29645,Standard Grant,"Clifford Analysis and Related Topics, December 15-17. 2014",Florida State University
 1509331,2014-11-07,9109,Standard Grant,The Geometry and Global Analysis of Arithmetic Manifolds,University of Wisconsin-Madison
+1444237,2014-11-13,35523,Standard Grant,"CBMS Conference: Reflectionless measures, Wolff's potentials, and rectifiability, June 15-19, 2015",North Dakota State University Fargo
 1444450,2014-11-13,35190,Standard Grant,"CBMS Conference: The Basic Homotopy Lemma, The Asymptotic Uniqueness Theorem, and Classification of C*-Algebras, June 1-5, 2015",University of Wyoming
 1458061,2014-11-13,55236,Standard Grant,Recursion Theory and Its Applications,Dartmouth College
 1464771,2014-11-13,15000,Standard Grant,"Finite Dimensional Integrable Systems 2015, July 13-17, 2015",Pennsylvania State Univ University Park
@@ -106,6 +107,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1501020,2015-01-27,49000,Continuing Grant,UNC PDE Mini-Schools,University of North Carolina at Chapel Hill
 1503955,2015-01-27,22170,Standard Grant,"Conference: Geometry, groups and 3-manifolds",Cornell University
 1506543,2015-01-27,16225,Standard Grant,Great Lakes Geometry Conference,Regents of the University of Michigan - Ann Arbor
+1452392,2015-01-29,446865,Continuing Grant,"CAREER:  Polynomials, Geometry, and Dynamics",Regents of the University of Michigan - Ann Arbor
 1454864,2015-01-29,444809,Continuing Grant,"CAREER: Entropy in dynamics: connections with geometry, algebraic numbers, and bioscience","OHIO STATE UNIVERSITY, THE"
 1460937,2015-01-29,245453,Standard Grant,REU Site: Inverse Problems for Electrical Networks,University of Washington
 1460537,2015-01-30,279997,Standard Grant,REU Site: Seattle University Mathematics Early Research (SUMmER),Seattle University
@@ -119,6 +121,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1455272,2015-02-03,499964,Continuing Grant,CAREER: Halting Problems In Statistical Mechanics,Cornell University
 1460982,2015-02-03,267555,Standard Grant,REU Site: Willamette Mathematics Consortium Research Experiences for Undergraduates,Willamette University
 1502166,2015-02-03,24500,Standard Grant,Perspectives on Complex Algebraic Geometry,Columbia University
+1452093,2015-02-04,450193,Continuing Grant,CAREER: The geometry and physics of non-semi-simple quantum topology,Utah State University
 1454767,2015-02-04,455281,Continuing Grant,"CAREER: Subfactors, Tensor Categories, and Local Topological Field Theory",Indiana University
 1455049,2015-02-04,497773,Continuing Grant,CAREER: Stochastic processes in statistical physics and optimization,University of Chicago
 1461148,2015-02-04,450000,Continuing Grant,REU Site: Modeling and Industrial Applied Mathematics,North Carolina State University
@@ -197,6 +200,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1534233,2015-03-16,273530,Continuing Grant,"ATD: Efficient online detection based on multiple sensors, with applications to cybersecurity and discovery of biological threats",American University
 1501160,2015-03-17,22000,Standard Grant,International Conference in Homological Algebra,"Georgia Southern University Research and Service Foundation, Inc"
 1501728,2015-03-17,150000,Fellowship Award,PostDoctoral Research Fellowship,Starkston               Laura          P
+1502253,2015-03-17,150000,Fellowship Award,PostDoctoral Research Fellowship,Turanova                Olga
 1502585,2015-03-17,150000,Fellowship Award,PostDoctoral Research Fellowship,Engel                   Philip
 1502608,2015-03-17,150000,Fellowship Award,PostDoctoral Research Fellowship,Cohen                   David          B
 1502657,2015-03-17,150000,Fellowship Award,PostDoctoral Research Fellowship,Perlmutter              Nathan         G
@@ -410,6 +414,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1502270,2015-05-14,172527,Standard Grant,Foundations of the Relative Langlands Program,Rutgers University Newark
 1508096,2015-05-14,151603,Continuing Grant,Equivariance and Higher Algebra in Motivic Homotopy Theory,Massachusetts Institute of Technology
 1510204,2015-05-14,386953,Continuing Grant,Facets of low-dimensional topology,University of Illinois at Urbana-Champaign
+1454342,2015-05-15,400000,Continuing Grant,CAREER: Periodic Orbits of Hamiltonian Diffeomorphisms and Reeb Flows,The University of Central Florida Board of Trustees
 1461094,2015-05-15,230602,Continuing Grant,REU Site:  Interdisciplinary Undergraduate Research in Discrete Mathematical and Computational Biology,Research Foundation Of The City University Of New York (Lehman)
 1500069,2015-05-15,154866,Standard Grant,Interactions between Commutative Algebra and Representation Theory,University of Wisconsin-Madison
 1500334,2015-05-15,252001,Standard Grant,Moduli Spaces in Algebraic Geometry,Stanford University
@@ -720,6 +725,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1541585,2015-07-29,10000,Standard Grant,"Nonlinear PDE's, Numerical Analysis, and Applications; October 2-3, 2015; Pittsburgh, PA",University of Pittsburgh
 1545136,2015-07-29,13148,Standard Grant,"SACNAS Scientific Symposia Sessions in Mathematics; Gaylord Resort & Conference Center, MD - October 2015",Moravian University
 1545586,2015-07-29,20000,Standard Grant,"Moduli Spaces and Arithmetic Geometry; Lorentz Center, Leiden, The Netherlands; November 9-13, 2015",University of Pennsylvania
+1548520,2015-07-29,23530,Standard Grant,U.S. Participation in Newton Institute Program on Stochastic Dynamical Systems in Biology:  Numerical Methods and Applications,Trustees of Boston University
 1551514,2015-07-29,246759,Continuing Grant,"Descent, rational points, and the geometry of moduli spaces",Brown University
 1503621,2015-07-30,142999,Standard Grant,On the Motivic Goettsche Invariants,University of Minnesota-Twin Cities
 1505215,2015-07-30,300000,Continuing Grant,Interacting Particle Systems on Lattices and on Graphs,Duke University
@@ -752,6 +758,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1515125,2015-08-05,236999,Standard Grant,Optimal Multimaterial Composites and Exotic Structures,University of Utah
 1518389,2015-08-05,180997,Continuing Grant,"Topological, Enumerative, and Algebraic Combinatorics",Washington University
 1534213,2015-08-05,30000,Standard Grant,The Legacy of Bernhard Riemann After One Hundred and Fifty Years,Regents of the University of Michigan - Ann Arbor
+1548167,2015-08-05,34800,Standard Grant,Advances in Quantum and Low-Dimensional Topology; March 2016; University of Iowa,California State University-Fresno Foundation
 1505111,2015-08-06,173898,Continuing Grant,Collaborative Research: New Statistical Methods and Theory for High-Dimensional Data,University of Minnesota-Twin Cities
 1505256,2015-08-06,126102,Continuing Grant,Collaborative Research:  New Statistical Methods and Theory for High-Dimensional Data,Pennsylvania State Univ University Park
 1514752,2015-08-06,507778,Standard Grant,Models for Trait-Mediated Dispersal in Ecology,University of Miami
@@ -1019,6 +1026,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1500984,2015-09-18,109438,Continuing Grant,Direct and Inverse Problems for Cardinality Questions in Additive Combinatorics,University of Rochester
 1562068,2015-09-21,220041,Standard Grant,Collaborative Research:   Multiscale Modeling of Mammary Gland Development,The University of Texas Health Science Center at Houston
 1502209,2015-09-22,424329,Continuing Grant,"Collaborative Research: A Software System for Research in Algebraic Geometry, Commutative Algebra, and their Applications",Mathematical Sciences Research Institute
+1502294,2015-09-22,475671,Continuing Grant,"Collaborative Research: A Software System for Research in Algebraic Geometry, Commutative Algebra, and their Applications",Cornell University
 1555033,2015-09-23,11464,Standard Grant,Collaborative Research: Sparse spectral-tau methods for binary neutron star initial data,"University of Massachusetts, Dartmouth"
 1565480,2015-10-05,42104,Standard Grant,Nonlocal PDE Models in Biology and Fluids,Georgia Tech Research Corporation
 1600365,2015-10-07,102257,Standard Grant,"Legendrian graphs, invariants and DNA topology",Indiana University
@@ -1032,6 +1040,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1561141,2015-10-23,217289,Continuing Grant,CAREER: Bridging High-Frequency Data Analysis and Continuous-time Features of Levy Models,Washington University
 1561533,2015-10-23,30000,Standard Grant,Geometry of Groups in Montevideo,Regents of the University of Michigan - Ann Arbor
 1543660,2015-10-26,20180,Standard Grant,TEXAS ANALYSIS AND MATHEMATICAL PHYSICS SYMPOSIUM,University of Texas at Dallas
+1561868,2015-10-26,19341,Standard Grant,2016 Redbud Geometry/Topology Conference,University of Oklahoma Norman Campus
 1606479,2015-10-26,92561,Standard Grant,Dualizing modules in algebra and geometry,University of Illinois at Urbana-Champaign
 1546974,2015-10-27,40000,Standard Grant,Analytic and probabilistic techniques in modern convex geometry,University of Missouri-Columbia
 1551696,2015-10-29,25000,Standard Grant,"Conference in Mathematical General Relativity; January 5 - 9, 2016; Sanya, Hainan, China.",Regents of the University of Michigan - Ann Arbor
@@ -1051,6 +1060,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1543841,2015-11-10,37541,Standard Grant,"CBMS Conference: Topological Data Analysis: Topology, Geometry and Statistics, May 23-27, 2016; Austin, TX",University of Texas at Austin
 1551069,2015-11-12,594292,Standard Grant,EDT: Experiential Diversity in Graduate Education,SUNY at Buffalo
 1551205,2015-11-12,600000,Standard Grant,EDT: Math-to-Industry Boot Camp,University of Minnesota-Twin Cities
+1602652,2015-11-15,11894,Standard Grant,The Northeast Analysis Network,University of Rochester
 1602736,2015-11-15,12554,Standard Grant,The Northeast Analysis Network,Syracuse University
 1552349,2015-11-16,38000,Standard Grant,Perspectives on integral geometry,Georgia Tech Research Corporation
 1562644,2015-11-17,8436,Standard Grant,The Fifth-Seventh Mighty Conference on Graph Theory,Wright State University
@@ -1078,6 +1088,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1600705,2015-12-07,49200,Standard Grant,"Conference: Harmonic Analysis, Complex Analysis, Spectral Theory and All That",Syracuse University
 1600746,2015-12-07,30228,Continuing Grant,Carolina Dynamics Symposium 2016-2018,Clemson University
 1600503,2015-12-08,26432,Standard Grant,Taking the measure of one-dimensional dynamics - Conference,SUNY at Stony Brook
+1603385,2015-12-10,49080,Continuing Grant,Southern California Analysis and Partial Differential Equations,University of California-San Diego
 1559606,2015-12-11,32400,Standard Grant,Conference on Extremal Combinatorics,Illinois Institute of Technology
 1564365,2015-12-11,49872,Standard Grant,"Dynamics, Geometry, and Number Theory",Yale University
 1564721,2015-12-11,39963,Standard Grant,50th Spring Topology and Dynamical Systems Conference,Baylor University
@@ -1188,6 +1199,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1632753,2016-02-25,38000,Standard Grant,Perspectives on integral geometry,University of Georgia
 1549934,2016-02-26,16000,Standard Grant,"KUMU Conference on PDE, Dynamical Systems, and Applications",University of Missouri-Columbia
 1601028,2016-02-26,49000,Standard Grant,L-functions and Arithmetic,Harvard University
+1630812,2016-02-26,10000,Standard Grant,Fall 2016 Mathematics Conference: Differential Equations and Dynamical Systems,Miami University
 1634544,2016-02-26,88740,Continuing Grant,Coupled-physics imaging methods and geodesic X-ray transforms,Regents of the University of Michigan - Ann Arbor
 1565874,2016-02-29,25000,Standard Grant,Conference on Geometric and Asymptotic Group Theory with Applications,Stevens Institute of Technology
 1636435,2016-03-01,103628,Standard Grant,DECAY AND WELL-POSEDNESS OF SOLUTIONS TO HYPERBOLIC PARTIAL DIFFERENTIAL EQUATIONS,University of Kentucky Research Foundation
@@ -1277,6 +1289,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1602841,2016-04-01,150000,Fellowship Award,PostDoctoral Research Fellowship,Wilson                  Dan            D
 1603681,2016-04-01,150000,Fellowship Award,PostDoctoral Research Fellowship,Leven                   Emily
 1604148,2016-04-01,150000,Fellowship Award,PostDoctoral Research Fellowship,Lang                    Jaclyn         A
+1604262,2016-04-01,150000,Fellowship Award,PostDoctoral Research Fellowship,Gillespie               Maria          M
 1604503,2016-04-01,150000,Fellowship Award,PostDoctoral Research Fellowship,Switala                 Nicholas
 1604796,2016-04-01,150000,Fellowship Award,PostDoctoral Research Fellowship,Vinhage                 Kurt           W
 1605825,2016-04-01,150000,Fellowship Award,PostDoctoral Research Fellowship,Krishnamoorthy          Subrahmanya
@@ -1492,6 +1505,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1613132,2016-05-24,310000,Standard Grant,Spatial Localization in Several Dimensions,University of California-Berkeley
 1613156,2016-05-24,127059,Standard Grant,Collaborative Research: Scalable Bayesian Methods for Complex Data with Optimality Guarantees,Florida State University
 1613193,2016-05-24,134138,Standard Grant,Collaborative Research: Scalable Bayesian Methods for Complex Data with Optimality Guarantees,Texas A&M University
+1613753,2016-05-24,365000,Standard Grant,Nonlinear Problems for Highly Deformable Elastic Solids and Structures,Cornell University
 1606623,2016-05-26,201291,Standard Grant,Equivariant and Chromatic Stable Homotopy Theory,University of Rochester
 1612061,2016-05-26,120000,Standard Grant,Asymptotic and quantitative geometry of groups and spaces,New York University
 1612193,2016-05-26,294235,Standard Grant,Analysis and Extension of a Model for Oscillatory Islet Activity,Florida State University
@@ -1526,6 +1540,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1616425,2016-05-31,328901,Standard Grant,Analysis and Control Theory for Moving Boundary and Nonlinear Phenomena in Interactive Partial Differential Equations,University of Nebraska-Lincoln
 1616926,2016-05-31,259998,Standard Grant,Modeling Transport in Complex Intracellular Environments,University of California - Merced
 1612948,2016-06-02,300000,Continuing Grant,"Statistical Estimation in Resource-Constrained Environments:  Computation, Communication and Privacy",University of California-Berkeley
+1613176,2016-06-02,5000,Standard Grant,The Fifth  Workshop on Biostatistics and Bioinformatics,"Georgia State University Research Foundation, Inc."
 1642608,2016-06-02,24711,Standard Grant,"IMA SUMMER SCHOOL ON MODERN APPLICATIONS OF REPRESENTATION THEORY (SUPPLEMENTARY FUNDING), July 20 - August 6, 2014",Pennsylvania State Univ University Park
 1608143,2016-06-03,151048,Standard Grant,Singularities and Collapsing in G2 Manifolds,SUNY at Stony Brook
 1613164,2016-06-03,100057,Standard Grant,Self-Exciting Point Processes and Their Applications,Florida State University
@@ -1709,6 +1724,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1647230,2016-07-20,9915,Standard Grant,Thematic Program on Geometric Analysis and Spectral Theory,CUNY Brooklyn College
 1615909,2016-07-21,409978,Standard Grant,Pattern Formation and Spatiotemporal Complex Dynamics in Extended Anisotropic Systems,Colorado State University
 1632364,2016-07-21,24700,Standard Grant,International Conference on Computational Mathematics and Inverse Problems,Michigan Technological University
+1642598,2016-07-21,20000,Standard Grant,Workshop on Hypergeometric Motives and Calabi-Yau Differential Equations,Louisiana State University
 1563159,2016-07-25,1599996,Continuing Grant,Decoding Strain-Level Variation in the Human Microbiome,The J. David Gladstone Institutes
 1611701,2016-07-25,163079,Standard Grant,Special Metrics in Geometry,CUNY City College
 1612913,2016-07-25,280000,Standard Grant,"Multiple time scales, coupling properties, and network interactions in respiratory rhythmicity",University of Pittsburgh
@@ -1766,6 +1782,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1639100,2016-08-05,9900,Standard Grant,2016 Writing Workshop for Junior Researchers in Statistical Sciences,National Institute of Statistical Sciences
 1636713,2016-08-08,150000,Continuing Grant,Western Algebraic Geometry Symposium,Colorado State University
 1642913,2016-08-08,25101,Standard Grant,I-70 Algebraic Geometry Symposia,University of Missouri-Columbia
+1643125,2016-08-08,13880,Standard Grant,"The 2016 Paul J. Sally, Jr. Midwest Representation Theory Conference",University of Iowa
 1643130,2016-08-08,23000,Standard Grant,Midwest Women in Mathematics Symposium,Indiana University
 1644214,2016-08-08,23380,Standard Grant,Integers Conference 2016: Spanning the Generations,University of West Georgia
 1645050,2016-08-08,12000,Standard Grant,Kansas-Missouri-Nebraska Commutative Algebra Conference (KUMUNU 2016),University of Kansas Center for Research Inc
@@ -2005,6 +2022,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1642516,2016-10-14,35750,Standard Grant,West Coast Operator Algebra Seminar 2016,University of Wyoming
 1644871,2016-10-14,36000,Standard Grant,Conference on Infinite-Dimensional Analysis,Kent State University
 1700852,2016-10-14,31826,Standard Grant,Holomorphic functions and some geometric problems on certain Kahler manifolds,Northwestern University
+1650252,2016-10-20,14998,Standard Grant,Virginia Topology Conference 2016: Mapping class groups and low dimensional topology,University of Virginia Main Campus
 1700918,2016-10-20,28258,Standard Grant,Multiparameter Harmonic analysis and sharp geometric inequalities with applications to PDEs,University of Connecticut
 1643220,2016-10-24,24550,Standard Grant,Texas Analysis and Mathematical Physics Symposium,William Marsh Rice University
 1640387,2016-10-28,24000,Standard Grant,36th Southeastern-Atlantic Regional Conference on Differential Equations 2016 (SEARCDE),Florida Gulf Coast University
@@ -2022,6 +2040,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1643426,2016-11-18,15000,Standard Grant,Bay Area Optimization Meeting 2017:   From Data to Decisions.,University of California-Davis
 1657187,2016-11-18,28500,Standard Grant,2017 PIMS-CRM Summer School in Probability,University of Washington
 1711937,2016-11-18,5590,Standard Grant,Underrepresented Students In Topology and Algebra Research Symposium (USTARS),University of San Diego
+1663552,2016-11-22,46020,Standard Grant,2017 Seminar on Stochastic Processes,University of Virginia Main Campus
 1664256,2016-11-22,30000,Standard Grant,2016 Field of Dreams Conference,Purdue University
 1712970,2016-11-22,10000,Standard Grant,Gene Golub SIAM Summer School: Data Sparse Approximations and Algorithms,Emory University
 1703296,2016-11-28,351848,Contract Interagency Agreement,CO is using an admin action to add the already processed action in iTRAK to the MyNSF record.,Department of Energy Oak Ridge Operations Office
@@ -2071,6 +2090,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1700356,2016-12-30,23965,Standard Grant,Summer Symposium in Real Analysis XLI,College of Wooster
 1717543,2016-12-30,34391,Standard Grant,Underrepresented Students in Topology and Algebra Research Symposium,Florida Gulf Coast University
 1719635,2016-12-30,15000,Standard Grant,"Conference on Nonconvex Statistical Learning, University of Southern California, May 26-27, 2017",University of Southern California
+1722535,2016-12-30,15000,Standard Grant,International Conference on Current Trends and Challenges in Numerical Solution of Partial Differential Equations,Purdue University
 1649807,2017-01-04,23000,Standard Grant,Algebraic and Extremal Graph Theory Conference,University of Delaware
 1651963,2017-01-04,408124,Continuing Grant,CAREER: Coarse geometry and quasimorphisms,University of Oklahoma Norman Campus
 1653602,2017-01-04,446046,Continuing Grant,CAREER:   Statistics of Extrema in Complex and Disordered Systems,CUNY Baruch College
@@ -2115,6 +2135,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1652134,2017-01-26,420000,Continuing Grant,CAREER: Nonlinear stability mechanisms and boundary layer singularities in fluid flows,Princeton University
 1719189,2017-01-26,30000,Standard Grant,"Southeastern Probability Conference 2017: Special Edition Interacting Particle Systems with Applications in Biology, Ecology, and Statistical Physics",Duke University
 1724979,2017-01-26,105494,Standard Grant,Structured Dictionary Models and Learning for High Resolution Images,Johns Hopkins University
+1654159,2017-01-27,420000,Continuing Grant,CAREER: Representing and Classifying Enriched Quantum Symmetry,"OHIO STATE UNIVERSITY, THE"
 1654692,2017-01-27,420003,Continuing Grant,CAREER:  New Approaches to Mathematical Wave Turbulence,Georgia Tech Research Corporation
 1700430,2017-01-27,25000,Standard Grant,2017 Pingree Park Dynamical Systems School,University of Denver
 1662788,2017-01-30,50000,Standard Grant,University of Arkansas Spring Lecture Series,University of Arkansas
@@ -2234,6 +2255,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1703183,2017-03-21,150000,Fellowship Award,PostDoctoral Research Fellowship,Shapiro                 Alexander
 1703834,2017-03-21,150000,Fellowship Award,PostDoctoral Research Fellowship,Medvedovsky             Anna
 1704364,2017-03-21,150000,Fellowship Award,PostDoctoral Research Fellowship,Schreve                 Kevin          D
+1705140,2017-03-21,150000,Fellowship Award,PostDoctoral Research Fellowship,Lawrence                Brian
 1705177,2017-03-21,150000,Fellowship Award,PostDoctoral Research Fellowship,Brady                   Zarathustra    E
 1707808,2017-03-21,55000,Standard Grant,Interactions Between Representation Theory and Algebraic Geometry,University of Chicago
 1711110,2017-03-21,28000,Standard Grant,Poisson Geometry Conference,University of Notre Dame
@@ -2320,6 +2342,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1725093,2017-04-19,12000,Standard Grant,Special Conference on Set-Theoretic Topology,Auburn University
 1742837,2017-04-19,41150,Standard Grant,Lehigh-Harvard Geometry and Topology Conference,Lehigh University
 1659113,2017-04-20,236942,Standard Grant,REU Site: Grand Valley State University Summer Undergraduate Research Program in Mathematics,Grand Valley State University
+1702221,2017-04-20,158997,Standard Grant,Automorphic Forms and L-Functions,Texas A&M University
 1659221,2017-04-21,254443,Standard Grant,"REU Site: Graph Theory, Combinatorics, and Abstract Algebra",University of Texas at Tyler
 1659299,2017-04-21,303000,Standard Grant,REU Site: Summer Undergraduate Research for Students who are Deaf or Hard-of-Hearing in Applying Mathematical and Statistical Methods to Problems from the Sciences,Rochester Institute of Tech
 1659643,2017-04-21,315001,Standard Grant,"REU Site: Differential Geometry, Mathematical Physics, Mathematical Finance, and Mathematics Education",University of Connecticut
@@ -2693,6 +2716,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1716156,2017-07-13,100000,Standard Grant,"Collaborative Research:  Water Waves - Nonlinearity, Dissipation and Forcing",University of Colorado at Boulder
 1716159,2017-07-13,114000,Standard Grant,"Collaborative Research:  Water Waves--Nonlinearity, dissipation, and forcing",Pennsylvania State Univ University Park
 1720245,2017-07-13,132278,Standard Grant,Multiscale Methods for Crystalline Nanomaterials,University of North Carolina at Charlotte
+1747624,2017-07-13,7200,Standard Grant,The Midwest Numerical Analysis Day,University of Kansas Center for Research Inc
 1748083,2017-07-13,44582,Standard Grant,Deterministic and probabilistic well-posedness results for nonlinear dispersive and wave equations,Louisiana State University
 1748706,2017-07-13,23975,Standard Grant,P-adic Representation Theory and Geometry of the Lubin-Tate Tower,Michigan Technological University
 1661900,2017-07-14,1200000,Continuing Grant,Multi-Scale Models for Membrane Fission Catalyzed by the Endosomal Sorting Complexes Required for Transport,University of Wisconsin-Madison
@@ -2952,6 +2976,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1757479,2017-09-06,334459,Continuing Grant,CAREER: Stochastic processes in statistical physics and optimization,University of Pennsylvania
 1758709,2017-09-06,104718,Standard Grant,Rigidity of Lipschitz and Related Mappings on Metric Spaces,Ball State University
 1759536,2017-09-08,143315,Standard Grant,Energetic Variational Approaches in Complex Fluids and Electrophysiology,Illinois Institute of Technology
+1722578,2017-09-11,467480,Standard Grant,A Distributed Learning Environment for the Mathematics of Climate and Sustainability,American Institute of Mathematics
 1759535,2017-09-11,349934,Standard Grant,Topics in Complex Fluids and Biophysiology: the Energetic Variational Approaches,Illinois Institute of Technology
 1736414,2017-09-12,229999,Continuing Grant,"AMPS: Financial Mathematics to Identify Optimal Electricity Distribution Pricing under Risk, High Photovoltaics Penetration, and Consumer Aggregation",Johns Hopkins University
 1759610,2017-09-12,144000,Continuing Grant,Ergodic Theory of Foliated Spaces through Geometric Deformations,"University of Maryland, College Park"
@@ -2960,6 +2985,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1759824,2017-09-21,88004,Standard Grant,CDS&E: Collaborative Research: Machine Learning on Dynamical Systems via Topological Features,Michigan State University
 1743144,2017-10-18,35000,Standard Grant,2018 NSF-CBMS Conference on Mathematical Biology: Modeling and Analysis at Howard University,Howard University
 1743625,2017-10-18,35000,Standard Grant,CBMS Conference: Additive Combinatorics from a Geometric Viewpoint,University of South Carolina at Columbia
+1743819,2017-10-18,35364,Standard Grant,CBMS Conference: Smooth and Non-Smooth Harmonic Analysis,Iowa State University
 1743920,2017-10-18,34999,Standard Grant,CBMS Conference: The Solution of Problems in Multiply-Connected Domains,University of California-Irvine
 1743979,2017-10-18,28000,Standard Grant,The 15th East Coast Operator Algebras Symposium,University of Louisiana at Lafayette
 1745012,2017-10-18,17000,Standard Grant,2017 Midwestern Workshop on Asymptotic Analysis,Indiana University
@@ -3016,6 +3042,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1664418,2017-11-30,318292,Standard Grant,FRG: cQIS: Collaborative Research: Mathematical Foundations of Topological Quantum Computation and Its Applications,Louisiana State University
 1747833,2017-11-30,27000,Standard Grant,Conference Proposal - Structure of 3-manifold Groups,Tufts University
 1764210,2017-11-30,21920,Standard Grant,Recent Developments in Noncommutative Algebra and Related Areas,University of Washington
+1800679,2017-11-30,39999,Standard Grant,Semi-annual Workshop in Dynamical Systems and Related Topics at Penn State,Pennsylvania State Univ University Park
 1801302,2017-11-30,21998,Standard Grant,Young Mathematicians in C*-algebras,University of Detroit Mercy
 1802088,2017-11-30,9192,Standard Grant,Conferences on Commutative Algebra for Early Career Researchers (KUMUNUJr 2018-2019),University of Nebraska-Lincoln
 1763855,2017-12-01,23000,Standard Grant,The 2018 Great Lakes Mathematical Physics Meeting,Michigan State University
@@ -3075,6 +3102,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1752614,2018-01-25,400000,Continuing Grant,CAREER: Computer-Intensive Statistical Inference on High-Dimensional and Massive Data: From Theoretical Foundations to Practical Computations,University of Illinois at Urbana-Champaign
 1753042,2018-01-25,425000,Continuing Grant,CAREER: Dynamical Rigidity Related to Group Actions and Arithmetics,Pennsylvania State Univ University Park
 1757469,2018-01-25,18000,Standard Grant,"Summer School: Waves and Particles in Random Media, Theory and Applications",Colorado State University
+1750488,2018-01-26,400000,Continuing Grant,CAREER: Applicable Kinetic Computation with Boundaries and Rough Media,University of Wisconsin-Madison
 1751636,2018-01-26,400000,Continuing Grant,CAREER: A Flexible Optimal Control Framework for Efficient Training of Deep Neural Networks,Emory University
 1751857,2018-01-26,424959,Continuing Grant,CAREER: Equivariant Floer Theory and Low-dimensional Topology,Michigan State University
 1752116,2018-01-26,400000,Continuing Grant,CAREER: Sparse Model Selection for Nonlinear Evolution Equations,Carnegie Mellon University
@@ -3088,6 +3116,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1760342,2018-02-06,10760,Standard Grant,Tropical Geometry and Moduli Spaces: Satellite Conference of the 2018 International Congress of Mathematicians (ICM),Yale University
 1804339,2018-02-06,30000,Standard Grant,Workshop on Transport and Localization in Random Media: Theory and Applications,Columbia University
 1749013,2018-02-07,400000,Continuing Grant,CAREER: Branes in the Moduli Space of Higgs Bundles,University of Illinois at Chicago
+1751281,2018-02-08,400000,Continuing Grant,CAREER: Structure and Interpolation in Number Theory and Beyond,University of Oregon Eugene
 1753185,2018-02-08,418036,Continuing Grant,"CAREER: Numerical Linear Algebra, Random Matrix Theory and Applications",University of California-Irvine
 1757717,2018-02-08,263980,Continuing Grant,REU Site at Lamar University,Lamar University
 1760012,2018-02-08,13000,Standard Grant,Advancing the Northeast Combinatorics Network,Saint Michael's College
@@ -3145,6 +3174,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1822277,2018-03-19,11999,Standard Grant,Conference on Graph Decompositions at Michigan Technological University,Michigan Technological University
 1756060,2018-03-20,6217,Standard Grant,TROY MathFest Undergraduate Conference,Troy University
 1802259,2018-03-20,14980,Standard Grant,The Southeastern Number Theory Meetings,University of South Carolina at Columbia
+1802397,2018-03-23,20000,Standard Grant,Atlanta Lecture Series in Combinatorics and Graph Theory,"Georgia State University Research Foundation, Inc."
 1802478,2018-03-23,30000,Standard Grant,"Vertex Operator Algebras, Number Theory, and Related Topics","University Enterprises, Incorporated"
 1802787,2018-03-23,150000,Fellowship Award,PostDoctoral Research Fellowship,Lund                    Benjamin
 1802920,2018-03-23,150000,Fellowship Award,PostDoctoral Research Fellowship,Hopkins                 Samuel         F
@@ -3482,6 +3512,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1812609,2018-05-23,230000,Standard Grant,Collaborative Research: Nonlocal Models of Aggregation and Dispersion,Carnegie Mellon University
 1812661,2018-05-23,301519,Standard Grant,Risk Assessment and Decision Making Under Uncertainty with Applications,Columbia University
 1812921,2018-05-23,195947,Standard Grant,Time-Consistency Theory for Time-Inconsistent Stochastic Optimal Control Problems,The University of Central Florida Board of Trustees
+1813384,2018-05-23,255536,Standard Grant,Dynamical Systems Methods for Fluid Mechanics and Hamiltonian Mechanics,Trustees of Boston University
 1813819,2018-05-23,399999,Standard Grant,Mechanisms and Functions of Intermittent Synchronization in Neural and Other Living Systems,Indiana University
 1814091,2018-05-23,273754,Standard Grant,Systemic Risk and Mean Field Games,University of California-Santa Barbara
 1814147,2018-05-23,346699,Standard Grant,"The Kompaneets Equation, Anomalous Diffusion, and Brownian Entanglement",Carnegie Mellon University
@@ -3625,6 +3656,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1810868,2018-06-28,390000,Standard Grant,Partial Differential Equation Methods in Kinetic Theory and Their Applications,Brown University
 1812625,2018-06-28,390000,Standard Grant,A Study of Wave Patterns,Regents of the University of Michigan - Ann Arbor
 1813149,2018-06-28,320000,Standard Grant,Quasi-Locality Properties of Quantum Many-Body Dynamics and Applications,University of California-Davis
+1821870,2018-06-28,16457,Standard Grant,Recent Developments on Mathematical/Statistical Approaches in Data Science,University of Texas at Dallas
 1832235,2018-06-28,22000,Standard Grant,Symposium on Moduli Spaces in Algebraic Geometry,University of Minnesota-Twin Cities
 1763336,2018-06-29,150000,Continuing Grant,Structure Constants for Bases of the Polynomial Ring,University of Southern California
 1800633,2018-06-29,180000,Continuing Grant,Topology and Measure in Dynamics and Operator Algebras,Texas A&M University
@@ -3709,6 +3741,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1819006,2018-07-16,20000,Standard Grant,International Congress on Mathematical Software (ICMS 2018),University of Notre Dame
 1819115,2018-07-16,200000,Standard Grant,Reduced-Order and Low-Rank Methods for Parameter-Dependent Partial Differential Equations,"University of Maryland, College Park"
 1822820,2018-07-16,30000,Standard Grant,Conference on Stochastic Weather Generators,University of Colorado at Boulder
+1830112,2018-07-16,12500,Standard Grant,Conference on Microlocal Analysis and Applications,Northwestern University
 1802863,2018-07-17,86170,Continuing Grant,Degenerate Diffusion in Complex Amphiphilic Network Structures,University of Alabama Tuscaloosa
 1836035,2018-07-17,20000,Standard Grant,The 4th Annual Meeting of SIAM Central States Section,University of Oklahoma Norman Campus
 1839993,2018-07-17,197049,Continuing Grant,"Collaborative Research: A Novel Control for Invasive Species -- Modeling, Analysis, and Experiments",Iowa State University
@@ -3944,6 +3977,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1820771,2018-08-09,239713,Standard Grant,Collaborative Research: Enhancing Diversity in the Mathematics Graduate Applicant Pool,The University of Texas Rio Grande Valley
 1820958,2018-08-09,80000,Continuing Grant,Collaborative Research: Efficient Coupling of Multilevel Partial Differential Equation Solvers and Advanced Sampling Methods,Clemson University
 1821210,2018-08-09,180000,Standard Grant,Collaborative Research: Efficient Coupling of Multilevel Partial Differential Equation Solvers and Advanced Sampling Methods,Colorado State University
+1835084,2018-08-09,15500,Standard Grant,Current Developments in Mathematics Conference,Harvard University
 1836636,2018-08-09,23376,Standard Grant,Integers Conference 2018,"AUGUSTA UNIVERSITY RESEARCH INSTITUTE, INC."
 1839925,2018-08-09,14400,Standard Grant,Virginia Topology Conference 2018,University of Virginia Main Campus
 1841116,2018-08-09,29999,Standard Grant,Conference on Classical and Quantum 3-Manifold Topology,Temple University
@@ -4062,6 +4096,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1854148,2018-10-24,138826,Standard Grant,Problems Related to Fourier Restriction Estimates,CUNY Baruch College
 1903420,2018-10-25,83789,Continuing Grant,Multiscale computational methods in kinetic theory and optimal transport,University of Minnesota-Twin Cities
 1839457,2018-10-29,15000,Standard Grant,International Conference on Mathematics of Data Science,Old Dominion University Research Foundation
+1841324,2018-10-30,12000,Standard Grant,Topological and Rigorous Computational Methods for High Dimensional Dynamics,Rutgers University New Brunswick
 1844731,2018-11-05,16033,Standard Grant,"Midwestern Conference on Partial Differential Equations, Dynamical Systems, and Applications",University of Missouri-Columbia
 1855136,2018-11-05,180000,Standard Grant,"Codes from Curves: Structure, Decoding, and Modern Applications",Virginia Polytechnic Institute and State University
 1901840,2018-11-05,239999,Continuing Grant,Tropical and Non-Archimedean Analytic Methods in Algebraic Geometry,University of Texas at Austin
@@ -4099,6 +4134,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1900856,2018-12-21,25000,Standard Grant,New Developments in Free Probability and Applications,Texas A&M University
 1901120,2018-12-21,20000,Standard Grant,International Conference on Equivariant Topology and Derived Algebra,University of Illinois at Chicago
 1901290,2018-12-21,36000,Standard Grant,"Operator Algebras, Groups, and Applications to Quantum Information",Texas A&M University
+1901871,2018-12-21,37025,Standard Grant,Analysis in Missouri: a Midwestern Symposium,University of Missouri-Columbia
 1841860,2019-01-28,18000,Standard Grant,"Early Career and Student Support for ""Mathematical Physics at the Crossings"" Conference",Virginia Polytechnic Institute and State University
 1845406,2019-01-31,400000,Continuing Grant,CAREER: Fast and Accurate Algorithms for Uncertainty Quantification in Large-Scale Inverse Problems,North Carolina State University
 1846745,2019-01-31,400000,Continuing Grant,"CAREER: Transport Equations in Fluids and Biology: Singularity, Dynamics, and Mixing",Georgia Tech Research Corporation
@@ -4148,6 +4184,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1906109,2019-02-12,19982,Standard Grant,University of Missouri Black Migrations Symposium,University of Missouri-Columbia
 1844481,2019-02-13,402189,Continuing Grant,CAREER: Valid and Scalable Inference for High-dimensional Statistical Models,University of Southern California
 1845034,2019-02-13,400000,Continuing Grant,CAREER: Higher Enumerative Geometry via Representation Theory and Mathematical Physics,Massachusetts Institute of Technology
+1847301,2019-02-13,400000,Continuing Grant,CAREER: Analysis of Operators on Rough Sets,Clemson University
 1847415,2019-02-13,400000,Continuing Grant,CAREER: A Statistical Inferential Framework for Online Learning Algorithms,University of Pennsylvania
 1847451,2019-02-13,429842,Continuing Grant,"CAREER:Phase Transitions in Algorithms, Complexity, and Geometry",University of Illinois at Chicago
 1847590,2019-02-13,400000,Continuing Grant,CAREER: Computational and Theoretical Investigations of Variational Inference,University of Chicago
@@ -4245,6 +4282,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1853562,2019-03-08,92622,Continuing Grant,Collaborative Research: Modeling the Spatial and Temporal Dynamics of Vector-borne Diseases in Florida: The Case of Zika Outbreak in 2016,Nova Southeastern University
 1853622,2019-03-08,235000,Continuing Grant,Collaborative Research: Modeling the Spatial and Temporal Dynamics of Vector-borne Diseases in Florida: The Case of Zika Outbreak in 2016,University of Miami
 1902669,2019-03-08,150000,Fellowship Award,PostDoctoral Research Fellowship,Wilson                  Dylan          L
+1902731,2019-03-08,150000,Fellowship Award,PostDoctoral Research Fellowship,"Romero, Marino"
 1902875,2019-03-08,150000,Fellowship Award,PostDoctoral Research Fellowship,Bragg                   Daniel         A
 1902884,2019-03-08,150000,Fellowship Award,PostDoctoral Research Fellowship,"Goldberg, Gabriel Theodore"
 1902927,2019-03-08,150000,Fellowship Award,Postdoctoral Research Fellowship,"Feng, Tony"
@@ -4318,6 +4356,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1901739,2019-04-05,40020,Standard Grant,Nonlinear Partial Equations and Applications,Regents of the University of Michigan - Ann Arbor
 1853550,2019-04-10,28200,Standard Grant,Young Geometric Group Theory VIII,Temple University
 1855309,2019-04-10,366384,Continuing Grant,CAREER: Quantitative Approach to Large-population Stochastic Dynamic Games,Illinois Institute of Technology
+1856221,2019-04-10,103096,Standard Grant,Operators on Banach Spaces,University of California-Los Angeles
 1856475,2019-04-10,126331,Standard Grant,Fractal Fourier Extension Estimates,"University of Maryland, College Park"
 1900816,2019-04-10,191022,Standard Grant,Operator Theory and Stable Polynomials,Washington University
 1901082,2019-04-10,113495,Standard Grant,Applications of Tensor Categories in Operator Algebras,"OHIO STATE UNIVERSITY, THE"
@@ -4477,6 +4516,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1906216,2019-05-23,296378,Continuing Grant,Singular Metrics in Kahler Geometry,University of Notre Dame
 1906326,2019-05-23,374640,Continuing Grant,Gromov-Witten Invariants and Extraordinary Cohomology,University of California-Berkeley
 1906500,2019-05-23,441452,Continuing Grant,Ricci Flows through Singularities and Ricci Flows with Bounded Scalar Curvature,University of California-Berkeley
+1907010,2019-05-23,109708,Continuing Grant,Surfaces and Geometry and Topology of Quantum Link Invariants,University of South Alabama
 1928295,2019-05-23,15000,Standard Grant,International Conference on Geometric and Asymptotic Group Theory with Applications,CUNY City College
 1847955,2019-05-24,400000,Continuing Grant,"CAREER: Mathematical Modeling, Physical Experiments, and Biological Data for Understanding Flow Interactions in Collective Locomotion",New York University
 1855604,2019-05-24,142873,Continuing Grant,Stochastic Dynamics on Large-Scale Networks,Colgate University
@@ -4690,6 +4730,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1902005,2019-06-27,180000,Continuing Grant,Motivic Class Groups and Iwasawa Theory of Function Fields,University of Arizona
 1902041,2019-06-27,235000,Standard Grant,Word Distributions in Groups,Northwestern University
 1902173,2019-06-27,180000,Standard Grant,The Subconvexity Problem,University of Wisconsin-Madison
+1906266,2019-06-27,22500,Standard Grant,Sage-Days Workshop on Computational Arithmetic Dynamics 2019,Saint Louis University
 1907583,2019-06-27,319997,Standard Grant,Collaborative Research: Analysis and Computation of Dynamics of Elastic Structures in Stokes Flow,University of Minnesota-Twin Cities
 1907796,2019-06-27,150000,Standard Grant,RUI: Collaborative Research: Analysis and Computation of Dynamics of Elastic Structures in Stokes Flow,Macalester College
 1916752,2019-06-27,40000,Standard Grant,"Conference in Geometry, Topology, and Dynamics: Celebrating the Work of Diverse Mathematicians",Regents of the University of Michigan - Ann Arbor
@@ -4888,6 +4929,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1900475,2019-07-26,230000,Continuing Grant,Inverse Problems in Partial Differential Equations and Geometry,Purdue University
 1908626,2019-07-26,231127,Continuing Grant,Dynamics and Stability of Nonlinear Waves,University of Kansas Center for Research Inc
 1909559,2019-07-26,169989,Standard Grant,Modeling Light Filamentation Science,Southern Methodist University
+1912868,2019-07-26,150000,Standard Grant,Nebraska Conference for Undergraduate Women in Mathematics,University of Nebraska-Lincoln
 1933743,2019-07-26,9991,Standard Grant,2019 NISS Writing Workshop for Junior Researchers,National Institute of Statistical Sciences
 1936283,2019-07-26,25500,Standard Grant,2019 East Coast Operator Algebra Symposium,"OHIO STATE UNIVERSITY, THE"
 1854513,2019-07-28,236000,Continuing Grant,CDS&E-MSS: Computational Developments of Power Series Methods to Solve Polynomial Systems,University of Illinois at Chicago
@@ -5010,6 +5052,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1916411,2019-08-09,124999,Continuing Grant,Novel Statistical Methods for Modeling Population Dynamical Systems,University of Georgia Research Foundation Inc
 1934411,2019-08-09,588732,Standard Grant,Collaborative Research: MODULUS: Modeling and Experimental Investigation of Protein Crowding on Lipid Bilayers,University of California-San Diego
 1934509,2019-08-09,421948,Standard Grant,Collaborative Research: MODULUS: Modeling and Experimental Investigation of Protein Crowding on Lipid Bilayers,University of Texas at Austin
+1945322,2019-08-09,25185,Standard Grant,9th Workshop on Parallel-in-Time Integration,Michigan Technological University
 1913149,2019-08-12,150000,Standard Grant,Statistical Learning Problems with Complex Stochastic Models,University of Wisconsin-Madison
 1854476,2019-08-13,350000,Standard Grant,Distributed Algorithms for Topic Models with Applications to Streaming Document Data and Cancer Genomics,University of Florida
 1908602,2019-08-13,133181,Continuing Grant,Optimized Domain Decomposition Methods for Wave Propagation in Complex Media,New Jersey Institute of Technology
@@ -5061,6 +5104,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1952510,2019-09-13,85721,Continuing Grant,"Parametrization, Embedding and Extension Problems in Metric Spaces",University of Tennessee Knoxville
 1952876,2019-09-13,60904,Continuing Grant,Statistical Properties of Hyperbolic Dynamical Systems and Applications to Statistical Physics,Yeshiva University
 1953141,2019-09-17,190870,Continuing Grant,Multitype Particle Systems,Bard College
+1952473,2019-09-20,118537,Continuing Grant,RUI: Exploring the Algebraic Geometry of Matroids,Bentley University
 1849728,2019-09-23,34000,Standard Grant,"Collaborative Research: Analysis of longitudinal multiscale data in immunological bioinformatics - Feature selection, graphical models, and structure identification",Beckman Research Institute City of Hope
 1933342,2019-10-11,36636,Standard Grant,CBMS Conference: Parallel Time Integration,Michigan Technological University
 1934391,2019-10-11,15000,Standard Grant,Women in Commutative Algebra,University of Mississippi
@@ -5088,6 +5132,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1937757,2019-10-24,29974,Standard Grant,"Collaborative Research: AGNES, Algebraic Geometry NorthEastern Series",SUNY at Stony Brook
 1942034,2019-10-28,10000,Standard Grant,SIAM Texas/Louisiana Sectional Conference in Applied Mathematics,Southern Methodist University
 2001433,2019-10-28,313955,Continuing Grant,CAREER: Hierarchical Models for Spatial Extremes,Colorado State University
+1947572,2019-10-29,32000,Standard Grant,Frontier Probability Days 2020,University of Nevada Las Vegas
 1933786,2019-10-30,24000,Standard Grant,Hyperplane Arrangements and Singularities,Northeastern University
 1952466,2019-11-04,40940,Standard Grant,2020 PIMS-CRM Summer School in Probability,University of Washington
 1953894,2019-11-04,24991,Standard Grant,Chico Topology Conference,Chico State Enterprises
@@ -5099,6 +5144,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2000506,2019-11-07,86764,Standard Grant,Homological Invariants in Low Dimensional Topology,University of Georgia Research Foundation Inc
 2003110,2019-11-07,111085,Continuing Grant,Nonlocal and Stochastic Effects in Reaction-Diffusion and Kinetic Equations.,University of Arizona
 1953775,2019-11-08,24999,Standard Grant,2020 Redbud Geometry/Topology Conference,University of Arkansas
+1955705,2019-11-08,15000,Standard Grant,The Second Transatlantic Transchromatic Homotopy Theory Conference,University of Kentucky Research Foundation
 2005746,2019-11-08,30604,Continuing Grant,Collaborative Research:  Nonparametric Bayesian Aggregation for Massive Data,New Jersey Institute of Technology
 1933330,2019-11-13,35000,Standard Grant,"CBMS Conference: Gaussian Random Fields, Fractals, Stochastic Partial Differential Equations, and Extremes",University of Alabama in Huntsville
 1939082,2019-11-13,30000,Standard Grant,Talking Across Fields,Columbia University
@@ -5247,6 +5293,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2022303,2020-02-25,25770,Standard Grant,"Springer Theory for Symmetric Spaces, Real Groups, Hitchin Fibrations, and Geometric Langlands",University of Minnesota-Twin Cities
 1955202,2020-02-26,35500,Standard Grant,International Conference on Approximation and Potential Theory,"Georgia Southern University Research and Service Foundation, Inc"
 1946311,2020-02-27,34800,Standard Grant,ANTS XIV: Algorithmic Number Theory Symposium 2020,Dartmouth College
+1950583,2020-02-27,484398,Standard Grant,REU Site: Iowa State University Mathematics REU,Iowa State University
 1952662,2020-02-27,36000,Standard Grant,The Circle at Infinity,Indiana University
 1954121,2020-02-27,197766,Standard Grant,Totally Positive Spaces and Cluster Algebras,University of California-Los Angeles
 1954251,2020-02-27,31000,Continuing Grant,Carolina Dynamics Symposium,Furman University
@@ -5332,6 +5379,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2002055,2020-03-17,150000,Fellowship Award,PostDoctoral Research Fellowship,"Stern, Daniel"
 2002118,2020-03-17,150000,Fellowship Award,PostDoctoral Research Fellowship,"Dunlap, Alexander Joseph"
 2002149,2020-03-17,150000,Fellowship Award,PostDoctoral Research Fellowship,"Conner, Austin Daniel"
+2002187,2020-03-17,150000,Fellowship Award,PostDoctoral Research Fellowship,"Lanier, Justin Dale"
 2002201,2020-03-17,150000,Fellowship Award,PostDoctoral Research Fellowship,"Waingarten, Erik A"
 2002222,2020-03-17,150000,Fellowship Award,PostDoctoral Research Fellowship,"Delaney, Colleen"
 1937229,2020-03-18,1999997,Continuing Grant,RTG: Applied Mathematics and Statistics for Data-Driven Discovery,University of Arizona
@@ -5479,6 +5527,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 1954995,2020-04-03,322323,Standard Grant,Variational Methods in Mathematical Physics and Analysis,California Institute of Technology
 2001319,2020-04-03,225000,Continuing Grant,Categorical Kahler Geometry and Applications,University of Miami
 2001398,2020-04-03,296148,Continuing Grant,Arithmetic Aspects of Electric-Magnetic Duality,University of Texas at Austin
+2009790,2020-04-03,15000,Standard Grant,Southern California Number Theory Day Conferences,University of California-Irvine
 1956092,2020-04-06,349482,Standard Grant,"Regularity, Stability, and Uniqueness Questions for Certain Non-Linear Partial Differential Equations",University of Minnesota-Twin Cities
 2000610,2020-04-06,336000,Continuing Grant,"Hodge Filtration, Singularities, and Complex Birational Geometry",Northwestern University
 2001089,2020-04-06,179999,Standard Grant,Logarithmic Geometry and the Gauged Linear Sigma Model,Boston College
@@ -5622,6 +5671,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2005539,2020-05-18,107908,Standard Grant,Floer Homology and Low-Dimensional Topology,Institute For Advanced Study
 2006887,2020-05-18,250000,Continuing Grant,"Growth and patterns: existence, stability, and dynamics",Trustees of Boston University
 2009736,2020-05-18,345000,Standard Grant,Collisional Kinetic Transport: Analysis and Numerical Methods,University of Texas at Austin
+2006416,2020-05-19,254815,Standard Grant,Topics in Wave Propagation and Quantum Systems,Colorado State University
 2009859,2020-05-19,206895,Continuing Grant,Determining Degrees of Freedom in Nonlinear Complex Systems: Deterministic and Stochastic Applications,Drexel University
 2012266,2020-05-19,219501,Standard Grant,Collaborative Research: Computational Harmonic Analysis Approach to Active Learning,University of California-San Diego
 2012355,2020-05-19,270448,Standard Grant,Collaborative Research: Computational Harmonic Analysis Approach to Active Learning,Claremont Graduate University
@@ -5794,6 +5844,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2015386,2020-06-25,135361,Continuing Grant,Collaborative Research: Capturing Salient Features in Point Process Models via Stochastic Process Discrepancies,Cornell University
 1954170,2020-06-26,91675,Continuing Grant,Pseudorandom Structures in Graphs and Combinatorics,Miami University
 2010107,2020-06-26,350000,Standard Grant,"High Order Schemes: Robustness, Efficiency, and Stochastic Effects",Brown University
+2011699,2020-06-26,400000,Standard Grant,Deep Learning for Inverse Problems,Stanford University
 2015291,2020-06-26,249999,Continuing Grant,Statistical Estimation from Decoupled Data,New York University
 2015366,2020-06-26,199002,Continuing Grant,Representation and Subspace Learning for Decentralized and Dependent Data,Regents of the University of Michigan - Ann Arbor
 2015373,2020-06-26,258589,Standard Grant,"Repro Sampling Method: A Transformative Artificial-Sample-Based Inferential Framework with Applications to Discrete Parameter, High-Dimensional Data, and Rare Events Inferences",Rutgers University New Brunswick
@@ -5820,6 +5871,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2008610,2020-07-10,262001,Standard Grant,"Fluctuation, Dissipation and Inversion",University of Utah
 2009549,2020-07-10,309408,Standard Grant,Interacting Particle Systems and Nonlinear Partial Differential Equations,University of Texas at Austin
 2031696,2020-07-10,49028,Standard Grant,Minimal Surfaces and Geometric Flows,University of Pittsburgh
+2035183,2020-07-10,27000,Standard Grant,East Coast Operator Algebra Symposium (ECOAS) 2020,University of Virginia Main Campus
 2001040,2020-07-11,150000,Standard Grant,Moduli of Differentials,Boston College
 2001128,2020-07-11,174996,Standard Grant,"Non-Commutative Spaces, Their Symmetries, and Geometric Quantum Group Theory",SUNY at Buffalo
 2001257,2020-07-11,175703,Continuing Grant,"Higgs Bundles, Real Quasi-Maps, and Automorphic L-Functions",University of Minnesota-Twin Cities
@@ -6078,6 +6130,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2050187,2020-09-09,138841,Standard Grant,Two Conjectures on Finite  Gabor Systems,Tufts University
 2001206,2020-09-10,650000,Continuing Grant,"Collaborative Research: A Software System for Research in Algebraic Geometry, Commutative Algebra, and their Applications",Mathematical Sciences Research Institute
 2001267,2020-09-10,450000,Continuing Grant,"Collaborative Research: A Software System for Research in Algebraic Geometry, Commutative Algebra, and their Applications",Georgia Tech Research Corporation
+2001367,2020-09-10,800000,Continuing Grant,"Collaborative Research: A Software System for Research in Algebraic Geometry, Commutative Algebra, and their Applications",Cornell University
 2050120,2020-09-10,114757,Standard Grant,Minimal Surfaces in Geometric Variational Problems,Brown University
 2052645,2020-09-10,116236,Standard Grant,Harmonic Analysis on the Hamming Cube,North Carolina State University
 2049477,2020-09-14,400000,Continuing Grant,CAREER: Analysis of Operators on Rough Sets,Georgia Tech Research Corporation
@@ -6087,6 +6140,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2052865,2020-09-18,400008,Continuing Grant,CAREER: Discrete Structures and Orthogonal Systems,North Carolina State University
 2052801,2020-09-22,126305,Standard Grant,"Topology of Kaehler Manifolds, Surface Bundles, and Outer Automorphism Groups",University of Southern Maine
 2054173,2020-09-22,157024,Standard Grant,Collaborative Research: Development of New Statistical Methods for Genome-Wide Association Studies,Virginia Polytechnic Institute and State University
+2053549,2020-10-19,2066957,Continuing Grant,Collaborative Research: Internship Network in the Mathematical Sciences,Johns Hopkins University
 2054808,2020-10-19,157960,Continuing Grant,Deep Learning and Random Forests for High-Dimensional Regression,Princeton University
 2054830,2020-10-19,137873,Standard Grant,Logarithmic Gauged Linear Sigma Models,University of Notre Dame
 2055230,2020-10-19,31832,Standard Grant,Representations of p-adic Groups and the Local Langlands Correspondence,Duke University
@@ -6103,9 +6157,11 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2104381,2020-11-05,18618,Standard Grant,Applications of Nonpositive Curvature in Several Complex Variables,University of Wisconsin-Madison
 2105487,2020-11-16,122313,Standard Grant,Advances in Numerical Methods for Wave Propagation in Inhomogeneous Media,University of Arizona
 2106419,2020-11-16,48608,Standard Grant,"Geometry, groups, and dynamics",William Marsh Rice University
+2107729,2020-11-17,99927,Standard Grant,Fractal Fourier Extension Estimates,Northwestern University
 2105847,2020-12-02,299999,Standard Grant,"ATD: Global Terrorism Threat Detection by Nonstationary, Spatio-Temporal Hawkes Process Models",University of Houston
 2112311,2020-12-16,124242,Standard Grant,Anisotropic Energy Functionals in Geometric Analysis,"University of Maryland, College Park"
 2112485,2020-12-18,300880,Standard Grant,The Biophysics of Collective Cell Locomotion,University of North Carolina at Chapel Hill
+2112747,2020-12-23,113607,Continuing Grant,"Derived Categories, Hodge Theory, and Birational Geometry",Regents of the University of Michigan - Ann Arbor
 2109583,2021-01-11,21465,Standard Grant,Conference on Special Metrics in Complex Geometry,University of Texas at Dallas
 2112697,2021-01-12,116762,Standard Grant,Moduli Spaces and Galois Theory in Arithmetic Dynamics,Oklahoma State University
 2045981,2021-01-14,400000,Continuing Grant,CAREER: Beyond Conditional Independence: New Model-Free Targets for High-Dimensional Inference,Harvard University
@@ -6120,6 +6176,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2114727,2021-01-19,455395,Standard Grant,"ATD: Relational Point Process Models: Theory, Methods, and Applications",University of Washington
 2114729,2021-01-19,482237,Standard Grant,ATD:  Understanding and Predicting User Mobility through Bayesian Models,University of Washington
 2047637,2021-01-26,454000,Continuing Grant,"CAREER: Nonconvex Optimization for Statistical Estimation and Learning: Conditioning, Dynamics, and Nonsmoothness",Cornell University
+2047681,2021-01-26,450000,Continuing Grant,CAREER: Hilberts Sixth Problem in the Boltzmann equation,University of Wisconsin-Madison
 2042473,2021-01-27,400000,Continuing Grant,CAREER: New Statistical Paradigms Reconciling Empirical Surprises in Modern Machine Learning,University of Chicago
 2044415,2021-01-27,428538,Continuing Grant,CAREER: Properties of Solutions to Singular Stochastic Partial Differential Equations from Quantum Field Theory,University of Wisconsin-Madison
 2044954,2021-01-27,550000,Continuing Grant,CAREER: Fine Structure of the Singular Set in Some Geometric Variational Problems,University of California-San Diego
@@ -6185,6 +6242,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2044828,2021-02-23,449940,Continuing Grant,"CAREER: Decoupling Theory, Oscillatory Integral Theory, and Their Applications in Analytic Number Theory and Combinatorics",University of Wisconsin-Madison
 2046880,2021-02-23,400001,Continuing Grant,CAREER: Design and analysis of experiments for complex social processes,Duke University
 2054394,2021-02-24,316364,Continuing Grant,"Interaction of Commutative Algebra, Valuations, and Geometry",University of Missouri-Columbia
+2101800,2021-02-24,412334,Continuing Grant,A Unified Perspective on Singularities in Commutative Algebra and Algebraic Geometry,University of Utah
 2054666,2021-02-25,260557,Continuing Grant,Random Matrices and Functional Inequalities on Spaces of Graphs,Georgia Tech Research Corporation
 2125031,2021-02-25,174486,Standard Grant,Distribution of Roots of Random Functions,University of Illinois at Urbana-Champaign
 2053493,2021-02-26,249972,Continuing Grant,Information-Based Complexity Analysis and Optimal Methods for Saddle-Point Structured Optimization,Rensselaer Polytechnic Institute
@@ -6263,6 +6321,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2103356,2021-03-24,150000,Fellowship Award,PostDoctoral Research Fellowship,"King, Darren Andrew"
 2103361,2021-03-24,150000,Fellowship Award,PostDoctoral Research Fellowship,"O'Desky, Andrew"
 2103382,2021-03-24,150000,Fellowship Award,PostDoctoral Research Fellowship,"Garcia, Fortino M"
+2103383,2021-03-24,150000,Fellowship Award,PostDoctoral Research Fellowship,"Graham, Cole"
 2113535,2021-03-24,30000,Standard Grant,The Polymath Jr. Program,CUNY Baruch College
 2044833,2021-03-25,400000,Continuing Grant,CAREER: Differential Operators and p-Derivations in Commutative Algebra,University of Nebraska-Lincoln
 2054184,2021-03-25,336065,Standard Grant,Geometric Methods for Singular Solutions to Nonlinear Hyperbolic Partial Differential Equations,Vanderbilt University
@@ -6461,6 +6520,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2053172,2021-05-18,149783,Standard Grant,CDS&E-MSS: Optimal Recovery in the Age of Data Science,Texas A&M University
 2106056,2021-05-18,300000,Standard Grant,Entropy in Optimal Transport and Finance,Columbia University
 2106433,2021-05-18,283044,Standard Grant,Modeling Financial Catastrophe and COVID-19 Super Spreader Events,Columbia University
+2106556,2021-05-18,330000,Standard Grant,New Developments in Mean Field Game Theory and Applications,Regents of the University of Michigan - Ann Arbor
 2106650,2021-05-18,367690,Continuing Grant,Partial Differential Equation Methods in Kinetic Theory and Their Applications,Brown University
 2107956,2021-05-18,330000,Standard Grant,Hydrodynamics of Collective Phenomena and Applications,University of Illinois at Chicago
 2108019,2021-05-18,203816,Standard Grant,Frontiers in Dispersive Wave Equations,University of Cincinnati Main Campus
@@ -6672,6 +6732,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2101636,2021-07-01,313999,Standard Grant,Higher Codimension Cycles on Shimura Varieties,Boston College
 2104497,2021-07-01,325617,Standard Grant,Quantum Topology beyond Semi-Simplicity,Utah State University
 2114837,2021-07-01,151706,Standard Grant,"Corks, Concordance, and Complex Curves",Columbia University
+2128590,2021-07-01,30000,Standard Grant,Enhancing Diversity in Graduate Education: Research Results from More than Twenty Years of Empowering Women in Mathematics,University of Wisconsin-Eau Claire
 2054686,2021-07-07,178120,Standard Grant,Partial Differential Equations With and Without Convexity Constraints,Indiana University
 2054781,2021-07-07,134447,Standard Grant,C*-Envelopes and Other Themes in Operator Algebras,East Carolina University
 2054860,2021-07-07,98834,Standard Grant,Large Scale Geometry in Functional Analysis,University of Virginia Main Campus
@@ -6827,6 +6888,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2137305,2021-08-04,250000,Standard Grant,LEAPS-MPS: Hybridizable discontinuous Galerkin methods for non-linear integro-differential boundary value problems in magnetic plasma confinement,University of Arizona
 2137614,2021-08-04,249210,Standard Grant,"LEAPS-MPS: Random growth models, spin glasses and stability of complex networks",Lehigh University
 2137743,2021-08-04,119626,Standard Grant,LEAPS-MPS: Elliptic theory for the Schrodinger operator,Montana State University
+2137983,2021-08-04,245681,Standard Grant,LEAPS-MPS: Statistical Learning on Next Generation Sequencing of T/B Cell Receptor Repertoire Data,San Francisco State University
 2110265,2021-08-05,128361,Standard Grant,Inverse Scattering Using Data-Driven Reduced-Order Models,Regents of the University of Michigan - Ann Arbor
 2111044,2021-08-05,265049,Continuing Grant,Design and Sensitivity Analysis of Infinite-Dimensional Bayesian Inverse Problems,North Carolina State University
 2124507,2021-08-05,300000,Standard Grant,ATD: Spatio-Temporal Modeling for Identifying Changes in Land Use,University of Florida
@@ -7025,6 +7087,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2144118,2022-01-10,400000,Continuing Grant,CAREER: Uncountable topological dynamics,University of Florida
 2145384,2022-01-10,498201,Continuing Grant,CAREER: Branched Covers in Dimensions Three and Four,Smith College
 2213338,2022-01-10,380001,Standard Grant,REU Site: Research for Undergraduates Summer Institute of Statistics at Oregon State University -- RUSIS@OSU,Indiana University
+2150108,2022-01-11,259184,Standard Grant,"REU Site: IUPUI REU Program in Mathematics with Applications to Medicine, Neuroscience, and Fluid Dynamics",Indiana University
 2213462,2022-01-11,52925,Standard Grant,Collaborative Research: RUI: Connecting Spatial Graphs to Links and 3-Manifolds,The University of Central Florida Board of Trustees
 2142064,2022-01-12,500000,Continuing Grant,CAREER: Regularity Theory of Measures and Dispersive Partial Differential Equations,University of Washington
 2142575,2022-01-12,499964,Continuing Grant,"CAREER: Curvature, Topology, and Geometric Partial Differential Equations, with new tools from Applied Mathematics",Research Foundation Of The City University Of New York (Lehman)
@@ -7081,6 +7144,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2149913,2022-02-07,480525,Standard Grant,REU: Modern Topics in Pure and Applied Mathematics,"University of Maryland, College Park"
 2150420,2022-02-08,114164,Standard Grant,REU Sites: Summer Program Advancing Techniques in the Applied Learning of Statistics (SPATIAL-Stats),American University
 2206872,2022-02-09,20000,Standard Grant,Graduate Meeting on Combinatorial Commutative Algebra,University of Minnesota-Twin Cities
+2144181,2022-02-14,430597,Continuing Grant,"CAREER: Acceleration Methods, Iterative Solvers and Heterogeneous Architectures: The New Landscape of Large-Scale Scientific Simulations",University of Kansas Center for Research Inc
 2149647,2022-02-14,312263,Standard Grant,REU Site: MathILy-EST (MathILy Early Scholarly Training),"Mathematical Staircase, Inc."
 2137037,2022-02-16,25000,Standard Grant,Midwest Representation Theory Conference 2021/2022,Regents of the University of Michigan - Ann Arbor
 2140413,2022-02-16,18605,Standard Grant,"Advances in Data Science: Theory, Methods and Computation",Texas A&M University
@@ -7177,6 +7241,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2202726,2022-03-22,150000,Fellowship Award,PostDoctoral Research Fellowship,"Hugelmeyer, Cole W"
 2202813,2022-03-22,150000,Fellowship Award,PostDoctoral Research Fellowship,"Green, Andrew Walton"
 2202826,2022-03-22,150000,Fellowship Award,PostDoctoral Research Fellowship,"Mouillé, Lawrence"
+2202831,2022-03-22,150000,Fellowship Award,PostDoctoral Research Fellowship,"Vasudevan, Sahana"
 2202960,2022-03-22,150000,Fellowship Award,PostDoctoral Research Fellowship,"Morrow, Jackson"
 2202961,2022-03-22,150000,Fellowship Award,PostDoctoral Research Fellowship,"McCarty, Rose"
 2202994,2022-03-22,150000,Fellowship Award,PostDoctoral Research Fellowship,"Kumar, Bhanu"
@@ -7290,6 +7355,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2154557,2022-04-07,49895,Standard Grant,Conference: Young Mathematicians in C*-Algebras 2022,Embry-Riddle Aeronautical University
 2200390,2022-04-07,287999,Continuing Grant,Obstructed deformation rings and  modularity of Galois representations,University of California-Los Angeles
 2213097,2022-04-07,300000,Fellowship Award,MPS-Ascend: The C*-Algebraic Mackey Bijection for Real Reductive Groups,"Roman, Angel R"
+2213166,2022-04-07,300000,Fellowship Award,MPS-Ascend: Representation Theory of General Linear Groups over Finite Local Principal Ideal Rings,"Monteiro, Nariel"
 2213261,2022-04-07,300000,Fellowship Award,MPS-Ascend: Structure-Preserving Algorithms and Their Applications in Plasma Physics,"Alvarez Loya, Allen"
 2213322,2022-04-07,300000,Fellowship Award,MPS-Ascend: Improved Accuracy and Robustness for Numerical Partial Differential Equations and Nonlinear Optimization,"Marquez, Alan"
 2213323,2022-04-07,300000,Fellowship Award,MPS-Ascend: Triangulations of the Product of Two Simplices and Matroids from Fine Mixed Subdivisions,"Gotti, Felix"
@@ -7403,6 +7469,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2223133,2022-05-03,250000,Continuing Grant,Collaborative Research: Combining Heterogeneous Data Sources to Identify Genetic Modifiers of Diseases,Colorado School of Mines
 2227372,2022-05-03,246402,Continuing Grant,"Dynamics, Embeddings, and Continuous Symplectic Geometry","University of Maryland, College Park"
 2154624,2022-05-05,258576,Standard Grant,"SaTC: CORE: Small: Markoff Triples, Cryptography, and Arithmetic of Thin Groups",University of California-Davis
+2204795,2022-05-05,281964,Standard Grant,Machine Learning and Mean Field Control,University of Texas at Dallas
 2134107,2022-05-06,2321764,Continuing Grant,"RTG: Networks: Foundations in Probability, Optimization, and Data Sciences",University of North Carolina at Chapel Hill
 2201221,2022-05-06,200848,Standard Grant,Combinatorics of Complex Curves and Surfaces,University of Georgia Research Foundation Inc
 2202337,2022-05-06,315000,Standard Grant,Geometry of Curves and Surfaces,Georgia Tech Research Corporation
@@ -7610,6 +7677,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2201110,2022-07-06,205000,Standard Grant,"Collaborative Research: Differential Methods, Implicitization, and Multiplicities with a View Towards Equisingularity Theory",University of Notre Dame
 2201149,2022-07-06,205000,Standard Grant,"Collaborative Research: Differential Methods, Implicitization, and Multiplicities with a View Towards Equisingularity Theory",Purdue University
 2205910,2022-07-06,253285,Standard Grant,"Bifurcation, Stability, and Non-uniqueness in Ideal Fluids",University of Pittsburgh
+2227199,2022-07-06,30000,Standard Grant,"Representation Theory, Calabi-Yau Manifolds, and Mirror Symmetry",University of Denver
 2231173,2022-07-06,24750,Standard Grant,"Conference on Algebraic Geometry, Mathematical Physics, and Solitons",Columbia University
 2231958,2022-07-06,201000,Standard Grant,Irrationality of Periods and Arithmetic of Abelian Varieties,University of California-Berkeley
 2152107,2022-07-07,380000,Standard Grant,"FRG: Collaborative Research: Complex Lagrangians, Integrable Systems, and Quantization",University of Illinois at Chicago
@@ -7897,6 +7965,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2153975,2022-08-11,360000,Standard Grant,Set Theory and Its Applications,Cornell University
 2206330,2022-08-11,416853,Standard Grant,Opinion Formation and Graph Dynamics: From Modeling to Empirical Applications,Arizona State University
 2210561,2022-08-11,350000,Standard Grant,Nonparametric Estimation and Inference with Network Data,Princeton University
+2234176,2022-08-11,27000,Standard Grant,Workshop on Advances in Mathematical and Theoretical Biology,Vanderbilt University
 2201112,2022-08-12,180000,Standard Grant,Geometric methods in the p-adic Langlands program,University of Utah
 2201387,2022-08-12,277007,Continuing Grant,Categorical and Diagrammatic Representation Theory,University of Oregon Eugene
 2203431,2022-08-12,395998,Standard Grant,"Braids, Surfaces, and Polynomials",Georgia Tech Research Corporation
@@ -7930,6 +7999,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2244923,2022-09-16,109708,Continuing Grant,Surfaces and Geometry and Topology of Quantum Link Invariants,Texas State University - San Marcos
 2245054,2022-09-16,158476,Standard Grant,"Logic, Ramsey Theory, and Relational Structures",University of Notre Dame
 2245935,2022-09-20,112428,Standard Grant,Quantum Subgroups of the Low Rank Lie Algebras,University of New Hampshire
+2246292,2022-09-21,94005,Continuing Grant,Density and Edge Coloring,West Virginia University Research Corporation
 2244988,2022-09-22,425565,Continuing Grant,CAREER: Deep Learning Based Scientific Computing: Mathematical Theory and Algorithms,"University of Maryland, College Park"
 2245674,2022-09-22,310000,Continuing Grant,Scalable Computational Methods for Large-Scale Stochastic Optimization under High-Dimensional Uncertainty,Georgia Tech Research Corporation
 2243210,2022-10-11,140000,Standard Grant,Collaborative Research: Adaptive Gaussian Markov Random Fields for Large-scale Discrete Optimization via Simulation,Georgia Tech Research Corporation
@@ -7937,12 +8007,14 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2232885,2022-10-14,49984,Standard Grant,Field of Dreams: Growing a Diverse Mathematics Community,University of Minnesota-Twin Cities
 2301050,2022-10-19,300000,Continuing Grant,Iterative Algorithms for Statistics: From Convergence Rates to Statistical Accuracy,Massachusetts Institute of Technology
 2227849,2022-10-20,40274,Standard Grant,CBMS Conference: Foundations of Causal Graphical Models and Structure Discovery,Texas A&M University
+2228010,2022-10-20,35000,Standard Grant,CBMS Conference: Deep Learning and Numerical Partial Differential Equations,Morgan State University
 2241293,2022-10-24,19089,Standard Grant,Conference: Third Annual Data Science Workshop: Emerging Data Science Methods for Complex Biomedical and Cyber Data,"AUGUSTA UNIVERSITY RESEARCH INSTITUTE, INC."
 2303605,2022-10-24,139794,Standard Grant,"Asymptotic growth of symbolic powers, mixed multiplicities, and convex bodies",Arizona State University
 2243650,2022-10-28,150000,Standard Grant,"Collaborative Research: New Methods, Theory and Applications for Nonsmooth Manifold-Based Learning",William Marsh Rice University
 2304392,2022-10-31,123611,Continuing Grant,Topics in Mathematical Biology and Fluid Mechanics,University of South Carolina at Columbia
 2246556,2022-11-02,438408,Continuing Grant,Rigidity in Dynamics and Geometry,William Marsh Rice University
 2304489,2022-11-02,121425,Continuing Grant,"Collaborative Research: Nonconvex Models for Structured Sensing: Theory, Algorithms, and Applications",The University of Central Florida Board of Trustees
+2232673,2022-11-07,42000,Standard Grant,Conference: On Poisson Geometry,Amherst College
 2236605,2022-11-07,44765,Standard Grant,"Southern California Geometric Analysis Seminar, Winter 2023",University of California-Irvine
 2242426,2022-11-07,30000,Standard Grant,Conference: Geometric Group Theory XI,University of California-Santa Cruz
 2303864,2022-11-08,110000,Standard Grant,Arithmetic Aspects of Special Values of L-Functions,University of Texas at Austin
@@ -7968,6 +8040,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2306064,2022-12-12,127385,Continuing Grant,Efficient Distribution Classification Tasks via Optimal Transport Embeddings,University of North Carolina at Chapel Hill
 2309115,2022-12-13,400000,Continuing Grant,"CAREER: Theory, Heuristics, and Data for Arithmetic Invariants",Princeton University
 2310340,2022-12-14,152848,Standard Grant,Efficient Hybridizable Discontinuous Galerkin Methods for Phase Field Fluid Models,SUNY at Buffalo
+2239047,2022-12-20,452840,Continuing Grant,CAREER: Adaptive experiments towards learning treatment effect heterogeneity,University of California-Berkeley
 2246779,2022-12-21,13578,Standard Grant,Conference: Recent advances in applications of harmonic analysis to convex geometry,North Dakota State University Fargo
 2247732,2022-12-21,37260,Standard Grant,Conference: 2023 Great Plains Operator Theory Symposium,"OHIO STATE UNIVERSITY, THE"
 2239234,2022-12-28,434135,Continuing Grant,CAREER: Statistical Inference in High Dimensions using Variational Approximations,Harvard University
@@ -7990,6 +8063,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2313443,2023-01-17,310561,Standard Grant,Collaborative Research: A generalizable data framework towards Precision Radiotherapy.,Jackson Laboratory
 2240741,2023-01-18,31108,Standard Grant,"Conference: Richmond Geometry Meeting: Knots, Moduli, and Strings",Virginia Commonwealth University
 2247067,2023-01-18,22146,Standard Grant,"International Conference on Harmonic Analysis, Partial Differential Equations, and Geometric Measure Theory",University of Missouri-Columbia
+2236705,2023-01-19,549595,Continuing Grant,"CAREER: Mapping class groups, diffeomorphism groups, and moduli spaces",Brown University
 2237322,2023-01-20,449998,Continuing Grant,CAREER: Towards Tight Guarantees of Markov Chain Sampling Algorithms in High Dimensional Statistical Inference,Duke University
 2237349,2023-01-20,498420,Continuing Grant,CAREER: Weighted Fourier extension estimates and interactions with PDEs and geometric measure theory,Northwestern University at Chicago
 2237842,2023-01-20,423784,Continuing Grant,CAREER: Learning of graph diffusion and transport from high dimensional data with low-dimensional structures,Duke University
@@ -8036,6 +8110,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2319010,2023-02-15,133158,Standard Grant,Matrix Analysis for the 21st Century,Drexel University
 2235395,2023-02-16,499999,Continuing Grant,CAREER: Order and Disorder in Two-dimensional Fluid Motion,SUNY at Stony Brook
 2238656,2023-02-16,448820,Continuing Grant,"CAREER: New Challenges in Statistical Genetics: Mendelian Randomization, Integrated Omics and General Methodology",University of Chicago
+2239325,2023-02-16,481439,Continuing Grant,"CAREER: Analysis of uncertainty, long-time statistics and singularity formation in fluid flow models",Drexel University
 2244835,2023-02-27,49860,Standard Grant,Conference: Seminar on Stochastic Processes 2023,University of Arizona
 2244956,2023-02-27,24363,Standard Grant,Conference: 2023 Spectra Survey of Mathematics,University of Kentucky Research Foundation
 2246851,2023-02-27,21260,Standard Grant,Conference: 8th Lake Michigan Workshop on Combinatorics and Graph Theory,University of Notre Dame
@@ -8079,6 +8154,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2243991,2023-03-10,385387,Standard Grant,REU Site: Theoretical and Application-Driven Mathematics,EAST TEXAS A&M UNIVERSITY
 2247834,2023-03-10,473736,Standard Grant,"NSF-BSF: convexity and symmetry in high dimensions, with applications",Georgia Tech Research Corporation
 2317397,2023-03-10,149992,Standard Grant,"ATD: Collaborative Research: Multi-task, Multi-Scale Point Processes for Modeling Infectious Disease Threats",Boston College
+2238818,2023-03-14,554752,Continuing Grant,CAREER: Oscillatory Integrals and the Geometry of Projections,University of California-Los Angeles
 2244306,2023-03-14,412937,Standard Grant,REU Site: Research Experiences for Undergraduates in Industrial Mathematics and Statistics,Worcester Polytechnic Institute
 2244976,2023-03-15,160000,Continuing Grant,CDS&E: Robust Symmetry-Preserving Machine Learning: Theory and Application,University of Massachusetts Amherst
 2245591,2023-03-15,180000,Continuing Grant,Next-generation Tempering Methods for Multimodal Sampling: Theory and Applications,Texas A&M University
@@ -8250,6 +8326,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2303185,2023-04-18,190000,Fellowship Award,PostDoctoral Research Fellowship,"Winsor, Karl G"
 2303228,2023-04-18,190000,Fellowship Award,PostDoctoral Research Fellowship,"Hamann, David Linus"
 2303242,2023-04-18,190000,Fellowship Award,PostDoctoral Research Fellowship,"Brazelton, Thomas"
+2303251,2023-04-18,190000,Fellowship Award,PostDoctoral Research Fellowship,"Abrishami, Tara"
 2303262,2023-04-18,190000,Fellowship Award,PostDoctoral Research Fellowship,"Domat, George"
 2303286,2023-04-18,190000,Fellowship Award,PostDoctoral Research Fellowship,"Dinkins, Hunter G"
 2303333,2023-04-18,190000,Fellowship Award,PostDoctoral Research Fellowship,"Call, Benjamin E"
@@ -8415,6 +8492,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2309661,2023-06-01,398972,Continuing Grant,Fast algorithms for high fidelity simulation of viscous suspension flows,University of Colorado at Boulder
 2309685,2023-06-01,258256,Continuing Grant,"Outliers are not what they seem: data-aware, flexible, and robust randomized iterative methods",Princeton University
 2309729,2023-06-01,240330,Standard Grant,Theory and algorithms for a new class of computationally amenable nonconvex functions,University of Minnesota-Twin Cities
+2309814,2023-06-01,112817,Continuing Grant,Model Reduction Methods for Extended Quantum Systems: Analysis and Applications,University of California-Los Angeles
 2247469,2023-06-02,85503,Continuing Grant,Topological Consequences of Distortion-type Estimates,University of Cincinnati Main Campus
 2307465,2023-06-02,307710,Standard Grant,"Collaborative Research: Theory, computation and applications of parameterized Wasserstein gradient and Hamiltonian flows",Georgia Tech Research Corporation
 2307466,2023-06-02,142289,Standard Grant,"Collaborative Research: Theory, computation and applications of parameterized Wasserstein gradient and Hamiltonian flows","Georgia State University Research Foundation, Inc."
@@ -8725,6 +8803,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2319260,2023-07-26,100000,Standard Grant,ATD: Dynamic Modeling for Extreme Event Prediction with Uncertainty Quantification with Multi-panel Time Series,Rutgers University New Brunswick
 2324962,2023-07-26,434276,Continuing Grant,eMB: New Approaches for Interpreting Neural Responses to Behaviorally-Relevant Sensory Stimuli,Florida State University
 2325706,2023-07-26,21285,Standard Grant,Conference: New Frontiers in Reliability and Risk Analysis,George Washington University
+2333152,2023-07-26,67052,Standard Grant,Conference: Tech Topology Conference at Georgia Tech,Georgia Tech Research Corporation
 2246876,2023-07-27,180328,Standard Grant,Approximation Theory and Complex Dynamics,University of North Texas
 2246908,2023-07-27,227959,Standard Grant,Probabilistic Aspects of Dispersive and Wave Equations,University of Southern California
 2247331,2023-07-27,160457,Standard Grant,Structure theorems beyond Z-systems,Virginia Polytechnic Institute and State University
@@ -8822,6 +8901,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2327185,2023-08-07,100000,Standard Grant,Collaborative Research: The dual effect of ephaptic coupling on arrhythmogenesis in the heart,University of Minnesota-Twin Cities
 2327211,2023-08-07,498229,Standard Grant,Multiscale data geometric networks for learning representations and dynamics of biological systems,Yale University
 2329555,2023-08-08,35000,Standard Grant,Conference: CBMS Conference: Algorithmic Fractal Dimensions,Drake University
+2332342,2023-08-08,304102,Standard Grant,"PRIMES: Matroids, Polyhedral Geometry, and Integrable Systems",Saint Mary's College of California
 2316796,2023-08-09,249989,Standard Grant,LEAPS-MPS: Getting modeling precision right for data with measurement errors,Board of Trustees of Illinois State University
 2316965,2023-08-09,116983,Standard Grant,LEAP-MPS: Two Conjectures in Mathematical Relativity,Clark University
 2319370,2023-08-09,144726,Standard Grant,Collaborative Research: ATD: Rapid Structure Recovery and Outlier Detection in Multidimensional Data,Colorado State University
@@ -8931,6 +9011,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2347230,2023-09-15,156381,Standard Grant,Surfaces in 4-manifolds and modified surgery theory,University of Texas at Austin
 2347000,2023-09-20,225148,Standard Grant,RUI: Configuration Spaces of Flexible Polyhedral Surfaces,Franklin and Marshall College
 2348163,2023-09-20,180000,Standard Grant,Collaborative Research: Bayesian Residual Learning and Random Recursive Partitioning Methods for Gaussian Process Modeling,Iowa State University
+2231514,2023-09-21,2500000,Continuing Grant,RTG: Linked via L-functions: training versatile researchers across number theory,Duke University
 2341362,2023-09-21,509999,Continuing Grant,CAREER: Mathematical Modeling to Identify New Regulatory Mechanisms of Blood Clotting,University of North Carolina at Chapel Hill
 2348154,2023-09-21,195596,Standard Grant,Modeling Multivariate and Space-Time Processes: Foundations and Innovations,Iowa State University
 2345215,2023-09-22,239925,Standard Grant,Matching and Data Integration,Yale University
@@ -8945,6 +9026,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2345869,2023-10-13,121831,Standard Grant,Graph Edge Decomposition and Graph Toughness,Auburn University
 2349860,2023-10-13,249989,Standard Grant,LEAPS-MPS: Getting modeling precision right for data with measurement errors,University of New Hampshire
 2401414,2023-10-16,210000,Continuing Grant,Extremal Combinatorics: Themes and Challenging Problems,Duke University
+2350325,2023-10-18,112817,Continuing Grant,Model Reduction Methods for Extended Quantum Systems: Analysis and Applications,University of Massachusetts Amherst
 2401018,2023-10-18,260000,Continuing Grant,Algebraic Structures and the Arithmetic of Fields,University of Pennsylvania
 2400460,2023-10-24,105432,Standard Grant,LEAPS-MPS: The representation theory of combinatorial categories,Stevens Institute of Technology
 2401020,2023-10-25,180000,Standard Grant,Collaborative Research: CDS&E-MSS: Community detection via covariance structures,Colorado State University
@@ -9007,6 +9089,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2350161,2023-12-21,450000,Continuing Grant,CAREER: Variational Analysis of Elastic Patterns and Mechanical Metamaterials,Rutgers University New Brunswick
 2413156,2023-12-21,148072,Standard Grant,Uniformization of Surfaces and Mapping Problems in Metric Spaces,Stevens Institute of Technology
 2337178,2023-12-27,25000,Standard Grant,Conference: Fairfax Algebra Days 2024,George Mason University
+2337630,2023-12-28,434697,Continuing Grant,CAREER: Isoperimetric and Minkowski Problems in Convex Geometric Analysis,Syracuse University
 2402028,2024-01-03,42000,Standard Grant,"Conference: Geometric Measure Theory, Harmonic Analysis, and Partial Differential Equations: Recent Advances",Washington University
 2348092,2024-01-04,46650,Standard Grant,Conference: Algebraic Structures in Topology 2024,Purdue University
 2350508,2024-01-05,30000,Standard Grant,Conference: Noncommutative Geometry and Analysis,California Institute of Technology
@@ -9133,6 +9216,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2422478,2024-03-12,400000,Continuing Grant,CAREER: Next-Generation Methods for Statistical Integration of High-Dimensional Disparate Data Sources,Regents of the University of Michigan - Ann Arbor
 2424015,2024-03-12,179348,Standard Grant,Oscillatory Integrals and Falconer's Conjecture,New York University
 2424801,2024-03-12,209593,Continuing Grant,Neural Networks for Stationary and Evolutionary Variational Problems,University of Pittsburgh
+2306378,2024-03-15,324938,Standard Grant,Collaborative Research: On New Directions for the Derivation of Wave Kinetic Equations,Massachusetts Institute of Technology
 2306379,2024-03-15,145000,Standard Grant,Collaborative Research: On New Directions for the Derivation of Wave Kinetic Equations,Texas A&M University
 2349593,2024-03-15,418500,Standard Grant,REU Site: Undergraduate Mathematical Science Research at James Madison University,James Madison University
 2349888,2024-03-15,25000,Standard Grant,Conference: International Conference on L-functions and Automorphic Forms,Vanderbilt University
@@ -9229,6 +9313,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2425308,2024-04-04,248180,Standard Grant,LEAPS-MPS:  Fast and Efficient Novel Algorithms for MHD Flow Ensembles,University of Alabama at Birmingham
 2348384,2024-04-05,239068,Standard Grant,Geometric Harmonic Analysis: Advances in Radon-like Transforms and Related Topics,University of Pennsylvania
 2348996,2024-04-05,390912,Continuing Grant,Variable Coefficient Fourier Analysis,Johns Hopkins University
+2349174,2024-04-05,288444,Continuing Grant,REU Site: Computational Number Theory,Clemson University
 2349382,2024-04-05,371974,Continuing Grant,REU Site: Applied Mathematics in Real World Problems,Florida State University
 2350128,2024-04-05,35875,Standard Grant,Conference: PDE in Moab: Advances in Theory and Application,Brigham Young University
 2400191,2024-04-05,353236,Standard Grant,"Group Actions, Rigidity, and Invariant Measures",Northwestern University at Chicago
@@ -9366,6 +9451,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2404992,2024-05-02,360027,Continuing Grant,Minimal Surfaces and Harmonic Maps in Differential Geometry,Cornell University
 2405044,2024-05-02,226665,Standard Grant,Geometric Classification Theory and Invariants of 4-Manifolds,University of Virginia Main Campus
 2405361,2024-05-02,194991,Standard Grant,Variational Problems In The Theory of Minimal Surfaces,Massachusetts Institute of Technology
+2405175,2024-05-03,404388,Continuing Grant,"Minimal Surfaces, Groups and Geometrization",California Institute of Technology
 2401136,2024-05-08,190000,Fellowship Award,Postdoctoral Fellowship: MSPRF: Point Processes Encountered in Analysis and Mathematical Physics,"Yakir, Oren Shimon"
 2401636,2024-05-08,190000,Fellowship Award,Postdoctoral Fellowship: MSPRF: Microlocal Asymptotic Analysis and Mathematical Physics,"Sussman, Ethan W"
 2402044,2024-05-08,190000,Fellowship Award,Postdoctoral Fellowship: MSPRF: Instabilities of Nonlinear Water Waves,"Creedon, Ryan Patrick"
@@ -9477,6 +9563,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2401601,2024-06-03,260000,Standard Grant,The Geometry of Hyperkähler Varieties and Rationality,Dartmouth College
 2404924,2024-06-03,47996,Standard Grant,Conference: Summer School on Cluster Algebras and Related Topics,University of Connecticut
 2405440,2024-06-03,207485,Standard Grant,Rigidity and Flexibility through Group Actions,University of Utah
+2409807,2024-06-03,399583,Standard Grant,Approximating partial differential equations without boundary conditions,Texas A&M University
 2409861,2024-06-03,99992,Continuing Grant,Conference: An Undergraduate Research Program in Combinatorics,University of Minnesota Duluth
 2409900,2024-06-03,200000,Continuing Grant,Tensor-valued finite elements and applications,Portland State University
 2409918,2024-06-03,204533,Standard Grant,"Structure preservation in nonlinear, degenerate, evolution",University of Tennessee Knoxville
@@ -9887,6 +9974,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2436217,2024-08-20,249971,Standard Grant,Collaborative Research: FDT-BioTech: Advancing Mathematical and Statistical Foundations to Enhance Human Digital Twin of Neurophysiological Modeling and Uncertainty Quantification,George Mason University
 2436332,2024-08-20,360000,Standard Grant,MPOPHC: Incorporation of Game Theory Tools to Improve the Policy Making to Mitigate Epidemics of Respiratory Diseases,University of Illinois at Urbana-Champaign
 2401279,2024-08-21,172000,Standard Grant,Birational classification of varieties: connections to arithmetic and algebra,Michigan State University
+2424994,2024-08-21,187133,Standard Grant,eMB: Collaborative Research: Reconstructing Interactions of Species Ensembles (RISE): Generalized dynamic frameworks for exploring ancient marine communities through time,University of California - Merced
 2424995,2024-08-21,112243,Standard Grant,eMB: Collaborative Research: Reconstructing Interactions of Species Ensembles (RISE): Generalized dynamic frameworks for exploring ancient marine communities through time,University of Alaska Fairbanks Campus
 2438562,2024-08-21,451186,Continuing Grant,CAREER: Shape Analysis in Submanifold Spaces: New Directions for Theory and Algorithms,University of Houston
 2408263,2024-08-22,350000,Standard Grant,Kinetic Transport of Interactive Complex Particle Dynamics in Mean Fields.,University of Texas at Austin
@@ -9928,6 +10016,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2436738,2024-08-29,997770,Standard Grant,FDT-BioTech:CARDIT: Cardiac Digital Twins; but better!,Johns Hopkins University
 2418918,2024-09-05,249916,Standard Grant,LEAPS-MPS: The geometry of three-forms and their degenerations,Rutgers University Newark
 2438083,2024-09-09,500000,Continuing Grant,CAREER: Analysis and Numerics for the Dynamics of Fluids under Magnetic Forces,University of California-Berkeley
+2410740,2024-09-10,169999,Continuing Grant,Collaborative Research: Energetic Variation Based Numerical Studies in Complex Fluids with Thermo-Chemo-Mechanical Effects,University of California-Riverside
 2410741,2024-09-10,160000,Continuing Grant,Collaborative Research: Energetic Variation Based Numerical Studies in Complex Fluids with Thermo-Chemo-Mechanical Effects,University of Notre Dame
 2410742,2024-09-10,140000,Continuing Grant,Collaborative Research: Energetic Variation Based Numerical Studies in Complex Fluids with Thermo-Chemo-Mechanical Effects,Illinois Institute of Technology
 2448749,2024-09-12,114999,Standard Grant,Collaborative Research: Mathematical Foundation of Learning with Information-Theoretic Criteria from Non-Gaussian Data,University of Tennessee Knoxville
@@ -9937,12 +10026,14 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2421890,2024-09-20,238250,Standard Grant,Collaborative Research: Modernizing Mixed Model Prediction,University of Minnesota-Twin Cities
 2451193,2024-09-20,78336,Standard Grant,LEAPS-MPS: Deep Quasi-Reversibility Inversion for Source Localization Oncological Problems,Texas Tech University
 2452816,2024-10-16,219595,Continuing Grant,Structure and regularity in continuous model theory,University of Illinois at Chicago
+2431357,2024-10-17,15000,Standard Grant,"Conference: D-modules, local systems and applications",University of Minnesota-Twin Cities
 2452130,2024-10-17,180328,Standard Grant,Approximation Theory and Complex Dynamics,University of Texas at Dallas
 2404932,2024-11-12,211992,Continuing Grant,"Algebraic K-theory, trace methods, and equivariant homotopy theory",Michigan State University
 2405035,2024-11-12,250999,Continuing Grant,"Structures on combinatorial K-theory: TR, zeta-functions, and motivic measures",Cornell University
 2435168,2024-11-12,18000,Standard Grant,Conference: Arithmetic and p-adic Geometry in Chile,Temple University
 2439188,2024-11-12,30000,Standard Grant,Conference: Homological Commutative Algebra And Related Topics,"Georgia Southern University Research and Service Foundation, Inc"
 2442586,2024-11-12,33800,Standard Grant,Conference: Workshop on Automorphic Forms and Related Topics,University of North Texas
+2445841,2024-11-12,40000,Standard Grant,Conference: Mapping class groups and beyond,University of Toledo
 2448679,2024-11-12,29664,Standard Grant,Conference: 2025 Redbud Topology Conference,University of Arkansas
 2503815,2024-11-12,165000,Standard Grant,Distribution of the Hodge and the Tate locus,Dartmouth College
 2505625,2024-11-12,97750,Standard Grant,Dynamical and Spatial Asymptotics of Large Disordered Systems,California Institute of Technology
@@ -9950,6 +10041,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2509179,2024-11-19,29940,Standard Grant,"Conference: Building Teams to Build Better Epidemiological Models: Balancing Participation from Mathematical and Social, Behavioral, and Economic Sciences",Duke University
 2502900,2024-12-02,160000,Continuing Grant,CDS&E: Robust Symmetry-Preserving Machine Learning: Theory and Application,Georgia Tech Research Corporation
 2513006,2024-12-02,248177,Standard Grant,LEAPS-MPS: Ergodic Jacobi Matrices,Texas A&M University
+2430460,2024-12-09,42244,Standard Grant,Conference: CBMS Conference: Research at the Interface of Applied Mathematics and Machine Learning,University of Houston
 2505158,2024-12-09,50000,Standard Grant,Conference: Mathematical Fellowships for the Annual International Conference on Quantum Information Processing (QIP) 2025,Duke University
 2503494,2024-12-10,380000,Standard Grant,ATD: Statistical and Machine Learning Methods for Studying the Dynamics of Weather and Climate Extremes,Washington University
 2419037,2024-12-12,19992,Standard Grant,"Conference: Research, Mentorship, and Community for Current and Future Underrepresented Algebraists",Benedictine University
@@ -9981,6 +10073,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2514382,2025-01-17,17000,Standard Grant,Conference: Logic Meeting at UCLA,University of California-Los Angeles
 2441034,2025-01-21,500000,Continuing Grant,CAREER: Virtual properties of groups in geometry and topology,University of Minnesota-Twin Cities
 2441153,2025-01-21,550000,Continuing Grant,"CAREER: Robust Manifold and Metric Learning: Techniques for Noise, Intersections, and Geometric Regularization",University of Utah
+2443867,2025-01-21,450000,Continuing Grant,CAREER: Robust Learning from Preference Feedback,University of Chicago
 2439949,2025-02-04,514281,Continuing Grant,CAREER: Mathematical Aspects of Topological Phases,University of Washington
 2441652,2025-02-04,450706,Continuing Grant,CAREER: Distributional Approximation for Sharp Finite Sample Bounds with Applications to Dependent Data and Complex Estimators,Harvard University
 2441769,2025-02-04,567061,Continuing Grant,CAREER: Structure Theory in Additive Combinatorics and Symbolic Dynamics,Northwestern University at Chicago
@@ -10019,6 +10112,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2523484,2025-02-13,129949,Standard Grant,Collaborative Research: Planning: FIRE-PLAN: Advancing Wildland Fire Analytics for Actuarial Applications and Beyond,University of California-Riverside
 2348981,2025-02-18,165000,Continuing Grant,Descriptive Aspects of Group Actions and Dynamics,University of California-San Diego
 2438051,2025-02-18,20000,Standard Grant,"Conference: Diophantine Equations, Combinatorics, and Analysis in Number Theory",Kansas State University
+2440680,2025-02-18,466294,Continuing Grant,CAREER: COLORED LINK HOMOLOGIES AND THE GEOMETRIC TOPOLOGY OF SURFACES IN LOW-DIMENSIONS,Texas State University - San Marcos
 2441170,2025-02-18,505790,Continuing Grant,CAREER: Classical Many-Body Systems Beyond Leading Order,Carnegie Mellon University
 2444520,2025-02-18,32000,Standard Grant,Collaborative Research: Conference: Ohio River Analysis Meetings 2025-2027,University of Cincinnati Main Campus
 2444521,2025-02-18,16000,Standard Grant,Collaborative Research: Conference: Ohio River Analysis Meetings 2025-2027,University of Kentucky Research Foundation
@@ -10054,6 +10148,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2439897,2025-03-11,425000,Continuing Grant,CAREER: Local-Global Properties in the Representations of Finite Groups,University of Denver
 2443145,2025-03-13,450000,Continuing Grant,CAREER: New Frontiers in Time Series Analysis,University of Connecticut
 2443425,2025-03-13,500000,Continuing Grant,CAREER: Termination of Flips and Cluster Geometry,University of California-Los Angeles
+2501336,2025-03-13,190000,Fellowship Award,Postdoctoral Fellowship: MSPRF: Problems and Challenges in Arithmetic Combinatorics,"Kravitz, Noah"
 2502744,2025-03-13,190000,Fellowship Award,Postdoctoral Fellowship: MSPRF: On the Use of the Gaussian Measure in Convex Geometry,"Langharst, Dylan Jacob"
 2502909,2025-03-13,190000,Fellowship Award,Postdoctoral Fellowship: MSPRF: Interactions between Homotopy Theory and Algebraic Geometry and Representation Theory,"Devalapurkar, Sanath"
 2502935,2025-03-13,190000,Fellowship Award,"Postdoctoral Fellowship: MSPRF: Next Generation Spatial Models for Discrete-valued, High-dimensional  Data","Carter, Brandon"
@@ -10107,6 +10202,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2514690,2025-04-07,34000,Standard Grant,"Conference: Groups, Logic, and Computation: Interactions between Group Theory, Model Theory, and Computer Science. GAGTA 2025.",Stevens Institute of Technology
 2420974,2025-04-08,303656,Standard Grant,Collaborative Research: AMPS: Optimal Design and Implementation of Capacity Markets under Market Failure Using Bilevel Financial Market Models,SUNY at Buffalo
 2420975,2025-04-08,83522,Standard Grant,Collaborative Research: AMPS: Optimal Design and Implementation of Capacity Markets under Market Failure Using Bilevel Financial Market Models,Johns Hopkins University
+2502794,2025-04-08,190000,Fellowship Award,Postdoctoral Fellowship: MSPRF: Precise Estimates for Minkowski Sums of Compact Sets,"Meyer, Mark"
 2503279,2025-04-08,190000,Fellowship Award,Postdoctoral Fellowship: MSPRF: Minimal Hypersurfaces in Riemannian Geometry,"Stryker, Douglas John"
 2503485,2025-04-08,190000,Fellowship Award,Postdoctoral Fellowship: MSPRF: The Topology of Varieties: Equivariant Monodromy and Moduli,"Raman, Sidhanth"
 2430581,2025-04-11,52769,Standard Grant,Conference: CBMS Conference: Legendrian Links and the Microlocal Theory of Sheaves,Georgia Tech Research Corporation
@@ -10126,6 +10222,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2453310,2025-05-21,20000,Standard Grant,Conference: Dynamics and Rigidity,University of Wisconsin-Madison
 2508098,2025-05-21,20000,Standard Grant,Travel: Young Topologist Meeting 2025,CUNY College of Staten Island
 2512212,2025-05-21,49900,Standard Grant,Conference: Midwest Conferences on Quantum Symmetry and Beyond,University of Notre Dame
+2516164,2025-05-21,10000,Standard Grant,Conference: Young Homotopy-theorist Meeting 2025,University of California-Los Angeles
 2524465,2025-05-21,409625,Continuing Grant,CAREER: Learning Theory for Large-scale Stochastic Games,New York University
 2527500,2025-05-21,20000,Standard Grant,Conference: International Indian Statistical Association Annual Conference 2025,University of Nebraska-Lincoln
 2531437,2025-05-21,227959,Standard Grant,Probabilistic Aspects of Dispersive and Wave Equations,University of Chicago
@@ -10321,6 +10418,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2506717,2025-06-27,200000,Standard Grant,Geometric Variational Theory and Applications,Cornell University
 2513336,2025-06-27,220000,Standard Grant,New Computational Framework for Complex Kinetic Simulation and Prediction,University of Minnesota-Twin Cities
 2531539,2025-06-27,119999,Standard Grant,Collaborative Research: Bayesian Residual Learning and Random Recursive Partitioning Methods for Gaussian Process Modeling,University of Chicago
+2533558,2025-06-27,30000,Standard Grant,"Conference: Rutgers Gauge Theory, Low-Dimensional Topology, and Geometric Analysis ICM Satellite Conference July 13-17 2026",Rutgers University New Brunswick
 2535755,2025-06-27,194997,Standard Grant,Collaborative Research: Slopes of Modular Forms and Moduli Stacks of Galois Representations,University of Arizona
 2447563,2025-06-30,399999,Standard Grant,REU Site: Research Experiences for Undergraduates in Mathematics at Indiana University,Indiana University
 2447675,2025-06-30,301326,Standard Grant,REU Site: Deep Learning for Dynamical Systems in Biological and Physical Sciences,University of Southern Mississippi
@@ -10420,6 +10518,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2505908,2025-07-17,150000,Standard Grant,3-manifold invariants from Virasoro TQFT and asymptotics,Texas A&M University
 2505914,2025-07-17,150000,Standard Grant,"Geometry, foliations and flows",Yale University
 2506250,2025-07-17,149826,Standard Grant,Floer homology in low-dimensional topology,Boston College
+2508707,2025-07-17,34000,Standard Grant,Conference: Universal Statistics in Number Theory,Trustees of Boston University
 2514152,2025-07-17,250000,Standard Grant,Fast and Robust Algorithms in Cryo-Electron Microscopy Imaging,University of California-Davis
 2527651,2025-07-17,15000,Standard Grant,Conference: 5th Biennial Meeting of SIAM Pacific Northwest Section,University of Washington
 2532551,2025-07-17,194689,Standard Grant,LEAPS-MPS: Morse Theory in Contact Topology,California Polytechnic State University Foundation
@@ -10655,6 +10754,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2515766,2025-08-07,159940,Standard Grant,Collaborative Research: Performance Guaranteed Statistical Learning with Multiple Classes of Models (guided by PCS),Rutgers University New Brunswick
 2515767,2025-08-07,140000,Standard Grant,Collaborative Research: Performance Guaranteed Statistical Learning with Multiple Classes of Models (guided by PCS),University of California-Berkeley
 2516950,2025-08-07,453779,Continuing Grant,CAREER: Brown Measure and non-Hermitian Random Matrices,University of Houston
+2535005,2025-08-07,25723,Standard Grant,Conference: Recent Perspectives on Moments of L-functions,University of Texas at Dallas
 2536330,2025-08-07,11000,Standard Grant,Conference: Workshop on Frontiers in Learning under Data Heterogeneity,University of Florida
 2441378,2025-08-08,450000,Continuing Grant,CAREER: Moduli of Algebraic Varieties and K-stability,Georgia Tech Research Corporation
 2453662,2025-08-08,199581,Standard Grant,"Kalton Program, Ribe Program, and Metric Invariants",Texas A&M University
@@ -10824,6 +10924,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2514400,2025-08-29,175000,Standard Grant,Collaborative Research: NSF-SNSF: Tail-robust Analysis of High-dimensional Nonstationary Time Series,Pennsylvania State Univ University Park
 2445603,2025-09-02,75000,Standard Grant,Preparing Students to Collaborate on High-Risk Problems from Industry,Society For Industrial and Applied Math (SIAM)
 2549719,2025-09-02,153999,Standard Grant,Modern Harmonic Analysis Techniques in Complex Variables and Non-Homogeneous Settings,George Mason University
+2532902,2025-09-03,185266,Standard Grant,LEAPS-MPS: Combinatorial Aspects of Finite and Infinite Free Resolutions,Marshall University Research Corporation
 2446019,2025-09-04,2997232,Continuing Grant,RTG: Geometry and Representation Theory at USC,University of Southern California
 2546184,2025-09-04,97017,Continuing Grant,Geometry of Wasserstein and Transportation Cost Metrics,University of North Carolina at Charlotte
 2549038,2025-09-05,116307,Standard Grant,"Collaborative Research: FRGMS: Multigraded Commutative Algebra, Toric Varieties, and Homological Mirror Symmetry",University of Oregon Eugene
@@ -10854,6 +10955,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2601564,2025-12-19,10000,Standard Grant,Conference: Young Homotopy-theorist Meeting 2025,Northwestern University at Chicago
 2609841,2025-12-22,156571,Standard Grant,LEAPS: MPS Four dimensions from two in symplectic topology and dynamics,"The University Corporation, Northridge"
 2522494,2025-12-30,400000,Standard Grant,Collaborative Research: AIMing: Synergistic Advancement of AI and Mathematics,California Institute of Technology
+2522495,2025-12-30,400000,Standard Grant,Collaborative Research: AIMing: Synergistic Advancement of AI and Mathematics,University of California-Los Angeles
 2522496,2025-12-30,199973,Standard Grant,Collaborative Research: AIMing: Synergistic Advancement of AI and Mathematics,Brigham Young University
 2514157,2026-01-05,330000,Standard Grant,Randomized Algorithms for Operator Approximations in Sobolev Spaces,University of California-Los Angeles
 2553660,2026-01-08,219854,Continuing Grant,"Sectional Curvature, Isotropic Curvature, and Curvature Operators",Auburn University
@@ -10886,6 +10988,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2604513,2026-02-25,29400,Standard Grant,Conference: Georgia Topology Conference,University of Georgia Research Foundation Inc
 2607700,2026-02-25,25000,Standard Grant,Travel: Formalizing Higher Categories at Mittag-Leffler Institute,Chapman University
 2554145,2026-02-26,20000,Standard Grant,Conference: Geometric Group Theory Around Cube Complexes,Wesleyan University
+2546348,2026-02-27,31608,Standard Grant,Conference: Heat Kernels and Stochastic Analysis,Purdue University
 2618114,2026-02-27,249394,Standard Grant,Structure-preserving machine learning moment closures for kinetic equations,University of Delaware
 2618808,2026-02-27,260000,Standard Grant,"Random structures in high dimensions: Matrices, polynomials and point processes",Northwestern University at Chicago
 2554203,2026-03-04,39999,Standard Grant,Conference: XXXI Southern California Geometric Analysis Seminar (SCGAS),University of California-San Diego
@@ -10916,6 +11019,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2601309,2026-03-12,49920,Standard Grant,Conference: The 2026 Gainesville International Number Theory Conference,University of Florida
 2603164,2026-03-18,15000,Standard Grant,Conference: Western Dynamical Systems Conference,University of Utah
 2611150,2026-03-18,9600,Standard Grant,Conference: May Midwestern Microlocal Meeting 2026,Northwestern University at Chicago
+2446222,2026-03-19,2000000,Continuing Grant,RTG: Statistics and Data Theory - Engaging the Future of Data Science,University of California-Los Angeles
 2603742,2026-03-19,49000,Standard Grant,"Conference: The Gross-Zagier Formula, 40 Years Later",Massachusetts Institute of Technology
 2619087,2026-03-19,188883,Standard Grant,The Frobenius action on curves and abelian varieties,Vanderbilt University
 2552723,2026-03-20,17100,Standard Grant,Conference: Red Raider Mini-Symposium on Geometric Analysis and Applications,Texas Tech University
@@ -10934,6 +11038,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2555776,2026-04-01,25000,Standard Grant,Collaborative Research: Conference: Great Lakes Mathematical Physics Meetings 2026-2027,University of Dayton
 2603891,2026-04-01,25000,Standard Grant,Conference: Building Bridges: 7th EU/US Summer School on Automorphic Forms and Related Topics (BB7),Oklahoma State University
 2618512,2026-04-01,200000,Standard Grant,Collaborative Research: NSF MPS/DMS-EPSRC: Stochastic Shape Processes and Inference,Johns Hopkins University
+2540284,2026-04-02,450000,Continuing Grant,"CAREER: p-adic harmonics, periods, and probability in lambda-rings",University of Utah
 2554686,2026-04-02,20000,Standard Grant,Conference: Geometry and Dynamics: Computer-assisted Proofs,Brown University
 2555151,2026-04-02,22500,Standard Grant,"Conference: Fourth Joint Alabama--Florida Conference on DifferentialEquations, Dynamical Systems and Applications (JAF DEDS)",Florida International University
 2555991,2026-04-02,20000,Standard Grant,Travel: SUMTOPO 2026,Indiana University
