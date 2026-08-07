@@ -1,0 +1,1761 @@
+{
+ "generated": "2026-08-07",
+ "source": "https://api.nsf.gov/services/v1/awards.json?org_code_div=03040000 (NSF Award Search API), month-by-month on Original Award Date",
+ "totalAwards": 11222,
+ "currentFY": 2026,
+ "warnings": [
+  "2015-09-10: amount-range partition had no effect; keeping unique set of 84",
+  "2015-09-11: amount-range partition had no effect; keeping unique set of 74",
+  "2018-04-26: amount-range partition had no effect; keeping unique set of 34",
+  "2018-07-18: amount-range partition had no effect; keeping unique set of 29",
+  "2018-08-01: amount-range partition had no effect; keeping unique set of 35",
+  "2018-08-02: amount-range partition had no effect; keeping unique set of 46",
+  "2019-06-20: amount-range partition had no effect; keeping unique set of 86",
+  "2019-06-21: amount-range partition had no effect; keeping unique set of 73",
+  "2019-07-09: amount-range partition had no effect; keeping unique set of 46",
+  "2019-07-10: amount-range partition had no effect; keeping unique set of 44",
+  "2019-07-29: amount-range partition had no effect; keeping unique set of 61",
+  "2019-07-30: amount-range partition had no effect; keeping unique set of 61",
+  "2020-07-27: amount-range partition had no effect; keeping unique set of 50",
+  "2020-07-28: amount-range partition had no effect; keeping unique set of 55",
+  "2021-03-24: amount-range partition had no effect; keeping unique set of 64",
+  "2021-03-25: amount-range partition had no effect; keeping unique set of 62",
+  "2022-08-02: amount-range partition had no effect; keeping unique set of 77",
+  "2022-08-03: amount-range partition had no effect; keeping unique set of 67",
+  "2024-07-31: amount-range partition had no effect; keeping unique set of 53",
+  "2024-08-01: amount-range partition had no effect; keeping unique set of 73",
+  "2025-06-10: amount-range partition had no effect; keeping unique set of 26",
+  "2025-06-11: amount-range partition had no effect; keeping unique set of 38",
+  "2025-07-17: amount-range partition had no effect; keeping unique set of 39",
+  "2025-07-30: amount-range partition had no effect; keeping unique set of 56",
+  "2025-08-06: amount-range partition had no effect; keeping unique set of 68",
+  "2025-08-07: amount-range partition had no effect; keeping unique set of 59",
+  "2025-08-13: amount-range partition had no effect; keeping unique set of 73",
+  "2025-08-14: amount-range partition had no effect; keeping unique set of 86",
+  "2025-08-15: amount-range partition had no effect; keeping unique set of 90",
+  "2026-07-21: amount-range partition had no effect; keeping unique set of 42"
+ ],
+ "monthly": [
+  {
+   "month": "2014-10",
+   "awards": 15,
+   "dollars": 1929959,
+   "std": 9,
+   "cont": 6,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2014-11",
+   "awards": 18,
+   "dollars": 722872,
+   "std": 17,
+   "cont": 1,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2014-12",
+   "awards": 33,
+   "dollars": 2385780,
+   "std": 28,
+   "cont": 5,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2015-01",
+   "awards": 50,
+   "dollars": 5818699,
+   "std": 38,
+   "cont": 12,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2015-02",
+   "awards": 54,
+   "dollars": 8985293,
+   "std": 38,
+   "cont": 16,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2015-03",
+   "awards": 84,
+   "dollars": 12451589,
+   "std": 28,
+   "cont": 18,
+   "fell": 38,
+   "other": 0
+  },
+  {
+   "month": "2015-04",
+   "awards": 80,
+   "dollars": 21877808,
+   "std": 33,
+   "cont": 45,
+   "fell": 2,
+   "other": 0
+  },
+  {
+   "month": "2015-05",
+   "awards": 120,
+   "dollars": 26453800,
+   "std": 55,
+   "cont": 65,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2015-06",
+   "awards": 127,
+   "dollars": 36671717,
+   "std": 69,
+   "cont": 58,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2015-07",
+   "awards": 144,
+   "dollars": 33987680,
+   "std": 92,
+   "cont": 52,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2015-08",
+   "awards": 136,
+   "dollars": 28607049,
+   "std": 86,
+   "cont": 50,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2015-09",
+   "awards": 144,
+   "dollars": 92041052,
+   "std": 111,
+   "cont": 33,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2015-10",
+   "awards": 16,
+   "dollars": 930209,
+   "std": 15,
+   "cont": 1,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2015-11",
+   "awards": 35,
+   "dollars": 2775735,
+   "std": 31,
+   "cont": 4,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2015-12",
+   "awards": 38,
+   "dollars": 3443067,
+   "std": 31,
+   "cont": 7,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2016-01",
+   "awards": 43,
+   "dollars": 6796049,
+   "std": 30,
+   "cont": 13,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2016-02",
+   "awards": 37,
+   "dollars": 10074710,
+   "std": 20,
+   "cont": 17,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2016-03",
+   "awards": 73,
+   "dollars": 13549862,
+   "std": 35,
+   "cont": 25,
+   "fell": 13,
+   "other": 0
+  },
+  {
+   "month": "2016-04",
+   "awards": 159,
+   "dollars": 46633480,
+   "std": 43,
+   "cont": 87,
+   "fell": 29,
+   "other": 0
+  },
+  {
+   "month": "2016-05",
+   "awards": 98,
+   "dollars": 24354882,
+   "std": 60,
+   "cont": 38,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2016-06",
+   "awards": 127,
+   "dollars": 23962588,
+   "std": 86,
+   "cont": 41,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2016-07",
+   "awards": 73,
+   "dollars": 15355330,
+   "std": 49,
+   "cont": 24,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2016-08",
+   "awards": 184,
+   "dollars": 36216216,
+   "std": 142,
+   "cont": 42,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2016-09",
+   "awards": 86,
+   "dollars": 16379587,
+   "std": 71,
+   "cont": 15,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2016-10",
+   "awards": 8,
+   "dollars": 277068,
+   "std": 8,
+   "cont": 0,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2016-11",
+   "awards": 17,
+   "dollars": 809414,
+   "std": 16,
+   "cont": 0,
+   "fell": 0,
+   "other": 1
+  },
+  {
+   "month": "2016-12",
+   "awards": 45,
+   "dollars": 1952742,
+   "std": 40,
+   "cont": 5,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2017-01",
+   "awards": 53,
+   "dollars": 9473057,
+   "std": 33,
+   "cont": 20,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2017-02",
+   "awards": 46,
+   "dollars": 4674257,
+   "std": 32,
+   "cont": 14,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2017-03",
+   "awards": 82,
+   "dollars": 20230241,
+   "std": 19,
+   "cont": 21,
+   "fell": 42,
+   "other": 0
+  },
+  {
+   "month": "2017-04",
+   "awards": 100,
+   "dollars": 23946614,
+   "std": 45,
+   "cont": 54,
+   "fell": 0,
+   "other": 1
+  },
+  {
+   "month": "2017-05",
+   "awards": 112,
+   "dollars": 25316902,
+   "std": 62,
+   "cont": 50,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2017-06",
+   "awards": 144,
+   "dollars": 36272414,
+   "std": 98,
+   "cont": 46,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2017-07",
+   "awards": 168,
+   "dollars": 57220706,
+   "std": 116,
+   "cont": 52,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2017-08",
+   "awards": 153,
+   "dollars": 26594717,
+   "std": 92,
+   "cont": 61,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2017-09",
+   "awards": 17,
+   "dollars": 4779295,
+   "std": 10,
+   "cont": 7,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2017-10",
+   "awards": 29,
+   "dollars": 2470413,
+   "std": 22,
+   "cont": 7,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2017-11",
+   "awards": 31,
+   "dollars": 2994012,
+   "std": 27,
+   "cont": 4,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2017-12",
+   "awards": 30,
+   "dollars": 1383358,
+   "std": 28,
+   "cont": 2,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2018-01",
+   "awards": 35,
+   "dollars": 6722184,
+   "std": 18,
+   "cont": 17,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2018-02",
+   "awards": 33,
+   "dollars": 3780912,
+   "std": 26,
+   "cont": 7,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2018-03",
+   "awards": 91,
+   "dollars": 14328808,
+   "std": 32,
+   "cont": 20,
+   "fell": 39,
+   "other": 0
+  },
+  {
+   "month": "2018-04",
+   "awards": 118,
+   "dollars": 25747179,
+   "std": 59,
+   "cont": 59,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2018-05",
+   "awards": 170,
+   "dollars": 54976141,
+   "std": 96,
+   "cont": 74,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2018-06",
+   "awards": 129,
+   "dollars": 34291486,
+   "std": 76,
+   "cont": 52,
+   "fell": 0,
+   "other": 1
+  },
+  {
+   "month": "2018-07",
+   "awards": 196,
+   "dollars": 38144617,
+   "std": 144,
+   "cont": 52,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2018-08",
+   "awards": 177,
+   "dollars": 31558019,
+   "std": 118,
+   "cont": 59,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2018-09",
+   "awards": 32,
+   "dollars": 9453094,
+   "std": 31,
+   "cont": 1,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2018-10",
+   "awards": 11,
+   "dollars": 1383721,
+   "std": 7,
+   "cont": 4,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2018-11",
+   "awards": 15,
+   "dollars": 1165489,
+   "std": 13,
+   "cont": 2,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2018-12",
+   "awards": 22,
+   "dollars": 1358256,
+   "std": 19,
+   "cont": 3,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2019-01",
+   "awards": 9,
+   "dollars": 2096766,
+   "std": 4,
+   "cont": 5,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2019-02",
+   "awards": 82,
+   "dollars": 14680568,
+   "std": 51,
+   "cont": 31,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2019-03",
+   "awards": 99,
+   "dollars": 17454788,
+   "std": 33,
+   "cont": 26,
+   "fell": 40,
+   "other": 0
+  },
+  {
+   "month": "2019-04",
+   "awards": 78,
+   "dollars": 12379447,
+   "std": 49,
+   "cont": 29,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2019-05",
+   "awards": 143,
+   "dollars": 44389785,
+   "std": 80,
+   "cont": 63,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2019-06",
+   "awards": 183,
+   "dollars": 44663859,
+   "std": 132,
+   "cont": 51,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2019-07",
+   "awards": 252,
+   "dollars": 53978595,
+   "std": 206,
+   "cont": 46,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2019-08",
+   "awards": 93,
+   "dollars": 21243381,
+   "std": 68,
+   "cont": 25,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2019-09",
+   "awards": 9,
+   "dollars": 957307,
+   "std": 5,
+   "cont": 4,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2019-10",
+   "awards": 27,
+   "dollars": 1968297,
+   "std": 19,
+   "cont": 8,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2019-11",
+   "awards": 21,
+   "dollars": 1427689,
+   "std": 15,
+   "cont": 6,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2019-12",
+   "awards": 48,
+   "dollars": 8133497,
+   "std": 31,
+   "cont": 17,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2020-01",
+   "awards": 70,
+   "dollars": 15409232,
+   "std": 40,
+   "cont": 30,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2020-02",
+   "awards": 38,
+   "dollars": 3431601,
+   "std": 30,
+   "cont": 8,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2020-03",
+   "awards": 181,
+   "dollars": 43460515,
+   "std": 92,
+   "cont": 51,
+   "fell": 38,
+   "other": 0
+  },
+  {
+   "month": "2020-04",
+   "awards": 110,
+   "dollars": 27770487,
+   "std": 65,
+   "cont": 45,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2020-05",
+   "awards": 98,
+   "dollars": 24968820,
+   "std": 69,
+   "cont": 29,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2020-06",
+   "awards": 135,
+   "dollars": 28439985,
+   "std": 93,
+   "cont": 42,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2020-07",
+   "awards": 159,
+   "dollars": 152742334,
+   "std": 117,
+   "cont": 42,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2020-08",
+   "awards": 103,
+   "dollars": 59534893,
+   "std": 72,
+   "cont": 31,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2020-09",
+   "awards": 14,
+   "dollars": 3472222,
+   "std": 8,
+   "cont": 6,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2020-10",
+   "awards": 8,
+   "dollars": 1121715,
+   "std": 6,
+   "cont": 2,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2020-11",
+   "awards": 8,
+   "dollars": 1219252,
+   "std": 4,
+   "cont": 4,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2020-12",
+   "awards": 3,
+   "dollars": 725121,
+   "std": 3,
+   "cont": 0,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2021-01",
+   "awards": 29,
+   "dollars": 9541332,
+   "std": 11,
+   "cont": 18,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2021-02",
+   "awards": 56,
+   "dollars": 19892144,
+   "std": 14,
+   "cont": 42,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2021-03",
+   "awards": 138,
+   "dollars": 32558592,
+   "std": 48,
+   "cont": 31,
+   "fell": 59,
+   "other": 0
+  },
+  {
+   "month": "2021-04",
+   "awards": 85,
+   "dollars": 25664397,
+   "std": 44,
+   "cont": 41,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2021-05",
+   "awards": 68,
+   "dollars": 19138102,
+   "std": 45,
+   "cont": 23,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2021-06",
+   "awards": 177,
+   "dollars": 45531078,
+   "std": 136,
+   "cont": 41,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2021-07",
+   "awards": 118,
+   "dollars": 33897443,
+   "std": 96,
+   "cont": 22,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2021-08",
+   "awards": 152,
+   "dollars": 47179770,
+   "std": 116,
+   "cont": 31,
+   "fell": 5,
+   "other": 0
+  },
+  {
+   "month": "2021-09",
+   "awards": 16,
+   "dollars": 4120751,
+   "std": 10,
+   "cont": 6,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2021-10",
+   "awards": 5,
+   "dollars": 1163483,
+   "std": 4,
+   "cont": 1,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2021-11",
+   "awards": 23,
+   "dollars": 4071433,
+   "std": 14,
+   "cont": 9,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2021-12",
+   "awards": 24,
+   "dollars": 7630224,
+   "std": 11,
+   "cont": 13,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2022-01",
+   "awards": 57,
+   "dollars": 20278880,
+   "std": 18,
+   "cont": 39,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2022-02",
+   "awards": 23,
+   "dollars": 3752170,
+   "std": 16,
+   "cont": 4,
+   "fell": 3,
+   "other": 0
+  },
+  {
+   "month": "2022-03",
+   "awards": 134,
+   "dollars": 26990129,
+   "std": 45,
+   "cont": 40,
+   "fell": 49,
+   "other": 0
+  },
+  {
+   "month": "2022-04",
+   "awards": 150,
+   "dollars": 42936305,
+   "std": 94,
+   "cont": 41,
+   "fell": 14,
+   "other": 1
+  },
+  {
+   "month": "2022-05",
+   "awards": 84,
+   "dollars": 24732441,
+   "std": 63,
+   "cont": 20,
+   "fell": 1,
+   "other": 0
+  },
+  {
+   "month": "2022-06",
+   "awards": 136,
+   "dollars": 37576648,
+   "std": 110,
+   "cont": 25,
+   "fell": 1,
+   "other": 0
+  },
+  {
+   "month": "2022-07",
+   "awards": 162,
+   "dollars": 37496809,
+   "std": 146,
+   "cont": 16,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2022-08",
+   "awards": 149,
+   "dollars": 38475624,
+   "std": 120,
+   "cont": 28,
+   "fell": 0,
+   "other": 1
+  },
+  {
+   "month": "2022-09",
+   "awards": 11,
+   "dollars": 2738950,
+   "std": 6,
+   "cont": 5,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2022-10",
+   "awards": 9,
+   "dollars": 1106490,
+   "std": 7,
+   "cont": 2,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2022-11",
+   "awards": 11,
+   "dollars": 1481180,
+   "std": 8,
+   "cont": 3,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2022-12",
+   "awards": 22,
+   "dollars": 4740010,
+   "std": 13,
+   "cont": 9,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2023-01",
+   "awards": 51,
+   "dollars": 16130987,
+   "std": 19,
+   "cont": 32,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2023-02",
+   "awards": 21,
+   "dollars": 3409221,
+   "std": 16,
+   "cont": 5,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2023-03",
+   "awards": 110,
+   "dollars": 31275046,
+   "std": 89,
+   "cont": 21,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2023-04",
+   "awards": 133,
+   "dollars": 30136591,
+   "std": 62,
+   "cont": 28,
+   "fell": 43,
+   "other": 0
+  },
+  {
+   "month": "2023-05",
+   "awards": 114,
+   "dollars": 38091612,
+   "std": 87,
+   "cont": 25,
+   "fell": 2,
+   "other": 0
+  },
+  {
+   "month": "2023-06",
+   "awards": 144,
+   "dollars": 35923803,
+   "std": 104,
+   "cont": 35,
+   "fell": 5,
+   "other": 0
+  },
+  {
+   "month": "2023-07",
+   "awards": 197,
+   "dollars": 48017669,
+   "std": 163,
+   "cont": 34,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2023-08",
+   "awards": 159,
+   "dollars": 39995133,
+   "std": 123,
+   "cont": 36,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2023-09",
+   "awards": 16,
+   "dollars": 26732882,
+   "std": 13,
+   "cont": 2,
+   "fell": 0,
+   "other": 1
+  },
+  {
+   "month": "2023-10",
+   "awards": 16,
+   "dollars": 3092908,
+   "std": 10,
+   "cont": 6,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2023-11",
+   "awards": 17,
+   "dollars": 3659015,
+   "std": 12,
+   "cont": 5,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2023-12",
+   "awards": 38,
+   "dollars": 4750255,
+   "std": 30,
+   "cont": 8,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2024-01",
+   "awards": 59,
+   "dollars": 13098524,
+   "std": 34,
+   "cont": 25,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2024-02",
+   "awards": 52,
+   "dollars": 11147993,
+   "std": 35,
+   "cont": 17,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2024-03",
+   "awards": 58,
+   "dollars": 14688439,
+   "std": 45,
+   "cont": 13,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2024-04",
+   "awards": 172,
+   "dollars": 42658047,
+   "std": 82,
+   "cont": 47,
+   "fell": 43,
+   "other": 0
+  },
+  {
+   "month": "2024-05",
+   "awards": 116,
+   "dollars": 27172416,
+   "std": 69,
+   "cont": 41,
+   "fell": 5,
+   "other": 1
+  },
+  {
+   "month": "2024-06",
+   "awards": 84,
+   "dollars": 19613295,
+   "std": 57,
+   "cont": 25,
+   "fell": 2,
+   "other": 0
+  },
+  {
+   "month": "2024-07",
+   "awards": 128,
+   "dollars": 29805175,
+   "std": 99,
+   "cont": 29,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2024-08",
+   "awards": 233,
+   "dollars": 62014033,
+   "std": 184,
+   "cont": 49,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2024-09",
+   "awards": 10,
+   "dollars": 1934445,
+   "std": 5,
+   "cont": 4,
+   "fell": 0,
+   "other": 1
+  },
+  {
+   "month": "2024-10",
+   "awards": 2,
+   "dollars": 399923,
+   "std": 1,
+   "cont": 1,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2024-11",
+   "awards": 10,
+   "dollars": 1055582,
+   "std": 8,
+   "cont": 2,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2024-12",
+   "awards": 14,
+   "dollars": 2730260,
+   "std": 12,
+   "cont": 2,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2025-01",
+   "awards": 19,
+   "dollars": 1861043,
+   "std": 17,
+   "cont": 2,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2025-02",
+   "awards": 56,
+   "dollars": 8200816,
+   "std": 43,
+   "cont": 13,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2025-03",
+   "awards": 57,
+   "dollars": 14886613,
+   "std": 10,
+   "cont": 14,
+   "fell": 33,
+   "other": 0
+  },
+  {
+   "month": "2025-04",
+   "awards": 23,
+   "dollars": 5208264,
+   "std": 12,
+   "cont": 5,
+   "fell": 6,
+   "other": 0
+  },
+  {
+   "month": "2025-05",
+   "awards": 49,
+   "dollars": 6688723,
+   "std": 41,
+   "cont": 7,
+   "fell": 1,
+   "other": 0
+  },
+  {
+   "month": "2025-06",
+   "awards": 163,
+   "dollars": 32039988,
+   "std": 153,
+   "cont": 10,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2025-07",
+   "awards": 238,
+   "dollars": 132624074,
+   "std": 222,
+   "cont": 13,
+   "fell": 3,
+   "other": 0
+  },
+  {
+   "month": "2025-08",
+   "awards": 245,
+   "dollars": 58010916,
+   "std": 240,
+   "cont": 5,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2025-09",
+   "awards": 14,
+   "dollars": 5762097,
+   "std": 9,
+   "cont": 5,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2025-10",
+   "awards": 0,
+   "dollars": 0,
+   "std": 0,
+   "cont": 0,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2025-11",
+   "awards": 9,
+   "dollars": 2174697,
+   "std": 8,
+   "cont": 1,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2025-12",
+   "awards": 10,
+   "dollars": 19197606,
+   "std": 7,
+   "cont": 3,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2026-01",
+   "awards": 11,
+   "dollars": 2928990,
+   "std": 8,
+   "cont": 3,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2026-02",
+   "awards": 21,
+   "dollars": 2587502,
+   "std": 18,
+   "cont": 3,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2026-03",
+   "awards": 41,
+   "dollars": 2808420,
+   "std": 39,
+   "cont": 2,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2026-04",
+   "awards": 41,
+   "dollars": 2489448,
+   "std": 38,
+   "cont": 3,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2026-05",
+   "awards": 111,
+   "dollars": 22426810,
+   "std": 77,
+   "cont": 8,
+   "fell": 26,
+   "other": 0
+  },
+  {
+   "month": "2026-06",
+   "awards": 81,
+   "dollars": 19225415,
+   "std": 67,
+   "cont": 13,
+   "fell": 1,
+   "other": 0
+  },
+  {
+   "month": "2026-07",
+   "awards": 163,
+   "dollars": 40823629,
+   "std": 153,
+   "cont": 10,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2026-08",
+   "awards": 68,
+   "dollars": 13365630,
+   "std": 68,
+   "cont": 0,
+   "fell": 0,
+   "other": 0
+  }
+ ],
+ "fiscalYears": [
+  {
+   "fy": 2015,
+   "partial": false,
+   "awards": 1005,
+   "dollars": 271933298,
+   "median": 166752,
+   "exTop3Dollars": 211330597,
+   "octJul": {
+    "awards": 725,
+    "dollars": 151285197,
+    "std": 407,
+    "cont": 278,
+    "fell": 40,
+    "other": 0
+   },
+   "top3": [
+    {
+     "id": "1440415",
+     "title": "Institute for Pure and Applied Mathematics",
+     "awardee": "University of California-Los Angeles",
+     "amount": 22550000
+    },
+    {
+     "id": "1440140",
+     "title": "Mathematical Sciences Research Institute (MSRI)",
+     "awardee": "Mathematical Sciences Research Institute",
+     "amount": 22550000
+    },
+    {
+     "id": "1439786",
+     "title": "Institute for Computational and Experimental Research in Mathematics",
+     "awardee": "Brown University",
+     "amount": 15502701
+    }
+   ]
+  },
+  {
+   "fy": 2016,
+   "partial": false,
+   "awards": 969,
+   "dollars": 200471715,
+   "median": 151048,
+   "exTop3Dollars": 191826727,
+   "octJul": {
+    "awards": 699,
+    "dollars": 147875912,
+    "std": 400,
+    "cont": 257,
+    "fell": 42,
+    "other": 0
+   },
+   "top3": [
+    {
+     "id": "1442386",
+     "title": "A Proposal of the Renewal of the Banff International Research Station for Mathematical Innovation and Discovery (BIRS)",
+     "awardee": "University of British Columbia",
+     "amount": 3865000
+    },
+    {
+     "id": "1547394",
+     "title": "RTG: Interdisciplinary Training in Quantitative Biological Modeling",
+     "awardee": "Northwestern University",
+     "amount": 2409659
+    },
+    {
+     "id": "1547145",
+     "title": "RTG: Enhancing American Research Leadership in Geometry",
+     "awardee": "SUNY at Stony Brook",
+     "amount": 2370329
+    }
+   ]
+  },
+  {
+   "fy": 2017,
+   "partial": false,
+   "awards": 945,
+   "dollars": 211547427,
+   "median": 158494,
+   "exTop3Dollars": 186461436,
+   "octJul": {
+    "awards": 775,
+    "dollars": 180173415,
+    "std": 469,
+    "cont": 262,
+    "fell": 42,
+    "other": 2
+   },
+   "top3": [
+    {
+     "id": "1638521",
+     "title": "Statistical and Applied Mathematical Sciences Institute",
+     "awardee": "University of North Carolina at Chapel Hill",
+     "amount": 9291999
+    },
+    {
+     "id": "1638352",
+     "title": "Research in Mathematics",
+     "awardee": "Institute For Advanced Study",
+     "amount": 7998750
+    },
+    {
+     "id": "1638535",
+     "title": "American Institute of Mathematics Research Conference Center: A Model for Collaboration",
+     "awardee": "American Institute of Mathematics",
+     "amount": 7795242
+    }
+   ]
+  },
+  {
+   "fy": 2018,
+   "partial": false,
+   "awards": 1071,
+   "dollars": 225850223,
+   "median": 150100,
+   "exTop3Dollars": 210850223,
+   "octJul": {
+    "awards": 862,
+    "dollars": 184839110,
+    "std": 528,
+    "cont": 294,
+    "fell": 39,
+    "other": 1
+   },
+   "top3": [
+    {
+     "id": "1764269",
+     "title": "NSF-Simons Center for Mathematical and Statistical Analysis of Biology",
+     "awardee": "Harvard University",
+     "amount": 5000000
+    },
+    {
+     "id": "1763272",
+     "title": "NSF-Simons Center for Multiscale Cell Fate Research",
+     "awardee": "University of California-Irvine",
+     "amount": 5000000
+    },
+    {
+     "id": "1764421",
+     "title": "NSF-Simons Center for Quantitative Biology",
+     "awardee": "Northwestern University",
+     "amount": 5000000
+    }
+   ]
+  },
+  {
+   "fy": 2019,
+   "partial": false,
+   "awards": 996,
+   "dollars": 215751962,
+   "median": 173949,
+   "exTop3Dollars": 208257805,
+   "octJul": {
+    "awards": 894,
+    "dollars": 193551274,
+    "std": 594,
+    "cont": 260,
+    "fell": 40,
+    "other": 0
+   },
+   "top3": [
+    {
+     "id": "1840234",
+     "title": "RTG: Number Theory and Representation Theory at the University of Michigan",
+     "awardee": "Regents of the University of Michigan - Ann Arbor",
+     "amount": 2500000
+    },
+    {
+     "id": "1839968",
+     "title": "RTG: Geometry and Topology at the University of Virginia",
+     "awardee": "University of Virginia Main Campus",
+     "amount": 2498237
+    },
+    {
+     "id": "1840314",
+     "title": "RTG: Analysis of Partial Differential Equations",
+     "awardee": "University of Texas at Austin",
+     "amount": 2495920
+    }
+   ]
+  },
+  {
+   "fy": 2020,
+   "partial": false,
+   "awards": 1004,
+   "dollars": 370759572,
+   "median": 186805,
+   "exTop3Dollars": 297098952,
+   "octJul": {
+    "awards": 887,
+    "dollars": 307752457,
+    "std": 571,
+    "cont": 278,
+    "fell": 38,
+    "other": 0
+   },
+   "top3": [
+    {
+     "id": "1928930",
+     "title": "Mathematical Sciences Research Institute (MSRI)",
+     "awardee": "Mathematical Sciences Research Institute",
+     "amount": 25000000
+    },
+    {
+     "id": "1925919",
+     "title": "Institute for Pure and Applied Mathematics",
+     "awardee": "University of California-Los Angeles",
+     "amount": 25000000
+    },
+    {
+     "id": "1929284",
+     "title": "Institute for Computational and Experimental Research in Mathematics",
+     "awardee": "Brown University",
+     "amount": 23660620
+    }
+   ]
+  },
+  {
+   "fy": 2021,
+   "partial": false,
+   "awards": 858,
+   "dollars": 240589697,
+   "median": 240462,
+   "exTop3Dollars": 233446021,
+   "octJul": {
+    "awards": 690,
+    "dollars": 189289176,
+    "std": 407,
+    "cont": 224,
+    "fell": 59,
+    "other": 0
+   },
+   "top3": [
+    {
+     "id": "2037569",
+     "title": "RTG: Algebra, Geometry, and Topology at UIC",
+     "awardee": "University of Illinois at Chicago",
+     "amount": 2499815
+    },
+    {
+     "id": "2038056",
+     "title": "RTG: Training Tomorrow's Workforce in Analysis and Applications",
+     "awardee": "Duke University",
+     "amount": 2383093
+    },
+    {
+     "id": "2039316",
+     "title": "RTG: Combinatorics, Geometry, Representation Theory, and Topology at University of Oregon",
+     "awardee": "University of Oregon Eugene",
+     "amount": 2260768
+    }
+   ]
+  },
+  {
+   "fy": 2022,
+   "partial": false,
+   "awards": 958,
+   "dollars": 247843096,
+   "median": 219928,
+   "exTop3Dollars": 240353232,
+   "octJul": {
+    "awards": 798,
+    "dollars": 206628522,
+    "std": 521,
+    "cont": 208,
+    "fell": 68,
+    "other": 1
+   },
+   "top3": [
+    {
+     "id": "2136090",
+     "title": "RTG: Geometry and Topology at UCLA",
+     "awardee": "University of California-Los Angeles",
+     "amount": 2500000
+    },
+    {
+     "id": "2136198",
+     "title": "RTG: Optimization and Inversion for the 21st Century Workforce",
+     "awardee": "University of Utah",
+     "amount": 2498692
+    },
+    {
+     "id": "2136217",
+     "title": "RTG: Dynamics: Classical, Modern, and Quantum",
+     "awardee": "Northwestern University at Chicago",
+     "amount": 2491172
+    }
+   ]
+  },
+  {
+   "fy": 2023,
+   "partial": false,
+   "awards": 987,
+   "dollars": 277040624,
+   "median": 218952,
+   "exTop3Dollars": 246535784,
+   "octJul": {
+    "awards": 812,
+    "dollars": 210312609,
+    "std": 568,
+    "cont": 194,
+    "fell": 50,
+    "other": 0
+   },
+   "top3": [
+    {
+     "id": "2235451",
+     "title": "NSF-Simons National Institute for Theory and Mathematics in Biology",
+     "awardee": "Northwestern University at Chicago",
+     "amount": 23250000
+    },
+    {
+     "id": "2201974",
+     "title": "Conference: Banff International Research Station",
+     "awardee": "University of British Columbia",
+     "amount": 4466668
+    },
+    {
+     "id": "2230900",
+     "title": "RTG: Geometry, Group Actions, and Dynamics at Wisconsin",
+     "awardee": "University of Wisconsin-Madison",
+     "amount": 2788172
+    }
+   ]
+  },
+  {
+   "fy": 2024,
+   "partial": false,
+   "awards": 983,
+   "dollars": 233634545,
+   "median": 207142,
+   "exTop3Dollars": 226418396,
+   "octJul": {
+    "awards": 740,
+    "dollars": 169686067,
+    "std": 473,
+    "cont": 216,
+    "fell": 50,
+    "other": 1
+   },
+   "top3": [
+    {
+     "id": "2342252",
+     "title": "RTG: Geometry and Topology",
+     "awardee": "University of Georgia",
+     "amount": 2497014
+    },
+    {
+     "id": "2342225",
+     "title": "RTG: Numbers, Geometry, and Symmetry at Berkeley",
+     "awardee": "University of California-Berkeley",
+     "amount": 2494135
+    },
+    {
+     "id": "2341150",
+     "title": "Park City Mathematics Institute",
+     "awardee": "Institute For Advanced Study",
+     "amount": 2225000
+    }
+   ]
+  },
+  {
+   "fy": 2025,
+   "partial": false,
+   "awards": 890,
+   "dollars": 269468299,
+   "median": 199625,
+   "exTop3Dollars": 223233301,
+   "octJul": {
+    "awards": 631,
+    "dollars": 205695286,
+    "std": 519,
+    "cont": 69,
+    "fell": 43,
+    "other": 0
+   },
+   "top3": [
+    {
+     "id": "2424139",
+     "title": "SLMath: Opening Doors to Mathematics",
+     "awardee": "Mathematical Sciences Research Institute",
+     "amount": 17000000
+    },
+    {
+     "id": "2424556",
+     "title": "Institute for Computational and Experimental Research in Mathematics",
+     "awardee": "Brown University",
+     "amount": 16500000
+    },
+    {
+     "id": "2425344",
+     "title": "American Institute of Mathematics Research Conference Center: A Model for Collaboration",
+     "awardee": "American Institute of Mathematics",
+     "amount": 12734998
+    }
+   ]
+  },
+  {
+   "fy": 2026,
+   "partial": true,
+   "awards": 556,
+   "dollars": 128028147,
+   "median": 190000,
+   "exTop3Dollars": 108748146,
+   "octJul": {
+    "awards": 488,
+    "dollars": 114662517,
+    "std": 415,
+    "cont": 46,
+    "fell": 27,
+    "other": 0
+   },
+   "top3": [
+    {
+     "id": "2422832",
+     "title": "Institute for Pure and Applied Mathematics",
+     "awardee": "University of California-Los Angeles",
+     "amount": 17000000
+    },
+    {
+     "id": "2502536",
+     "title": "MFAI: Data for and from Language Models: Information, Dynamics, Architectures, and Optimization",
+     "awardee": "University of California-Los Angeles",
+     "amount": 1200000
+    },
+    {
+     "id": "2617441",
+     "title": "AIMing: Scalable Collaborative Human-AI Reasoning in Mathematics",
+     "awardee": "University of California-Los Angeles",
+     "amount": 1080001
+    }
+   ]
+  }
+ ]
+}
