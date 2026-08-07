@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NSF DMS funding dashboard</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f9f9f7; --surface: #fcfcfb;
+    --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+    --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,.10);
+    --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a;
+    --good: #006300; --bad: #b33636;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --page: #0d0d0d; --surface: #1a1a19;
+      --ink: #ffffff; --ink-2: #c3c2b7; --muted: #898781;
+      --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,.10);
+      --s1: #3987e5; --s2: #d95926; --s3: #199e70;
+      --good: #0ca30c; --bad: #e66767;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19;
+    --ink: #ffffff; --ink-2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,.10);
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70;
+    --good: #0ca30c; --bad: #e66767;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--page); color: var(--ink);
+    font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+    padding: 32px 16px 64px;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; }
+  h1 { font-size: 26px; font-weight: 650; letter-spacing: -.01em; }
+  .sub { color: var(--ink-2); margin-top: 4px; max-width: 72ch; }
+  .stamp { color: var(--muted); font-size: 13px; margin-top: 6px; }
+  .banner {
+    margin-top: 16px; padding: 10px 14px; border: 1px solid var(--border);
+    border-left: 3px solid var(--s2); border-radius: 6px; background: var(--surface);
+    color: var(--ink-2); font-size: 13.5px;
+  }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin-top: 24px; }
+  .tile { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; }
+  .tile .label { color: var(--ink-2); font-size: 13px; }
+  .tile .value { font-size: 30px; font-weight: 600; margin-top: 2px; }
+  .tile .delta { font-size: 13px; margin-top: 2px; font-weight: 550; }
+  .tile .delta span { color: var(--muted); font-weight: 400; }
+  .up { color: var(--good); } .down { color: var(--bad); }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px 20px 14px; margin-top: 20px; }
+  .card h2 { font-size: 16px; font-weight: 620; }
+  .card .note { color: var(--ink-2); font-size: 13px; margin-top: 2px; max-width: 78ch; }
+  .plot { position: relative; margin-top: 12px; }
+  .plot svg { display: block; width: 100%; height: auto; }
+  .legend { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 12px; font-size: 13px; color: var(--ink-2); align-items: center; }
+  .legend .key { display: inline-flex; align-items: center; gap: 6px; }
+  .legend .swatch { width: 12px; height: 12px; border-radius: 3px; }
+  .legend .stroke { width: 16px; height: 2.5px; border-radius: 2px; }
+  .tip {
+    position: absolute; pointer-events: none; display: none; z-index: 5;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
+    padding: 8px 10px; font-size: 13px; box-shadow: 0 2px 10px rgba(0,0,0,.12);
+    min-width: 150px;
+  }
+  .tip .t-head { color: var(--ink-2); margin-bottom: 4px; }
+  .tip .t-row { display: flex; align-items: baseline; gap: 7px; }
+  .tip .t-key { width: 14px; height: 2.5px; border-radius: 2px; flex: none; align-self: center; }
+  .tip .t-val { font-weight: 620; }
+  .tip .t-lab { color: var(--ink-2); }
+  details { margin-top: 8px; }
+  summary { color: var(--muted); font-size: 13px; cursor: pointer; user-select: none; }
+  table { border-collapse: collapse; margin-top: 8px; font-size: 13px; width: 100%; }
+  th { text-align: left; color: var(--ink-2); font-weight: 550; }
+  th, td { padding: 4px 12px 4px 0; border-bottom: 1px solid var(--grid); }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .notes { margin-top: 28px; color: var(--ink-2); font-size: 13.5px; max-width: 82ch; }
+  .notes h2 { font-size: 15px; color: var(--ink); margin-bottom: 6px; }
+  .notes li { margin: 6px 0 6px 18px; }
+  a { color: var(--s1); }
+  .axis-text { fill: var(--muted); font-size: 11.5px; }
+  .dlabel { fill: var(--ink-2); font-size: 12px; font-weight: 550; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>NSF DMS funding dashboard</h1>
+  <p class="sub">New awards made by the NSF Division of Mathematical Sciences, pulled from the
+    <a href="https://www.research.gov/common/webapi/awardapisearch-v1.htm">NSF Award Search API</a>
+    (division code 03040000), counted by original award date. Dollar figures are intended totals
+    (<code>estimatedTotalAmt</code>), not outlays.</p>
+  <p class="stamp" id="stamp">Loading data&hellip;</p>
+  <div id="app"></div>
+
+  <div class="notes">
+    <h2>How to read this</h2>
+    <ul>
+      <li><strong>Oct&ndash;Jul basis.</strong> Fiscal years run Oct&ndash;Sep. Comparisons use the
+        Oct&ndash;Jul window so a fiscal year in progress can be compared like-for-like with
+        completed years, without the heavy August&ndash;September award season distorting it.</li>
+      <li><strong>The dollar series is outlier-driven.</strong> Institute-scale awards (e.g. the
+        mathematical-sciences institutes renewal cycle) can be 15&ndash;20% of a year's dollars in
+        the top three awards alone, so the stacked dollars chart separates the top&nbsp;3 from the
+        rest &mdash; year-over-year swings in the total largely track the institute cycle, not the
+        research-grant base.</li>
+      <li><strong>Standard vs continuing grants.</strong> A shift in NSF practice from continuing
+        to standard grants lowers the new-continuing-award count without necessarily cutting
+        funding &mdash; interpret the mechanism chart before reading the headline count as a cut.</li>
+      <li><strong>Amendment bias.</strong> Intended totals are read as currently stated, including
+        later upward amendments. Older cohorts have had longer to accumulate them, which biases
+        recent years low by an unmeasured amount.</li>
+      <li><strong>Pagination fault, handled.</strong> The NSF API silently drops ~5% of records on
+        large paginated queries. The
+        <a href="https://github.com/jpwolfson/fed-funding-dashboard/blob/main/scripts/pull_nsf_dms.py">pull script</a>
+        keeps every query window small (bisecting as needed) and cross-checks against an
+        independently verified baseline. Data refreshes weekly via GitHub Actions; the full
+        award-level dataset is in <a href="data/awards.csv">awards.csv</a>.</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+"use strict";
+const BASE_FROM = 2015, BASE_TO = 2024; // fixed comparison baseline: FY15-24 average
+const $app = document.getElementById("app");
+
+const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+const el = (tag, attrs = {}, ...kids) => {
+  const ns = ["svg","g","path","rect","line","circle","text"].includes(tag);
+  const n = ns ? document.createElementNS("http://www.w3.org/2000/svg", tag) : document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === "text") n.textContent = v; else n.setAttribute(k, v);
+  }
+  for (const kid of kids) if (kid) n.append(kid);
+  return n;
+};
+const fmtN = v => v.toLocaleString("en-US");
+const fmtM = v => "$" + (v / 1e6 >= 100 ? (v / 1e6).toFixed(0) : (v / 1e6).toFixed(1)) + "M";
+const fmtMoney = v => v >= 1e6 ? fmtM(v) : "$" + Math.round(v / 1e3) + "K";
+const fmtPct = v => (v > 0 ? "+" : "−") + Math.abs(v * 100).toFixed(1) + "%";
+const monthName = m => new Date(m + "-15").toLocaleString("en-US", { month: "short", year: "numeric" });
+
+function niceTicks(max) {
+  const raw = max / 4;
+  const mag = Math.pow(10, Math.floor(Math.log10(raw)));
+  const step = [1, 2, 2.5, 5, 10].map(s => s * mag).find(s => s >= raw);
+  const out = [0];
+  while (out.at(-1) < max) out.push(out.at(-1) + step);
+  return out;
+}
+
+// ---------- shared chart scaffolding ----------
+function makeCard(title, note) {
+  const card = el("div", { class: "card" });
+  card.append(el("h2", { text: title }));
+  if (note) card.append(el("p", { class: "note", text: note }));
+  const plot = el("div", { class: "plot" });
+  const tip = el("div", { class: "tip" });
+  plot.append(tip);
+  card.append(plot);
+  $app.append(card);
+  return { card, plot, tip };
+}
+
+function frame(plot, H, padL, padR) {
+  const W = Math.max(560, Math.min(1000, plot.clientWidth || 1000));
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" });
+  plot.append(svg);
+  return { svg, W, H, L: padL, R: W - padR, T: 14, B: H - 26 };
+}
+
+function yAxis(svg, f, max, fmt) {
+  for (const v of niceTicks(max)) {
+    const y = f.B - (v / max) * (f.B - f.T);
+    svg.append(el("line", { x1: f.L, x2: f.R, y1: y, y2: y, stroke: v === 0 ? css("--axis") : css("--grid"), "stroke-width": 1 }));
+    svg.append(el("text", { class: "axis-text", x: f.L - 8, y: y + 4, "text-anchor": "end", text: fmt(v) }));
+  }
+}
+
+function showTip(tip, plot, xPix, yPix, head, rows) {
+  tip.replaceChildren(el("div", { class: "t-head", text: head }));
+  for (const r of rows) {
+    const row = el("div", { class: "t-row" });
+    if (r.color) row.append(el("span", { class: "t-key", style: `background:${r.color}` }));
+    row.append(el("span", { class: "t-val", text: r.val }), el("span", { class: "t-lab", text: r.lab }));
+    tip.append(row);
+  }
+  tip.style.display = "block";
+  const pw = plot.clientWidth, tw = tip.offsetWidth;
+  tip.style.left = Math.min(Math.max(4, xPix - tw / 2), pw - tw - 4) + "px";
+  tip.style.top = Math.max(0, yPix - tip.offsetHeight - 14) + "px";
+}
+
+function addTable(card, headers, rows) {
+  const d = el("details");
+  d.append(el("summary", { text: "View as table" }));
+  const t = el("table");
+  const trh = el("tr");
+  headers.forEach((h, i) => trh.append(el("th", { class: i > 0 ? "num" : "", text: h })));
+  t.append(trh);
+  for (const r of rows) {
+    const tr = el("tr");
+    r.forEach((c, i) => tr.append(el("td", { class: i > 0 ? "num" : "", text: c })));
+    t.append(tr);
+  }
+  d.append(t);
+  card.append(d);
+}
+
+function legend(card, items, kind) {
+  const lg = el("div", { class: "legend" });
+  for (const it of items) {
+    lg.append(el("span", { class: "key" },
+      el("span", { class: kind === "line" ? "stroke" : "swatch", style: `background:${it.color}` }),
+      document.createTextNode(it.label)));
+  }
+  card.append(lg);
+}
+
+// ---------- tiles ----------
+function tiles(data) {
+  const cur = data.fiscalYears.find(f => f.fy === data.currentFY);
+  const base = data.fiscalYears.filter(f => f.fy >= BASE_FROM && f.fy <= BASE_TO);
+  if (!cur || !base.length) return;
+  const avg = key => base.reduce((s, f) => s + f.octJul[key], 0) / base.length;
+  const gen = new Date(data.generated + "T12:00:00");
+  const windowDone = gen >= new Date(data.currentFY, 7, 1); // Oct-Jul window complete once Aug arrives
+  const suffix = windowDone ? "" : " to date";
+  const row = el("div", { class: "tiles" });
+  const specs = [
+    { label: `New awards, FY${cur.fy} Oct–Jul${suffix}`, val: fmtN(cur.octJul.awards), a: cur.octJul.awards, b: avg("awards") },
+    { label: `Intended $, FY${cur.fy} Oct–Jul${suffix}`, val: fmtM(cur.octJul.dollars), a: cur.octJul.dollars, b: avg("dollars") },
+    { label: `Standard grants, Oct–Jul${suffix}`, val: fmtN(cur.octJul.std), a: cur.octJul.std, b: avg("std") },
+    { label: `Continuing grants, Oct–Jul${suffix}`, val: fmtN(cur.octJul.cont), a: cur.octJul.cont, b: avg("cont") },
+  ];
+  for (const s of specs) {
+    const pct = (s.a - s.b) / s.b;
+    const tile = el("div", { class: "tile" });
+    tile.append(el("div", { class: "label", text: s.label }), el("div", { class: "value", text: s.val }));
+    const d = el("div", { class: `delta ${pct >= 0 ? "up" : "down"}` });
+    d.append(document.createTextNode(fmtPct(pct) + " "), el("span", { text: `vs FY${String(BASE_FROM).slice(2)}–${String(BASE_TO).slice(2)} avg` }));
+    tile.append(d);
+    row.append(tile);
+  }
+  $app.append(row);
+}
+
+// ---------- chart 1: monthly line ----------
+function monthlyChart(data) {
+  const { card, plot, tip } = makeCard("New awards per month",
+    "Every month since October 2014. Months with zero awards are shown as zero.");
+  const pts = data.monthly;
+  function render() {
+    plot.querySelector("svg")?.remove();
+    const f = frame(plot, 300, 46, 14);
+    const max = niceTicks(Math.max(...pts.map(p => p.awards))).at(-1);
+    yAxis(f.svg, f, max, fmtN);
+    const x = i => f.L + (i / (pts.length - 1)) * (f.R - f.L);
+    const y = v => f.B - (v / max) * (f.B - f.T);
+    pts.forEach((p, i) => {
+      if (p.month.endsWith("-01") && p.month.slice(0, 4) % 2 === 1)
+        f.svg.append(el("text", { class: "axis-text", x: x(i), y: f.B + 18, "text-anchor": "middle", text: p.month.slice(0, 4) }));
+    });
+    const line = pts.map((p, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(p.awards).toFixed(1)}`).join("");
+    f.svg.append(el("path", { d: `${line}L${f.R},${f.B}L${f.L},${f.B}Z`, fill: css("--s1"), opacity: .1 }));
+    f.svg.append(el("path", { d: line, fill: "none", stroke: css("--s1"), "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }));
+    const last = pts.length - 1;
+    f.svg.append(el("circle", { cx: x(last), cy: y(pts[last].awards), r: 4.5, fill: css("--s1"), stroke: css("--surface"), "stroke-width": 2 }));
+    f.svg.append(el("text", { class: "dlabel", x: x(last) - 6, y: y(pts[last].awards) - 10, "text-anchor": "end", text: fmtN(pts[last].awards) }));
+    const cross = el("line", { y1: f.T, y2: f.B, stroke: css("--axis"), "stroke-width": 1, visibility: "hidden" });
+    const dot = el("circle", { r: 4.5, fill: css("--s1"), stroke: css("--surface"), "stroke-width": 2, visibility: "hidden" });
+    f.svg.append(cross, dot);
+    const scale = () => plot.clientWidth / f.W;
+    f.svg.addEventListener("pointermove", e => {
+      const r = f.svg.getBoundingClientRect();
+      const vx = (e.clientX - r.left) / scale();
+      const i = Math.max(0, Math.min(last, Math.round((vx - f.L) / (f.R - f.L) * last)));
+      const p = pts[i];
+      cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.setAttribute("visibility", "visible");
+      dot.setAttribute("cx", x(i)); dot.setAttribute("cy", y(p.awards)); dot.setAttribute("visibility", "visible");
+      showTip(tip, plot, x(i) * scale(), y(p.awards) * scale(), monthName(p.month), [
+        { color: css("--s1"), val: fmtN(p.awards), lab: "new awards" },
+        { val: fmtMoney(p.dollars), lab: "intended" },
+      ]);
+    });
+    f.svg.addEventListener("pointerleave", () => { tip.style.display = "none"; cross.setAttribute("visibility", "hidden"); dot.setAttribute("visibility", "hidden"); });
+  }
+  render();
+  addTable(card, ["Month", "New awards", "Intended $"],
+    pts.map(p => [monthName(p.month), fmtN(p.awards), fmtMoney(p.dollars)]));
+  return render;
+}
+
+// ---------- chart 2: FY awards columns ----------
+function fyAwardsChart(data, windowDone) {
+  const { card, plot, tip } = makeCard("New awards by fiscal year (Oct–Jul)",
+    "October through July of each fiscal year, so the current year compares like-for-like. Hairline: FY15–24 average.");
+  const rows = data.fiscalYears;
+  const base = rows.filter(r => r.fy >= BASE_FROM && r.fy <= BASE_TO);
+  const avg = base.reduce((s, r) => s + r.octJul.awards, 0) / base.length;
+  function render() {
+    plot.querySelector("svg")?.remove();
+    const f = frame(plot, 300, 46, 14);
+    const max = niceTicks(Math.max(...rows.map(r => r.octJul.awards))).at(-1);
+    yAxis(f.svg, f, max, fmtN);
+    const band = (f.R - f.L) / rows.length;
+    const bw = Math.min(24, band - 8);
+    const y = v => f.B - (v / max) * (f.B - f.T);
+    const ay = y(avg);
+    f.svg.append(el("line", { x1: f.L, x2: f.R, y1: ay, y2: ay, stroke: css("--axis"), "stroke-width": 1 }));
+    f.svg.append(el("text", { class: "axis-text", x: f.R, y: ay - 5, "text-anchor": "end", text: "FY15–24 avg " + Math.round(avg) }));
+    rows.forEach((r, i) => {
+      const cx = f.L + band * (i + .5);
+      const h = Math.max(2, (r.octJul.awards / max) * (f.B - f.T));
+      const partial = r.fy === data.currentFY && !windowDone;
+      const bar = el("path", {
+        d: `M${cx - bw / 2},${f.B}V${f.B - h + 4}Q${cx - bw / 2},${f.B - h} ${cx - bw / 2 + 4},${f.B - h}H${cx + bw / 2 - 4}Q${cx + bw / 2},${f.B - h} ${cx + bw / 2},${f.B - h + 4}V${f.B}Z`,
+        fill: css("--s1"), opacity: partial ? .5 : 1,
+      });
+      f.svg.append(bar);
+      f.svg.append(el("text", { class: "axis-text", x: cx, y: f.B + 18, "text-anchor": "middle", text: "'" + String(r.fy).slice(2) + (partial ? "*" : "") }));
+      if (i === rows.length - 1 || r.fy === 2025)
+        f.svg.append(el("text", { class: "dlabel", x: cx, y: f.B - h - 6, "text-anchor": "middle", text: fmtN(r.octJul.awards) }));
+      const hit = el("rect", { x: cx - band / 2, y: f.T, width: band, height: f.B - f.T, fill: "transparent" });
+      const scale = () => plot.clientWidth / f.W;
+      const over = () => {
+        bar.setAttribute("opacity", partial ? .7 : .8);
+        showTip(tip, plot, cx * scale(), (f.B - h) * scale(), `FY${r.fy}${partial ? " (to date)" : ""}`, [
+          { color: css("--s1"), val: fmtN(r.octJul.awards), lab: "awards Oct–Jul" },
+          { val: fmtN(r.awards), lab: r.partial ? "awards FY to date" : "awards full FY" },
+          { val: fmtPct((r.octJul.awards - avg) / avg), lab: "vs FY15–24 avg" },
+        ]);
+      };
+      hit.addEventListener("pointermove", over);
+      hit.addEventListener("pointerleave", () => { bar.setAttribute("opacity", partial ? .5 : 1); tip.style.display = "none"; });
+      f.svg.append(hit);
+    });
+  }
+  render();
+  addTable(card, ["Fiscal year", "Awards Oct–Jul", "Awards full FY", "vs FY15–24 avg"],
+    rows.map(r => [`FY${r.fy}${r.partial ? " (to date)" : ""}`, fmtN(r.octJul.awards),
+      fmtN(r.awards), fmtPct((r.octJul.awards - avg) / avg)]));
+  return render;
+}
+
+// ---------- chart 3: mechanism lines ----------
+function mechanismChart(data) {
+  const { card, plot, tip } = makeCard("New awards by mechanism (Oct–Jul)",
+    "The FY2025 decline is concentrated in new continuing grants; standard-grant volume held until FY2026. A policy shift from continuing to standard grants would look identical to a cut in this chart — see notes.");
+  const rows = data.fiscalYears;
+  const series = [
+    { key: "std", label: "Standard grants", v: "--s1" },
+    { key: "cont", label: "Continuing grants", v: "--s2" },
+    { key: "fell", label: "Fellowships", v: "--s3" },
+  ];
+  function render() {
+    plot.querySelector("svg")?.remove();
+    const f = frame(plot, 300, 46, 118);
+    const max = niceTicks(Math.max(...rows.map(r => r.octJul.std))).at(-1);
+    yAxis(f.svg, f, max, fmtN);
+    const x = i => f.L + (i / (rows.length - 1)) * (f.R - f.L);
+    const y = v => f.B - (v / max) * (f.B - f.T);
+    rows.forEach((r, i) => f.svg.append(el("text", { class: "axis-text", x: x(i), y: f.B + 18, "text-anchor": "middle", text: "'" + String(r.fy).slice(2) })));
+    const endYs = [];
+    for (const s of series) {
+      const line = rows.map((r, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(r.octJul[s.key]).toFixed(1)}`).join("");
+      f.svg.append(el("path", { d: line, fill: "none", stroke: css(s.v), "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }));
+      const last = rows.at(-1).octJul[s.key];
+      f.svg.append(el("circle", { cx: x(rows.length - 1), cy: y(last), r: 4.5, fill: css(s.v), stroke: css("--surface"), "stroke-width": 2 }));
+      let ly = y(last) + 4;
+      while (endYs.some(v => Math.abs(v - ly) < 14)) ly += 14;
+      endYs.push(ly);
+      f.svg.append(el("text", { class: "dlabel", x: x(rows.length - 1) + 10, y: ly, text: `${last} ${s.label.split(" ")[0].toLowerCase()}` }));
+    }
+    const cross = el("line", { y1: f.T, y2: f.B, stroke: css("--axis"), "stroke-width": 1, visibility: "hidden" });
+    f.svg.append(cross);
+    const scale = () => plot.clientWidth / f.W;
+    f.svg.addEventListener("pointermove", e => {
+      const r0 = f.svg.getBoundingClientRect();
+      const vx = (e.clientX - r0.left) / scale();
+      const i = Math.max(0, Math.min(rows.length - 1, Math.round((vx - f.L) / (f.R - f.L) * (rows.length - 1))));
+      const r = rows[i];
+      cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.setAttribute("visibility", "visible");
+      showTip(tip, plot, x(i) * scale(), f.T * scale() + 40, `FY${r.fy} Oct–Jul`,
+        series.map(s => ({ color: css(s.v), val: fmtN(r.octJul[s.key]), lab: s.label.toLowerCase() })));
+    });
+    f.svg.addEventListener("pointerleave", () => { tip.style.display = "none"; cross.setAttribute("visibility", "hidden"); });
+  }
+  render();
+  legend(card, series.map(s => ({ label: s.label, color: css(s.v) })), "line");
+  addTable(card, ["Fiscal year", "Standard", "Continuing", "Fellowships", "Other"],
+    rows.map(r => [`FY${r.fy}`, fmtN(r.octJul.std), fmtN(r.octJul.cont), fmtN(r.octJul.fell), fmtN(r.octJul.other)]));
+  return render;
+}
+
+// ---------- chart 4: dollars stacked ----------
+function dollarsChart(data) {
+  const { card, plot, tip } = makeCard("Intended dollars by fiscal year",
+    "Full fiscal years; the top-3 awards are split out because institute-scale awards drive most year-over-year swings in the total.");
+  const rows = data.fiscalYears;
+  function render() {
+    plot.querySelector("svg")?.remove();
+    const f = frame(plot, 300, 56, 14);
+    const max = niceTicks(Math.max(...rows.map(r => r.dollars))).at(-1);
+    yAxis(f.svg, f, max, v => "$" + Math.round(v / 1e6) + "M");
+    const band = (f.R - f.L) / rows.length;
+    const bw = Math.min(24, band - 8);
+    const hOf = v => (v / max) * (f.B - f.T);
+    rows.forEach((r, i) => {
+      const cx = f.L + band * (i + .5);
+      const partial = r.fy === data.currentFY;
+      const hBase = hOf(r.exTop3Dollars), hTop = hOf(r.dollars - r.exTop3Dollars);
+      const op = partial ? .5 : 1;
+      const seg1 = el("rect", { x: cx - bw / 2, y: f.B - hBase, width: bw, height: hBase, fill: css("--s1"), opacity: op });
+      const topY = f.B - hBase - 2 - hTop;
+      const seg2 = el("path", {
+        d: `M${cx - bw / 2},${f.B - hBase - 2}V${topY + 4}Q${cx - bw / 2},${topY} ${cx - bw / 2 + 4},${topY}H${cx + bw / 2 - 4}Q${cx + bw / 2},${topY} ${cx + bw / 2},${topY + 4}V${f.B - hBase - 2}Z`,
+        fill: css("--s2"), opacity: op,
+      });
+      f.svg.append(seg1, seg2);
+      f.svg.append(el("text", { class: "axis-text", x: cx, y: f.B + 18, "text-anchor": "middle", text: "'" + String(r.fy).slice(2) + (partial ? "*" : "") }));
+      const hit = el("rect", { x: cx - band / 2, y: f.T, width: band, height: f.B - f.T, fill: "transparent" });
+      const scale = () => plot.clientWidth / f.W;
+      hit.addEventListener("pointermove", () => {
+        seg1.setAttribute("opacity", Math.min(1, op + .2)); seg2.setAttribute("opacity", Math.min(1, op + .2));
+        showTip(tip, plot, cx * scale(), topY * scale(), `FY${r.fy}${partial ? " (to date)" : ""}`, [
+          { val: fmtM(r.dollars), lab: "total intended" },
+          { color: css("--s2"), val: fmtM(r.dollars - r.exTop3Dollars), lab: "top 3 awards" },
+          { color: css("--s1"), val: fmtM(r.exTop3Dollars), lab: "all other awards" },
+          { val: fmtMoney(r.median), lab: "median award" },
+        ]);
+      });
+      hit.addEventListener("pointerleave", () => { seg1.setAttribute("opacity", op); seg2.setAttribute("opacity", op); tip.style.display = "none"; });
+      f.svg.append(hit);
+    });
+  }
+  render();
+  legend(card, [{ label: "All other awards", color: css("--s1") }, { label: "Top 3 awards", color: css("--s2") }], "swatch");
+  addTable(card, ["Fiscal year", "Total intended", "Top 3 awards", "All other", "Median award"],
+    rows.map(r => [`FY${r.fy}${r.partial ? " (to date)" : ""}`, fmtM(r.dollars),
+      fmtM(r.dollars - r.exTop3Dollars), fmtM(r.exTop3Dollars), fmtMoney(r.median)]));
+  return render;
+}
+
+// ---------- largest awards table ----------
+function topAwards(data) {
+  const recent = data.fiscalYears.slice(-3).reverse();
+  if (!recent.some(r => r.top3?.length)) return;
+  const card = el("div", { class: "card" });
+  card.append(el("h2", { text: "Largest awards, last three fiscal years" }));
+  card.append(el("p", { class: "note", text: "The outliers behind the dollars chart. Award IDs link to NSF." }));
+  const t = el("table");
+  const trh = el("tr");
+  ["FY", "Award", "Institution", ""].forEach((h, i) => trh.append(el("th", { class: i === 3 ? "num" : "", text: h })));
+  t.append(trh);
+  for (const r of recent) for (const a of (r.top3 || [])) {
+    const tr = el("tr");
+    tr.append(el("td", { text: `FY${r.fy}` }));
+    const tdA = el("td");
+    tdA.append(el("a", { href: `https://www.nsf.gov/awardsearch/showAward?AWD_ID=${encodeURIComponent(a.id)}`, text: a.title || a.id }));
+    tr.append(tdA);
+    tr.append(el("td", { text: a.awardee }), el("td", { class: "num", text: fmtMoney(a.amount) }));
+    t.append(tr);
+  }
+  card.append(t);
+  $app.append(card);
+}
+
+// ---------- boot ----------
+async function boot() {
+  let data;
+  try {
+    data = await (await fetch("data/dashboard.json", { cache: "no-store" })).json();
+  } catch (e) {
+    document.getElementById("stamp").textContent =
+      "No data yet - the first scheduled pull hasn't run. Trigger the “Update data and deploy” workflow.";
+    return;
+  }
+  const gen = new Date(data.generated + "T12:00:00");
+  document.getElementById("stamp").textContent =
+    `${fmtN(data.totalAwards)} awards since Oct 2014 · last updated ${gen.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })} · refreshes weekly`;
+  if (data.warnings?.length) {
+    const b = el("div", { class: "banner" });
+    b.append(el("strong", { text: "Data quality warnings from the last pull: " }), document.createTextNode(data.warnings.join(" · ")));
+    $app.append(b);
+  }
+  const windowDone = gen >= new Date(data.currentFY, 7, 1);
+  tiles(data);
+  const renders = [monthlyChart(data), fyAwardsChart(data, windowDone), mechanismChart(data), dollarsChart(data)];
+  topAwards(data);
+  const foot = el("p", { class: "stamp", text: "* fiscal year in progress" });
+  $app.append(foot);
+  let raf;
+  const rerender = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(() => renders.forEach(r => r())); };
+  window.addEventListener("resize", rerender);
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", rerender);
+}
+boot();
+</script>
+</body>
+</html>
