@@ -10819,6 +10819,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2533213,2026-05-14,260047,Standard Grant,"Biochemical reaction systems: Multistationarity, identifiability, and absolute concentration robustness",Texas A&M University
 2554183,2026-05-14,299999,Standard Grant,Discrete Approximation,University of California-Irvine
 2608376,2026-05-14,30000,Standard Grant,Conference: 54th Barrett Memorial Lectures: Mathematical Foundations for Computational and Data-Driven Scientific Discovery,University of Tennessee Knoxville
+2610271,2026-05-14,270000,Standard Grant,Explainability and reproducibility in AI-powered science,Stanford University
 2610282,2026-05-14,200000,Standard Grant,"Distribution-Free Inference for AI-in-Use: Addressing Multiplicity, Selectivity, and Adaptivity",University of Pennsylvania
 2610474,2026-05-14,179999,Standard Grant,High-Dimensional Asymptotics of Estimation Under Privacy and Computational Constraints,University of Wisconsin-Madison
 2610618,2026-05-14,200000,Standard Grant,Nonparametric causal factor models for reliable generative AI,University of Chicago
@@ -10880,6 +10881,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2602196,2026-05-26,190000,Fellowship Award,"Postdoctoral Fellowship: MSPRF: Embedding Spaces, Mapping Class Groups, and Related Problems.","Hartman, Daniel H"
 2602215,2026-05-26,470116,Standard Grant,A Computational Framework for Lymph Node Physiology,University of Notre Dame
 2602417,2026-05-26,190000,Fellowship Award,Postdoctoral Fellowship: MSPRF: Spectral Theory and Quantum Chaos,"Kim, Elena"
+2602552,2026-05-26,190000,Fellowship Award,Postdoctoral Fellowship: MSPRF: Enumerative Geometry of Hitchin Moduli Spaces,"DeHority, Samuel Patrick"
 2602658,2026-05-26,190000,Fellowship Award,Postdoctoral Fellowship: MSPRF: Mathematical Analysis of Non-Convex Machine Learning Problems in High-Dimensions,"Saeed, Basil"
 2607646,2026-05-26,270186,Standard Grant,Collaborative Research: Stochastic approach for material properties and fluid motions in perforated domains,Dartmouth College
 2607647,2026-05-26,176763,Standard Grant,Collaborative Research: Stochastic approach for material properties and fluid motions in perforated domains,SUNY at Albany
@@ -10929,6 +10931,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2554723,2026-06-02,300000,Standard Grant,Quantum symmetries of quantum spin systems,"OHIO STATE UNIVERSITY, THE"
 2554830,2026-06-02,200000,Standard Grant,Fourier Analytic Methods to Count Rational Points near Manifolds,University of Wisconsin-Madison
 2556011,2026-06-02,200000,Standard Grant,Soliton Dynamics for Nonlinear Evolution Equations,"University of Maryland, College Park"
+2602712,2026-06-02,190000,Fellowship Award,Postdoctoral Fellowship: MSPRF: Growth in Corners of Linear Groups,"Slote, Joseph"
 2607685,2026-06-02,400000,Standard Grant,Novel Surface and Trace Finite Element Methods for Incompressible Fluids,University of Pittsburgh
 2608488,2026-06-02,350000,Standard Grant,Mimetic Immersed Boundary Methods for Fluid-Structure Interaction,University of North Carolina at Chapel Hill
 2608659,2026-06-02,150000,Standard Grant,Collaborative Research: Gradient-free optimization of matrix functions,Colorado School of Mines
@@ -10970,6 +10973,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2619069,2026-06-25,35000,Standard Grant,Conference: North Carolina Conference on Algebra and Mathematical Physics (NCAMP) 2026,University of North Carolina at Wilmington
 2620087,2026-06-25,19795,Standard Grant,Conference: STATGEN 2026: Conference on Statistics in Genomics and Genetics,Emory University
 2620675,2026-06-25,16023,Standard Grant,Conference: Algebraic Combinatorics Virtual Expedition,Dartmouth College
+2622920,2026-06-25,19975,Standard Grant,Conference: Fall Technical Conference,Virginia Polytechnic Institute and State University
 2624298,2026-06-25,500000,Continuing Grant,Analytic Number Theory at the Interface,New York University
 2625074,2026-06-25,20000,Standard Grant,Conference: International Conference on Advances in Interdisciplinary Statistics and Combinatorics (AISC-2026),University of Louisiana at Lafayette
 2627763,2026-06-25,19774,Standard Grant,Conference: Arrangements in Oregon,University of Oregon Eugene
@@ -10988,6 +10992,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2627378,2026-06-29,174999,Standard Grant,"Data integration for heterogeneous data: A general framework for distribution shift, posterior drift and block missing data",University of California-Santa Barbara
 2540790,2026-06-30,410623,Continuing Grant,"CAREER: Equivariant Analysis: At the Crossroads of Descriptive Set Theory, Dynamical Systems, and Classical Analysis",Iowa State University
 2543889,2026-06-30,450000,Continuing Grant,CAREER: Dehn Surgery and the Homology Cobordism Group,University of Oregon Eugene
+2547942,2026-06-30,370722,Standard Grant,REU Site: Extremal Graph Theory and Dynamical Systems at RIT,Rochester Institute of Tech
 2603388,2026-06-30,380000,Standard Grant,"Collaborative Research: Machine Learning on Stratified Matrix Manifolds Under Group Actions -- Foundations, Algorithms and Applications",University of North Carolina at Chapel Hill
 2603389,2026-06-30,300000,Standard Grant,"Collaborative Research: Machine Learning on Stratified Matrix Manifolds Under Group Actions -- Foundations, Algorithms and Applications",Northeastern University
 2542804,2026-07-01,674161,Standard Grant,CAREER: Learning spatiotemporal dynamics of tissue regrowth at multiple spatial scales,Northeastern University
@@ -11068,6 +11073,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2608930,2026-07-21,229586,Standard Grant,"Advanced Neural Network-Enhanced Reduced Order Modeling for Solving PDEs with High-Dimensionality, Randomness, and Multiscale Features",University of Alabama Tuscaloosa
 2622524,2026-07-21,25000,Standard Grant,Collaborative Research: Conference: Prairie Analysis Seminar 2026-2027,Kansas State University
 2622525,2026-07-21,25000,Standard Grant,Collaborative Research: Conference: Prairie Analysis Seminar 2026-2027,University of Kansas Center for Research Inc
+2625606,2026-07-21,35000,Standard Grant,Conference: Macaulay2 at Auburn University,Auburn University
 2627468,2026-07-21,30000,Standard Grant,Conference: STAI-X 2026: Conference on Statistics and Trustworthy AI for Cross (X)-Domain Acceleration,Regents of the University of Michigan - Ann Arbor
 2542575,2026-07-22,440000,Continuing Grant,CAREER: Explicit geometry of moduli spaces of higher dimensional varieties,University of California-San Diego
 2543311,2026-07-22,450000,Continuing Grant,CAREER: Ricci Flow and Ricci Solitons,University of California-Irvine
@@ -11217,6 +11223,7 @@ id,date,estimatedTotalAmt,transType,title,awardeeName
 2606072,2026-08-06,300000,Standard Grant,Regularity and Long Time Dynamics of Fluids and Plasmas,Princeton University
 2606106,2026-08-06,300000,Standard Grant,A PDE approach to Collective Behavior in Biological Systems: Nonlocal Interactions and Free Boundaries,"University of Maryland, College Park"
 2606421,2026-08-06,300000,Standard Grant,Forward and Inverse Scattering problems in Topological Insulators and paraxial wave models,University of Chicago
+2606466,2026-08-06,173816,Standard Grant,Reaction Networks in Random Environments,University of Hawaii
 2606949,2026-08-06,200000,Standard Grant,Complex methods in reconstructive integral geometry,University of California-Santa Cruz
 2609113,2026-08-06,243100,Standard Grant,"Instantons, Knots and Surgery",Washington University
 2616283,2026-08-06,30000,Standard Grant,Conference: Upcoming Researchers in Commutative Algebra (URiCA) 2026 and 2027,University of Nebraska-Lincoln

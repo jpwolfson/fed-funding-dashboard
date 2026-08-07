@@ -1,40 +1,9 @@
 {
  "generated": "2026-08-07",
  "source": "https://api.nsf.gov/services/v1/awards.json?org_code_div=03040000 (NSF Award Search API), month-by-month on Original Award Date",
- "totalAwards": 11222,
+ "totalAwards": 11229,
  "currentFY": 2026,
- "warnings": [
-  "2015-09-10: amount-range partition had no effect; keeping unique set of 84",
-  "2015-09-11: amount-range partition had no effect; keeping unique set of 74",
-  "2018-04-26: amount-range partition had no effect; keeping unique set of 34",
-  "2018-07-18: amount-range partition had no effect; keeping unique set of 29",
-  "2018-08-01: amount-range partition had no effect; keeping unique set of 35",
-  "2018-08-02: amount-range partition had no effect; keeping unique set of 46",
-  "2019-06-20: amount-range partition had no effect; keeping unique set of 86",
-  "2019-06-21: amount-range partition had no effect; keeping unique set of 73",
-  "2019-07-09: amount-range partition had no effect; keeping unique set of 46",
-  "2019-07-10: amount-range partition had no effect; keeping unique set of 44",
-  "2019-07-29: amount-range partition had no effect; keeping unique set of 61",
-  "2019-07-30: amount-range partition had no effect; keeping unique set of 61",
-  "2020-07-27: amount-range partition had no effect; keeping unique set of 50",
-  "2020-07-28: amount-range partition had no effect; keeping unique set of 55",
-  "2021-03-24: amount-range partition had no effect; keeping unique set of 64",
-  "2021-03-25: amount-range partition had no effect; keeping unique set of 62",
-  "2022-08-02: amount-range partition had no effect; keeping unique set of 77",
-  "2022-08-03: amount-range partition had no effect; keeping unique set of 67",
-  "2024-07-31: amount-range partition had no effect; keeping unique set of 53",
-  "2024-08-01: amount-range partition had no effect; keeping unique set of 73",
-  "2025-06-10: amount-range partition had no effect; keeping unique set of 26",
-  "2025-06-11: amount-range partition had no effect; keeping unique set of 38",
-  "2025-07-17: amount-range partition had no effect; keeping unique set of 39",
-  "2025-07-30: amount-range partition had no effect; keeping unique set of 56",
-  "2025-08-06: amount-range partition had no effect; keeping unique set of 68",
-  "2025-08-07: amount-range partition had no effect; keeping unique set of 59",
-  "2025-08-13: amount-range partition had no effect; keeping unique set of 73",
-  "2025-08-14: amount-range partition had no effect; keeping unique set of 86",
-  "2025-08-15: amount-range partition had no effect; keeping unique set of 90",
-  "2026-07-21: amount-range partition had no effect; keeping unique set of 42"
- ],
+ "warnings": [],
  "monthly": [
   {
    "month": "2014-10",
@@ -1289,36 +1258,36 @@
   },
   {
    "month": "2026-05",
-   "awards": 111,
-   "dollars": 22426810,
-   "std": 77,
+   "awards": 113,
+   "dollars": 22886810,
+   "std": 78,
    "cont": 8,
-   "fell": 26,
+   "fell": 27,
    "other": 0
   },
   {
    "month": "2026-06",
-   "awards": 81,
-   "dollars": 19225415,
-   "std": 67,
+   "awards": 84,
+   "dollars": 19806112,
+   "std": 69,
    "cont": 13,
-   "fell": 1,
+   "fell": 2,
    "other": 0
   },
   {
    "month": "2026-07",
-   "awards": 163,
-   "dollars": 40823629,
-   "std": 153,
+   "awards": 164,
+   "dollars": 40858629,
+   "std": 154,
    "cont": 10,
    "fell": 0,
    "other": 0
   },
   {
    "month": "2026-08",
-   "awards": 68,
-   "dollars": 13365630,
-   "std": 68,
+   "awards": 69,
+   "dollars": 13539446,
+   "std": 69,
    "cont": 0,
    "fell": 0,
    "other": 0
@@ -1342,15 +1311,15 @@
    },
    "top3": [
     {
-     "id": "1440415",
-     "title": "Institute for Pure and Applied Mathematics",
-     "awardee": "University of California-Los Angeles",
-     "amount": 22550000
-    },
-    {
      "id": "1440140",
      "title": "Mathematical Sciences Research Institute (MSRI)",
      "awardee": "Mathematical Sciences Research Institute",
+     "amount": 22550000
+    },
+    {
+     "id": "1440415",
+     "title": "Institute for Pure and Applied Mathematics",
+     "awardee": "University of California-Los Angeles",
      "amount": 22550000
     },
     {
@@ -1450,21 +1419,21 @@
    },
    "top3": [
     {
-     "id": "1764269",
-     "title": "NSF-Simons Center for Mathematical and Statistical Analysis of Biology",
-     "awardee": "Harvard University",
-     "amount": 5000000
-    },
-    {
      "id": "1763272",
      "title": "NSF-Simons Center for Multiscale Cell Fate Research",
      "awardee": "University of California-Irvine",
      "amount": 5000000
     },
     {
-     "id": "1764421",
-     "title": "NSF-Simons Center for Quantitative Biology",
-     "awardee": "Northwestern University",
+     "id": "1764269",
+     "title": "NSF-Simons Center for Mathematical and Statistical Analysis of Biology",
+     "awardee": "Harvard University",
+     "amount": 5000000
+    },
+    {
+     "id": "1764406",
+     "title": "NSF-Simons Southeast Center for Mathematics and Biology",
+     "awardee": "Georgia Tech Research Corporation",
      "amount": 5000000
     }
    ]
@@ -1522,15 +1491,15 @@
    },
    "top3": [
     {
-     "id": "1928930",
-     "title": "Mathematical Sciences Research Institute (MSRI)",
-     "awardee": "Mathematical Sciences Research Institute",
-     "amount": 25000000
-    },
-    {
      "id": "1925919",
      "title": "Institute for Pure and Applied Mathematics",
      "awardee": "University of California-Los Angeles",
+     "amount": 25000000
+    },
+    {
+     "id": "1928930",
+     "title": "Mathematical Sciences Research Institute (MSRI)",
+     "awardee": "Mathematical Sciences Research Institute",
      "amount": 25000000
     },
     {
@@ -1724,16 +1693,16 @@
   {
    "fy": 2026,
    "partial": true,
-   "awards": 556,
-   "dollars": 128028147,
+   "awards": 563,
+   "dollars": 129277660,
    "median": 190000,
-   "exTop3Dollars": 108748146,
+   "exTop3Dollars": 109997659,
    "octJul": {
-    "awards": 488,
-    "dollars": 114662517,
-    "std": 415,
+    "awards": 494,
+    "dollars": 115738214,
+    "std": 419,
     "cont": 46,
-    "fell": 27,
+    "fell": 29,
     "other": 0
    },
    "top3": [
