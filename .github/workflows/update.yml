@@ -50,6 +50,8 @@ jobs:
           fi
           echo "mode flag: '$FLAG'"
           python scripts/pull_nsf_dms.py $FLAG
+        env:
+          PYTHONUNBUFFERED: "1"
 
       - name: Commit refreshed data
         run: |
