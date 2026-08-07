@@ -28,6 +28,7 @@ API = "https://api.nsf.gov/services/v1/awards.json"
 DMS_DIV_CODE = "03040000"  # org_code_div for the Division of Mathematical Sciences
 RPP = 25          # API maximum results per page
 SAFE_WINDOW = 60  # bisect windows larger than this (~2.5 pages) to dodge the pagination fault
+RECENT_MONTHS = 4  # incremental runs re-pull this trailing window (NSF backfill period)
 PRINT_FIELDS = "id,date,estimatedTotalAmt,transType,title,awardeeName"
 SERIES_START = date(2014, 10, 1)  # FY2015 onward
 
@@ -85,7 +86,7 @@ def date_params(start, end):
             "dateEnd": (end + timedelta(days=1)).strftime("%m/%d/%Y")}
 
 
-def fetch_day_by_amount(day, lo=0, hi=10_000_000_000):
+def fetch_day_by_amount(day, lo=0, hi=10_000_000_000, parent_n=None):
     """Last-resort partition of a single heavy day by estimatedTotalAmt range."""
     params = date_params(day, day)
     by_id, dups = fetch_pages({**params, "estimatedTotalAmtFrom": lo, "estimatedTotalAmtTo": hi})
@@ -93,14 +94,15 @@ def fetch_day_by_amount(day, lo=0, hi=10_000_000_000):
         if dups:
             warn(f"{day}: duplicates persisted at amount range [{lo},{hi}]; keeping unique set")
         return by_id
-    mid = (lo + hi) // 2
-    left = fetch_day_by_amount(day, lo, mid)
-    right = fetch_day_by_amount(day, mid + 1, hi)
-    # If the API ignored the amount params, both halves return the whole day.
-    if len(left) >= len(by_id) and len(right) >= len(by_id):
+    # A narrower range must return strictly fewer awards than its parent;
+    # otherwise the API is ignoring the amount params (or every award shares
+    # one amount) and recursing would only multiply identical queries.
+    if parent_n is not None and len(by_id) >= parent_n:
         warn(f"{day}: amount-range partition had no effect; keeping unique set of {len(by_id)}")
         return by_id
-    return {**left, **right}
+    mid = (lo + hi) // 2
+    return {**fetch_day_by_amount(day, lo, mid, len(by_id)),
+            **fetch_day_by_amount(day, mid + 1, hi, len(by_id))}
 
 
 def fetch_window(start, end):
@@ -137,11 +139,58 @@ def fiscal_year(d):
     return d.year + 1 if d.month >= 10 else d.year
 
 
+def month_floor(d):
+    return d.replace(day=1)
+
+
+def months_back(d, n):
+    y, m = d.year, d.month - n
+    while m < 1:
+        y, m = y - 1, m + 12
+    return date(y, m, 1)
+
+
+def load_store():
+    """data/awards.csv is the committed store of record from prior runs."""
+    path = REPO_ROOT / "data" / "awards.csv"
+    if not path.exists():
+        return {}
+    store = {}
+    with open(path, newline="") as fh:
+        for row in csv.DictReader(fh):
+            date.fromisoformat(row["date"])  # validate before trusting the row
+            store[row["id"]] = {
+                "id": row["id"],
+                "date": row["date"],
+                "month": row["date"][:7],
+                "amount": int(row["estimatedTotalAmt"]),
+                "type": norm_type(row["transType"]),
+                "transType": row["transType"],
+                "title": row["title"],
+                "awardee": row["awardeeName"],
+            }
+    return store
+
+
 def main():
+    full = "--full" in sys.argv
     today = date.today()
-    print(f"Pulling DMS awards {SERIES_START} .. {today}")
+    stored = load_store()
+    # Recent months are re-pulled every run: NSF backfills awards for weeks
+    # after their award date, so this window is always taken from the API.
+    window_start = months_back(today, RECENT_MONTHS - 1)
+    if stored:
+        last_stored = max(date.fromisoformat(a["date"]) for a in stored.values())
+        window_start = min(window_start, month_floor(last_stored))
+    if full or not stored:
+        pull_start = SERIES_START
+    else:
+        pull_start = window_start
+    mode = "full" if pull_start == SERIES_START else "incremental"
+    print(f"{mode} pull: {pull_start} .. {today} ({len(stored)} awards in store)")
+
     collected = {}
-    for mstart, mend in month_windows(SERIES_START, today):
+    for mstart, mend in month_windows(pull_start, today):
         month_key = mstart.strftime("%Y-%m")
         for a in fetch_window(mstart, mend).values():
             d = time.strptime(a["date"], "%m/%d/%Y")
@@ -164,7 +213,22 @@ def main():
             sys.exit(f"FATAL: {month_key} returned {n} awards - far above any plausible "
                      f"DMS volume. The division filter was probably ignored; aborting.")
 
-    awards = list(collected.values())
+    # Merge pull into the store. Inside the recent window the pull is
+    # authoritative (drops as well as adds). For older months the pull only
+    # updates or adds records - a historical award the API no longer returns
+    # is RETAINED and flagged, so lost API history never erases our copy.
+    window_key = window_start.strftime("%Y-%m")
+    merged = {aid: a for aid, a in stored.items() if a["month"] < window_key}
+    retained = len(merged)
+    merged.update(collected)
+    if mode == "full":
+        missing = retained - sum(1 for aid in stored
+                                 if stored[aid]["month"] < window_key and aid in collected)
+        if missing > 0:
+            warn(f"{missing} stored historical awards no longer returned by the API; "
+                 "retained from the store")
+
+    awards = list(merged.values())
     total = len(awards)
     print(f"Total unique awards: {total}")
     if not 9_000 <= total <= 30_000:
