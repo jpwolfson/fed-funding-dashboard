@@ -7,8 +7,8 @@ pages it returns duplicate records across pages, and each duplicate silently
 displaces a record that is then never returned. The fix is to keep every
 query's result set small: pull month-by-month, and recursively bisect any
 window whose result count exceeds SAFE_WINDOW or that shows cross-page
-duplicates. Single-day windows that are still too large fall back to
-partitioning by estimatedTotalAmt range.
+duplicates, unioning results at every level. Single-day windows that are
+still too large partition by transaction type and awardee state.
 
 Outputs:
   data/dashboard.json  - aggregated series the dashboard reads
@@ -41,6 +41,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 BASELINE = json.loads((Path(__file__).parent / "verified_baseline.json").read_text())["months"]
 
 warnings = []
+USE_ZERO_OFFSET = False  # set by main() after probing the API
 
 
 def warn(msg):
@@ -78,8 +79,21 @@ def fetch_pages(extra_params):
                 dups = True
             by_id[a["id"]] = a
         if len(page) < RPP:
-            return by_id, dups
+            break
         offset += RPP
+    if USE_ZERO_OFFSET:
+        # Every window came back exactly one award short with 1-based
+        # pagination - the API's offset is evidently 0-based, so offset=1
+        # skips each query's first record. Union in the offset=0 page.
+        for a in api_get({
+            "org_code_div": DMS_DIV_CODE,
+            "printFields": PRINT_FIELDS,
+            "rpp": RPP,
+            "offset": 0,
+            **extra_params,
+        }):
+            by_id.setdefault(a["id"], a)
+    return by_id, dups
 
 
 def date_params(start, end):
@@ -196,8 +210,17 @@ def load_store():
 
 
 def main():
+    global USE_ZERO_OFFSET
     full = "--full" in sys.argv
     today = date.today()
+    try:
+        probe = api_get({"org_code_div": DMS_DIV_CODE, "printFields": "id", "rpp": RPP,
+                         "offset": 0, "dateStart": "01/01/2015", "dateEnd": "01/31/2015"},
+                        retries=2)
+        USE_ZERO_OFFSET = len(probe) > 0
+    except RuntimeError:
+        USE_ZERO_OFFSET = False
+    print(f"offset=0 supported: {USE_ZERO_OFFSET}")
     stored = load_store()
     # Recent months are re-pulled every run: NSF backfills awards for weeks
     # after their award date, so this window is always taken from the API.
