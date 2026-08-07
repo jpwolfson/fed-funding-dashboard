@@ -77,7 +77,12 @@ def fetch_pages(extra_params):
 
 
 def date_params(start, end):
-    return {"dateStart": start.strftime("%m/%d/%Y"), "dateEnd": end.strftime("%m/%d/%Y")}
+    # Pad one day each side: the API's date-range boundaries have off-by-one
+    # behavior (observed: each unpadded month returned exactly one award short).
+    # Awards are keyed by id and attributed to months by their own date field,
+    # so the overlap between adjacent windows is harmless.
+    return {"dateStart": (start - timedelta(days=1)).strftime("%m/%d/%Y"),
+            "dateEnd": (end + timedelta(days=1)).strftime("%m/%d/%Y")}
 
 
 def fetch_day_by_amount(day, lo=0, hi=10_000_000_000):
@@ -106,7 +111,7 @@ def fetch_window(start, end):
     if start == end:
         return fetch_day_by_amount(start)
     mid = start + (end - start) // 2
-    return {**fetch_window(start, mid), **fetch_window(mid + 1, end)}
+    return {**fetch_window(start, mid), **fetch_window(mid + timedelta(days=1), end)}
 
 
 def month_windows(first, last):
@@ -135,31 +140,31 @@ def fiscal_year(d):
 def main():
     today = date.today()
     print(f"Pulling DMS awards {SERIES_START} .. {today}")
-    awards = []
+    collected = {}
     for mstart, mend in month_windows(SERIES_START, today):
-        by_id = fetch_window(mstart, mend)
         month_key = mstart.strftime("%Y-%m")
-        for a in by_id.values():
+        for a in fetch_window(mstart, mend).values():
             d = time.strptime(a["date"], "%m/%d/%Y")
-            awards.append({
+            award_date = date(d.tm_year, d.tm_mon, d.tm_mday)
+            if not SERIES_START <= award_date <= today:
+                continue  # padding can catch a day outside the series
+            collected[a["id"]] = {
                 "id": a["id"],
-                "date": f"{d.tm_year:04d}-{d.tm_mon:02d}-{d.tm_mday:02d}",
+                "date": award_date.isoformat(),
                 "month": f"{d.tm_year:04d}-{d.tm_mon:02d}",
                 "amount": int(float(a.get("estimatedTotalAmt") or 0)),
                 "type": norm_type(a.get("transType")),
                 "transType": a.get("transType") or "",
                 "title": a.get("title") or "",
                 "awardee": a.get("awardeeName") or "",
-            })
-        n = sum(1 for a in awards if a["month"] == month_key)
+            }
+        n = sum(1 for a in collected.values() if a["month"] == month_key)
         print(f"  {month_key}: {n} awards")
         if n > 600:
             sys.exit(f"FATAL: {month_key} returned {n} awards - far above any plausible "
                      f"DMS volume. The division filter was probably ignored; aborting.")
 
-    # Deduplicate across window boundaries (an award dated on a boundary day
-    # can be fetched by both adjacent windows).
-    awards = list({a["id"]: a for a in awards}.values())
+    awards = list(collected.values())
     total = len(awards)
     print(f"Total unique awards: {total}")
     if not 9_000 <= total <= 30_000:
