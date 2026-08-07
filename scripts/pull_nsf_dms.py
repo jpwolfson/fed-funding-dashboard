@@ -31,6 +31,11 @@ SAFE_WINDOW = 60  # bisect windows larger than this (~2.5 pages) to dodge the pa
 RECENT_MONTHS = 4  # incremental runs re-pull this trailing window (NSF backfill period)
 PRINT_FIELDS = "id,date,estimatedTotalAmt,transType,title,awardeeName"
 SERIES_START = date(2014, 10, 1)  # FY2015 onward
+# The API's date filter may not operate on exactly the "date" field it
+# returns (residual undercounts suggest e.g. start-date filtering), so query
+# a wider horizon than the series and attribute records by their own date.
+QUERY_BACK = date(2013, 10, 1)
+QUERY_AHEAD = timedelta(days=550)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 BASELINE = json.loads((Path(__file__).parent / "verified_baseline.json").read_text())["months"]
@@ -86,34 +91,52 @@ def date_params(start, end):
             "dateEnd": (end + timedelta(days=1)).strftime("%m/%d/%Y")}
 
 
-def fetch_day_by_amount(day, lo=0, hi=10_000_000_000, parent_n=None):
-    """Last-resort partition of a single heavy day by estimatedTotalAmt range."""
-    params = date_params(day, day)
-    by_id, dups = fetch_pages({**params, "estimatedTotalAmtFrom": lo, "estimatedTotalAmtTo": hi})
-    if (len(by_id) <= SAFE_WINDOW and not dups) or hi - lo < 2:
-        if dups:
-            warn(f"{day}: duplicates persisted at amount range [{lo},{hi}]; keeping unique set")
-        return by_id
-    # A narrower range must return strictly fewer awards than its parent;
-    # otherwise the API is ignoring the amount params (or every award shares
-    # one amount) and recursing would only multiply identical queries.
-    if parent_n is not None and len(by_id) >= parent_n:
-        warn(f"{day}: amount-range partition had no effect; keeping unique set of {len(by_id)}")
-        return by_id
-    mid = (lo + hi) // 2
-    return {**fetch_day_by_amount(day, lo, mid, len(by_id)),
-            **fetch_day_by_amount(day, mid + 1, hi, len(by_id))}
+# The pagination fault displaces records at random, so no single query is
+# trusted to be complete. Every level below UNIONS its own results with its
+# sub-queries' results - a record survives if ANY query returns it, and an
+# ineffective partition can never lose data, only waste a few requests.
+
+TRANS_TYPES = [
+    "Standard Grant", "Continuing Grant", "Continuing grant", "Fellowship",
+    "Cooperative Agreement", "Interagency Agreement", "Contract",
+    "Fixed Price Award", "BOA/Task Order", "GAA",
+]
+STATE_CODES = [
+    "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI",
+    "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN",
+    "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH",
+    "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA",
+    "WV", "WI", "WY", "PR", "VI", "GU", "AS", "MP",
+]
+
+
+def fetch_day_partitions(day):
+    """Partition a heavy day by transaction type (documented API param), then
+    by awardee state for any type that is still heavy. All results are
+    unioned by the caller, so unmatched or ignored filter values cost only
+    requests, never records."""
+    out = {}
+    dp = date_params(day, day)
+    for t in TRANS_TYPES:
+        sub, dups = fetch_pages({**dp, "transType": t})
+        out.update(sub)
+        if len(sub) > SAFE_WINDOW or dups:
+            for s in STATE_CODES:
+                sub2, _ = fetch_pages({**dp, "transType": t, "awardeeStateCode": s})
+                out.update(sub2)
+    return out
 
 
 def fetch_window(start, end):
-    """Fetch all awards dated within [start, end], bisecting until safe."""
+    """Fetch all awards dated within [start, end], bisecting until safe.
+    Returns the union of this window's own page results and all sub-queries."""
     by_id, dups = fetch_pages(date_params(start, end))
     if len(by_id) <= SAFE_WINDOW and not dups:
         return by_id
     if start == end:
-        return fetch_day_by_amount(start)
+        return {**by_id, **fetch_day_partitions(start)}
     mid = start + (end - start) // 2
-    return {**fetch_window(start, mid), **fetch_window(mid + timedelta(days=1), end)}
+    return {**by_id, **fetch_window(start, mid), **fetch_window(mid + timedelta(days=1), end)}
 
 
 def month_windows(first, last):
@@ -183,14 +206,14 @@ def main():
         last_stored = max(date.fromisoformat(a["date"]) for a in stored.values())
         window_start = min(window_start, month_floor(last_stored))
     if full or not stored:
-        pull_start = SERIES_START
+        pull_start, mode = QUERY_BACK, "full"
     else:
-        pull_start = window_start
-    mode = "full" if pull_start == SERIES_START else "incremental"
-    print(f"{mode} pull: {pull_start} .. {today} ({len(stored)} awards in store)")
+        pull_start, mode = window_start, "incremental"
+    query_end = today + QUERY_AHEAD
+    print(f"{mode} pull: {pull_start} .. {query_end} ({len(stored)} awards in store)")
 
     collected = {}
-    for mstart, mend in month_windows(pull_start, today):
+    for mstart, mend in month_windows(pull_start, query_end):
         month_key = mstart.strftime("%Y-%m")
         for a in fetch_window(mstart, mend).values():
             d = time.strptime(a["date"], "%m/%d/%Y")
@@ -213,20 +236,17 @@ def main():
             sys.exit(f"FATAL: {month_key} returned {n} awards - far above any plausible "
                      f"DMS volume. The division filter was probably ignored; aborting.")
 
-    # Merge pull into the store. Inside the recent window the pull is
-    # authoritative (drops as well as adds). For older months the pull only
-    # updates or adds records - a historical award the API no longer returns
-    # is RETAINED and flagged, so lost API history never erases our copy.
-    window_key = window_start.strftime("%Y-%m")
-    merged = {aid: a for aid, a in stored.items() if a["month"] < window_key}
-    retained = len(merged)
+    # Merge pull into the store: update or add only, never delete. Because
+    # the API's filter semantics are not fully trustworthy, a stored award
+    # missing from this pull is RETAINED and flagged - API downtime, filter
+    # quirks, or lost history can never erase our copy. (The cost: a record
+    # NSF genuinely retracts persists here until manually removed.)
+    merged = dict(stored)
     merged.update(collected)
-    if mode == "full":
-        missing = retained - sum(1 for aid in stored
-                                 if stored[aid]["month"] < window_key and aid in collected)
-        if missing > 0:
-            warn(f"{missing} stored historical awards no longer returned by the API; "
-                 "retained from the store")
+    missing = sum(1 for aid in stored if aid not in collected)
+    if mode == "full" and missing > 0:
+        warn(f"{missing} stored awards not returned by this full re-pull; "
+             "retained from the store")
 
     awards = list(merged.values())
     total = len(awards)
