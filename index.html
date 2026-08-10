@@ -570,7 +570,7 @@ async function boot() {
   }
   const windowDone = gen >= new Date(data.currentFY, 7, 1);
   tiles(data);
-  const renders = [monthlyChart(data), fyAwardsChart(data, windowDone), mechanismChart(data), dollarsChart(data)];
+  const renders = [];
   if (data.fyCumulative?.length) {
     renders.push(
       cumulativeChart(data, "awards", "Cumulative new awards through the fiscal year",
@@ -580,6 +580,7 @@ async function boot() {
         "Running FY-to-date intended dollars on the same axes. Institute-scale outlier awards arrive as visible steps. Minor ticks are weeks.",
         v => "$" + Math.round(v / 1e6) + "M", fmtM));
   }
+  renders.push(monthlyChart(data), fyAwardsChart(data, windowDone), mechanismChart(data), dollarsChart(data));
   topAwards(data);
   const foot = el("p", { class: "stamp", text: "* fiscal year in progress" });
   $app.append(foot);
