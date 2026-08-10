@@ -10,7 +10,7 @@
     --page: #f9f9f7; --surface: #fcfcfb;
     --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
     --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,.10);
-    --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a;
+    --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4;
     --good: #006300; --bad: #b33636;
   }
   @media (prefers-color-scheme: dark) {
@@ -19,7 +19,7 @@
       --page: #0d0d0d; --surface: #1a1a19;
       --ink: #ffffff; --ink-2: #c3c2b7; --muted: #898781;
       --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,.10);
-      --s1: #3987e5; --s2: #d95926; --s3: #199e70;
+      --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181;
       --good: #0ca30c; --bad: #e66767;
     }
   }
@@ -28,7 +28,7 @@
     --page: #0d0d0d; --surface: #1a1a19;
     --ink: #ffffff; --ink-2: #c3c2b7; --muted: #898781;
     --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,.10);
-    --s1: #3987e5; --s2: #d95926; --s3: #199e70;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181;
     --good: #0ca30c; --bad: #e66767;
   }
   * { box-sizing: border-box; margin: 0; }
@@ -447,6 +447,85 @@ function dollarsChart(data) {
   return render;
 }
 
+// ---------- charts 5 & 6: cumulative FY-to-date overlays ----------
+const MONTH_OFFSETS = [0, 31, 61, 92, 123, 151, 182, 212, 243, 273, 304, 335];
+const MONTH_ABBR = ["Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"];
+const fyDayLabel = d => new Date(2025, 9, 1 + Math.min(d, 364))
+  .toLocaleString("en-US", { month: "short", day: "numeric" });
+
+function cumulativeChart(data, key, title, note, fmtVal, fmtEnd) {
+  const { card, plot, tip } = makeCard(title, note);
+  // Newest year gets slot 1 and draws on top; older years recede down the fixed slot order.
+  const series = data.fyCumulative.slice().sort((a, b) => b.fy - a.fy)
+    .map((s, i) => ({ ...s, v: ["--s1", "--s2", "--s3", "--s4", "--s5"][i] }));
+  const DAYS = 365;
+  function render() {
+    plot.querySelector("svg")?.remove();
+    const f = frame(plot, 340, 56, 122);
+    const max = niceTicks(Math.max(...series.map(s => s.points.at(-1)[key]))).at(-1);
+    yAxis(f.svg, f, max, fmtVal);
+    const x = d => f.L + (Math.min(d, DAYS - 1) / (DAYS - 1)) * (f.R - f.L);
+    const y = v => f.B - (v / max) * (f.B - f.T);
+    for (let d = 6; d < DAYS; d += 7)
+      f.svg.append(el("line", { x1: x(d), x2: x(d), y1: f.B, y2: f.B + 3, stroke: css("--grid"), "stroke-width": 1 }));
+    MONTH_OFFSETS.forEach((off, m) => {
+      f.svg.append(el("line", { x1: x(off), x2: x(off), y1: f.B, y2: f.B + 6, stroke: css("--axis"), "stroke-width": 1 }));
+      f.svg.append(el("text", { class: "axis-text", x: x(off + 15), y: f.B + 18, "text-anchor": "middle", text: MONTH_ABBR[m] }));
+    });
+    for (const s of [...series].reverse()) {  // draw oldest first, current year on top
+      const line = s.points.map((p, i) => `${i ? "L" : "M"}${x(p.d).toFixed(1)},${y(p[key]).toFixed(1)}`).join("");
+      f.svg.append(el("path", { d: line, fill: "none", stroke: css(s.v),
+        "stroke-width": s.partial ? 3 : 2, "stroke-linejoin": "round", "stroke-linecap": "round" }));
+      const end = s.points.at(-1);
+      f.svg.append(el("circle", { cx: x(end.d), cy: y(end[key]), r: s.partial ? 5 : 4,
+        fill: css(s.v), stroke: css("--surface"), "stroke-width": 2 }));
+      if (s.partial)
+        f.svg.append(el("text", { class: "dlabel", x: x(end.d) - 9, y: y(end[key]) - 10, "text-anchor": "end",
+          text: `FY${String(s.fy).slice(2)} · ${fmtEnd(end[key])}` }));
+    }
+    // Right-margin labels for completed years: sorted by endpoint so vertical
+    // order always matches the lines, with a color key against near-ties.
+    let prevY = -Infinity;
+    for (const s of series.filter(s => !s.partial).sort((a, b) => b.points.at(-1)[key] - a.points.at(-1)[key])) {
+      const v = s.points.at(-1)[key];
+      const ly = Math.max(y(v) + 4, prevY + 15);
+      prevY = ly;
+      f.svg.append(el("line", { x1: f.R + 6, x2: f.R + 14, y1: ly - 4, y2: ly - 4,
+        stroke: css(s.v), "stroke-width": 2.5, "stroke-linecap": "round" }));
+      f.svg.append(el("text", { class: "dlabel", x: f.R + 18, y: ly,
+        text: `FY${String(s.fy).slice(2)} · ${fmtEnd(v)}` }));
+    }
+    const cross = el("line", { y1: f.T, y2: f.B, stroke: css("--axis"), "stroke-width": 1, visibility: "hidden" });
+    f.svg.append(cross);
+    const scale = () => plot.clientWidth / f.W;
+    f.svg.addEventListener("pointermove", e => {
+      const r0 = f.svg.getBoundingClientRect();
+      const day = Math.max(0, Math.min(DAYS - 1, ((e.clientX - r0.left) / scale() - f.L) / (f.R - f.L) * (DAYS - 1)));
+      const wi = Math.min(Math.floor(day / 7), 52);
+      const cd = Math.min(7 * wi + 6, DAYS - 1);
+      cross.setAttribute("x1", x(cd)); cross.setAttribute("x2", x(cd)); cross.setAttribute("visibility", "visible");
+      showTip(tip, plot, x(cd) * scale(), f.T * scale() + 40, `Week ${wi + 1} · through ${fyDayLabel(cd)}`,
+        series.filter(s => wi < s.points.length)
+          .map(s => ({ color: css(s.v), val: fmtVal(s.points[Math.min(wi, s.points.length - 1)][key]),
+                       lab: `FY${s.fy}` })));
+    });
+    f.svg.addEventListener("pointerleave", () => { tip.style.display = "none"; cross.setAttribute("visibility", "hidden"); });
+  }
+  render();
+  legend(card, series.map(s => ({ label: `FY${s.fy}${s.partial ? " (to date)" : ""}`, color: css(s.v) })), "line");
+  // Table rows: cumulative at each month end (for the year in progress, its
+  // started months only — the last shows the total through the latest data).
+  addTable(card, ["Through end of", ...series.map(s => `FY${s.fy}${s.partial ? " (to date)" : ""}`)],
+    MONTH_OFFSETS.map((mo, m) => {
+      const bd = (MONTH_OFFSETS[m + 1] ?? 365) - 1;
+      return [MONTH_ABBR[m], ...series.map(s => {
+        if (mo > s.points.at(-1).d) return "—";
+        return fmtVal(s.points.filter(p => p.d <= bd).at(-1)[key]);
+      })];
+    }));
+  return render;
+}
+
 // ---------- largest awards table ----------
 function topAwards(data) {
   const recent = data.fiscalYears.slice(-3).reverse();
@@ -492,6 +571,15 @@ async function boot() {
   const windowDone = gen >= new Date(data.currentFY, 7, 1);
   tiles(data);
   const renders = [monthlyChart(data), fyAwardsChart(data, windowDone), mechanismChart(data), dollarsChart(data)];
+  if (data.fyCumulative?.length) {
+    renders.push(
+      cumulativeChart(data, "awards", "Cumulative new awards through the fiscal year",
+        "Running FY-to-date total, October through September, one line per year. Read the endpoint of the year in progress against the other lines at the same point in the year — no visual integration needed. Minor ticks are weeks.",
+        fmtN, fmtN),
+      cumulativeChart(data, "dollars", "Cumulative intended dollars through the fiscal year",
+        "Running FY-to-date intended dollars on the same axes. Institute-scale outlier awards arrive as visible steps. Minor ticks are weeks.",
+        v => "$" + Math.round(v / 1e6) + "M", fmtM));
+  }
   topAwards(data);
   const foot = el("p", { class: "stamp", text: "* fiscal year in progress" });
   $app.append(foot);

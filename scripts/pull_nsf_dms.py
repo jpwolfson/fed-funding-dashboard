@@ -212,31 +212,35 @@ def load_store():
 def main():
     global USE_ZERO_OFFSET
     full = "--full" in sys.argv
+    offline = "--offline" in sys.argv  # re-aggregate from the committed store, no API calls
     today = date.today()
-    try:
-        probe = api_get({"org_code_div": DMS_DIV_CODE, "printFields": "id", "rpp": RPP,
-                         "offset": 0, "dateStart": "01/01/2015", "dateEnd": "01/31/2015"},
-                        retries=2)
-        USE_ZERO_OFFSET = len(probe) > 0
-    except RuntimeError:
-        USE_ZERO_OFFSET = False
-    print(f"offset=0 supported: {USE_ZERO_OFFSET}")
     stored = load_store()
-    # Recent months are re-pulled every run: NSF backfills awards for weeks
-    # after their award date, so this window is always taken from the API.
-    window_start = months_back(today, RECENT_MONTHS - 1)
-    if stored:
-        last_stored = max(date.fromisoformat(a["date"]) for a in stored.values())
-        window_start = min(window_start, month_floor(last_stored))
-    if full or not stored:
-        pull_start, mode = QUERY_BACK, "full"
+    if offline:
+        pull_start, mode = None, "offline"
     else:
-        pull_start, mode = window_start, "incremental"
+        try:
+            probe = api_get({"org_code_div": DMS_DIV_CODE, "printFields": "id", "rpp": RPP,
+                             "offset": 0, "dateStart": "01/01/2015", "dateEnd": "01/31/2015"},
+                            retries=2)
+            USE_ZERO_OFFSET = len(probe) > 0
+        except RuntimeError:
+            USE_ZERO_OFFSET = False
+        print(f"offset=0 supported: {USE_ZERO_OFFSET}")
+        # Recent months are re-pulled every run: NSF backfills awards for weeks
+        # after their award date, so this window is always taken from the API.
+        window_start = months_back(today, RECENT_MONTHS - 1)
+        if stored:
+            last_stored = max(date.fromisoformat(a["date"]) for a in stored.values())
+            window_start = min(window_start, month_floor(last_stored))
+        if full or not stored:
+            pull_start, mode = QUERY_BACK, "full"
+        else:
+            pull_start, mode = window_start, "incremental"
     query_end = today + QUERY_AHEAD
     print(f"{mode} pull: {pull_start} .. {query_end} ({len(stored)} awards in store)")
 
     collected = {}
-    for mstart, mend in month_windows(pull_start, query_end):
+    for mstart, mend in month_windows(pull_start, query_end) if pull_start else []:
         month_key = mstart.strftime("%Y-%m")
         for a in fetch_window(mstart, mend).values():
             d = time.strptime(a["date"], "%m/%d/%Y")
@@ -341,6 +345,29 @@ def main():
                       "amount": a["amount"]} for a in top3],
         })
 
+    # Cumulative FY-to-date overlays, last five fiscal years: weekly running
+    # totals aligned by day-of-fiscal-year (day 0 = Oct 1), so leap years and
+    # weekday drift never misalign the lines. Complete years end on Sep 30;
+    # the current year ends at today. Endpoints therefore equal the
+    # fiscal-year totals above exactly.
+    fy_cum = []
+    for fy in [f for f in sorted(fys) if current_fy - 5 < f <= current_fy]:
+        fy_start = date(fy - 1, 10, 1)
+        last_day = (min(date(fy, 9, 30), today) - fy_start).days
+        daily = [[0, 0] for _ in range(last_day + 1)]
+        for a in awards:
+            d = (date.fromisoformat(a["date"]) - fy_start).days
+            if 0 <= d <= last_day:
+                daily[d][0] += 1
+                daily[d][1] += a["amount"]
+        pts, ca, cd = [], 0, 0
+        for d in range(last_day + 1):
+            ca += daily[d][0]
+            cd += daily[d][1]
+            if d % 7 == 6 or d == last_day:
+                pts.append({"d": d, "awards": ca, "dollars": cd})
+        fy_cum.append({"fy": fy, "partial": fy == current_fy, "points": pts})
+
     out = {
         "generated": today.isoformat(),
         "source": f"{API}?org_code_div={DMS_DIV_CODE} (NSF Award Search API), "
@@ -350,6 +377,7 @@ def main():
         "warnings": warnings,
         "monthly": monthly,
         "fiscalYears": fy_rows,
+        "fyCumulative": fy_cum,
     }
     data_dir = REPO_ROOT / "data"
     data_dir.mkdir(exist_ok=True)
