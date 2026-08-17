@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-10",
+ "generated": "2026-08-17",
  "source": "https://api.nsf.gov/services/v1/awards.json?org_code_div=03040000 (NSF Award Search API), month-by-month on Original Award Date",
- "totalAwards": 11523,
+ "totalAwards": 11592,
  "currentFY": 2026,
  "warnings": [],
  "monthly": [
@@ -1285,10 +1285,10 @@
   },
   {
    "month": "2026-08",
-   "awards": 84,
-   "dollars": 16781081,
-   "std": 83,
-   "cont": 1,
+   "awards": 153,
+   "dollars": 34113201,
+   "std": 151,
+   "cont": 2,
    "fell": 0,
    "other": 0
   }
@@ -1693,10 +1693,10 @@
   {
    "fy": 2026,
    "partial": true,
-   "awards": 585,
-   "dollars": 135818136,
+   "awards": 654,
+   "dollars": 153150256,
    "median": 190000,
-   "exTop3Dollars": 115618136,
+   "exTop3Dollars": 132950256,
    "octJul": {
     "awards": 501,
     "dollars": 119037055,
@@ -3037,9 +3037,14 @@
      "dollars": 123235753
     },
     {
-     "d": 313,
-     "awards": 585,
-     "dollars": 135818136
+     "d": 314,
+     "awards": 618,
+     "dollars": 141561529
+    },
+    {
+     "d": 320,
+     "awards": 654,
+     "dollars": 153150256
     }
    ]
   }
