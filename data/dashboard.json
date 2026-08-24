@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-17",
+ "generated": "2026-08-24",
  "source": "https://api.nsf.gov/services/v1/awards.json?org_code_div=03040000 (NSF Award Search API), month-by-month on Original Award Date",
- "totalAwards": 11592,
+ "totalAwards": 11609,
  "currentFY": 2026,
  "warnings": [],
  "monthly": [
@@ -1285,10 +1285,10 @@
   },
   {
    "month": "2026-08",
-   "awards": 153,
-   "dollars": 34113201,
-   "std": 151,
-   "cont": 2,
+   "awards": 170,
+   "dollars": 40934111,
+   "std": 167,
+   "cont": 3,
    "fell": 0,
    "other": 0
   }
@@ -1693,10 +1693,10 @@
   {
    "fy": 2026,
    "partial": true,
-   "awards": 654,
-   "dollars": 153150256,
+   "awards": 671,
+   "dollars": 159971166,
    "median": 190000,
-   "exTop3Dollars": 132950256,
+   "exTop3Dollars": 138235882,
    "octJul": {
     "awards": 501,
     "dollars": 119037055,
@@ -1713,16 +1713,16 @@
      "amount": 17000000
     },
     {
+     "id": "2447115",
+     "title": "RTG: Mathematics & AI Synergies (MAIS): Algebra and Applications",
+     "awardee": "University of Wisconsin-Madison",
+     "amount": 2735284
+    },
+    {
      "id": "2446222",
      "title": "RTG: Statistics and Data Theory - Engaging the Future of Data Science",
      "awardee": "University of California-Los Angeles",
      "amount": 2000000
-    },
-    {
-     "id": "2502536",
-     "title": "MFAI: Data for and from Language Models: Information, Dynamics, Architectures, and Optimization",
-     "awardee": "University of California-Los Angeles",
-     "amount": 1200000
     }
    ]
   }
@@ -3042,9 +3042,14 @@
      "dollars": 141561529
     },
     {
-     "d": 320,
-     "awards": 654,
-     "dollars": 153150256
+     "d": 321,
+     "awards": 661,
+     "dollars": 158544742
+    },
+    {
+     "d": 327,
+     "awards": 671,
+     "dollars": 159971166
     }
    ]
   }
