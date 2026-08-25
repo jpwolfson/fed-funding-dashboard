@@ -61,7 +61,7 @@
   .legend { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 12px; font-size: 13px; color: var(--ink-2); align-items: center; }
   .legend .key { display: inline-flex; align-items: center; gap: 6px; }
   .legend .swatch { width: 12px; height: 12px; border-radius: 3px; }
-  .legend .stroke { width: 16px; height: 2.5px; border-radius: 2px; }
+  .legend .stroke-sample { display: block; flex: none; }
   .tip {
     position: absolute; pointer-events: none; display: none; z-index: 5;
     background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
@@ -131,7 +131,7 @@ const $app = document.getElementById("app");
 
 const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 const el = (tag, attrs = {}, ...kids) => {
-  const ns = ["svg","g","path","rect","line","circle","text"].includes(tag);
+  const ns = ["svg","g","path","rect","line","circle","text","defs","pattern"].includes(tag);
   const n = ns ? document.createElementNS("http://www.w3.org/2000/svg", tag) : document.createElement(tag);
   for (const [k, v] of Object.entries(attrs)) {
     if (k === "text") n.textContent = v; else n.setAttribute(k, v);
@@ -144,6 +144,17 @@ const fmtM = v => "$" + (v / 1e6 >= 100 ? (v / 1e6).toFixed(0) : (v / 1e6).toFix
 const fmtMoney = v => v >= 1e6 ? fmtM(v) : "$" + Math.round(v / 1e3) + "K";
 const fmtPct = v => (v > 0 ? "+" : "−") + Math.abs(v * 100).toFixed(1) + "%";
 const monthName = m => new Date(m + "-15").toLocaleString("en-US", { month: "short", year: "numeric" });
+
+// Each multi-line series pairs its color with a distinct weight + dash pattern,
+// so lines stay distinguishable without color vision. Round linecaps turn the
+// short dashes of slot 1 into dots.
+const LINE_STYLES = [
+  { dash: "none", width: 3 },       // solid, heavy — the emphasized series
+  { dash: "0.1 6", width: 2.5 },    // dotted
+  { dash: "7 5", width: 2 },        // dashed
+  { dash: "12 4 0.1 4", width: 2 }, // dash-dot
+  { dash: "17 5", width: 2 },       // long dash
+];
 
 function niceTicks(max) {
   const raw = max / 4;
@@ -160,7 +171,8 @@ function makeCard(title, note) {
   card.append(el("h2", { text: title }));
   if (note) card.append(el("p", { class: "note", text: note }));
   const plot = el("div", { class: "plot" });
-  const tip = el("div", { class: "tip" });
+  plot.dataset.chartTitle = title;
+  const tip = el("div", { class: "tip", "aria-hidden": "true" });
   plot.append(tip);
   card.append(plot);
   $app.append(card);
@@ -169,7 +181,8 @@ function makeCard(title, note) {
 
 function frame(plot, H, padL, padR) {
   const W = Math.max(560, Math.min(1000, plot.clientWidth || 1000));
-  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" });
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img",
+    "aria-label": `Chart: ${plot.dataset.chartTitle || "data"}. The same data is in the “View as table” disclosure below.` });
   plot.append(svg);
   return { svg, W, H, L: padL, R: W - padR, T: 14, B: H - 26 };
 }
@@ -215,9 +228,19 @@ function addTable(card, headers, rows) {
 function legend(card, items, kind) {
   const lg = el("div", { class: "legend" });
   for (const it of items) {
-    lg.append(el("span", { class: "key" },
-      el("span", { class: kind === "line" ? "stroke" : "swatch", style: `background:${it.color}` }),
-      document.createTextNode(it.label)));
+    let key;
+    if (kind === "line") {
+      // Sample the series' actual stroke (color + weight + dash) so the legend
+      // itself identifies lines without relying on color.
+      key = el("svg", { class: "stroke-sample", width: 34, height: 10, viewBox: "0 0 34 10", "aria-hidden": "true" });
+      key.append(el("line", { x1: 2, x2: 32, y1: 5, y2: 5, stroke: it.color,
+        "stroke-width": it.width ?? 2.5, "stroke-dasharray": it.dash ?? "none", "stroke-linecap": "round" }));
+    } else {
+      key = el("span", { class: "swatch", style: it.hatch
+        ? `background: repeating-linear-gradient(45deg, ${it.color} 0 3px, var(--surface) 3px 4.5px)`
+        : `background:${it.color}` });
+    }
+    lg.append(el("span", { class: "key" }, key, document.createTextNode(it.label)));
   }
   card.append(lg);
 }
@@ -354,9 +377,9 @@ function mechanismChart(data) {
     "The FY2025 decline is concentrated in new continuing grants; standard-grant volume held until FY2026. A policy shift from continuing to standard grants would look identical to a cut in this chart — see notes.");
   const rows = data.fiscalYears;
   const series = [
-    { key: "std", label: "Standard grants", v: "--s1" },
-    { key: "cont", label: "Continuing grants", v: "--s2" },
-    { key: "fell", label: "Fellowships", v: "--s3" },
+    { key: "std", label: "Standard grants", v: "--s1", st: LINE_STYLES[0] },
+    { key: "cont", label: "Continuing grants", v: "--s2", st: LINE_STYLES[2] },
+    { key: "fell", label: "Fellowships", v: "--s3", st: LINE_STYLES[1] },
   ];
   function render() {
     plot.querySelector("svg")?.remove();
@@ -369,7 +392,9 @@ function mechanismChart(data) {
     const endYs = [];
     for (const s of series) {
       const line = rows.map((r, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(r.octJul[s.key]).toFixed(1)}`).join("");
-      f.svg.append(el("path", { d: line, fill: "none", stroke: css(s.v), "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }));
+      f.svg.append(el("path", { d: line, fill: "none", stroke: css(s.v),
+        "stroke-width": s.st.width, "stroke-dasharray": s.st.dash,
+        "stroke-linejoin": "round", "stroke-linecap": "round" }));
       const last = rows.at(-1).octJul[s.key];
       f.svg.append(el("circle", { cx: x(rows.length - 1), cy: y(last), r: 4.5, fill: css(s.v), stroke: css("--surface"), "stroke-width": 2 }));
       let ly = y(last) + 4;
@@ -392,7 +417,7 @@ function mechanismChart(data) {
     f.svg.addEventListener("pointerleave", () => { tip.style.display = "none"; cross.setAttribute("visibility", "hidden"); });
   }
   render();
-  legend(card, series.map(s => ({ label: s.label, color: css(s.v) })), "line");
+  legend(card, series.map(s => ({ label: s.label, color: css(s.v), dash: s.st.dash, width: s.st.width })), "line");
   addTable(card, ["Fiscal year", "Standard", "Continuing", "Fellowships", "Other"],
     rows.map(r => [`FY${r.fy}`, fmtN(r.octJul.std), fmtN(r.octJul.cont), fmtN(r.octJul.fell), fmtN(r.octJul.other)]));
   return render;
@@ -408,6 +433,13 @@ function dollarsChart(data) {
     const f = frame(plot, 300, 56, 14);
     const max = niceTicks(Math.max(...rows.map(r => r.dollars))).at(-1);
     yAxis(f.svg, f, max, v => "$" + Math.round(v / 1e6) + "M");
+    // Diagonal hatch on the top-3 segment: texture separates the two stacked
+    // segments without depending on color vision.
+    const pat = el("pattern", { id: "hatch-top3", width: 4.5, height: 4.5,
+      patternUnits: "userSpaceOnUse", patternTransform: "rotate(45)" });
+    pat.append(el("rect", { width: 4.5, height: 4.5, fill: css("--s2") }));
+    pat.append(el("line", { x1: 0, y1: 0, x2: 0, y2: 4.5, stroke: css("--surface"), "stroke-width": 1.5, opacity: .6 }));
+    f.svg.append(el("defs", {}, pat));
     const band = (f.R - f.L) / rows.length;
     const bw = Math.min(24, band - 8);
     const hOf = v => (v / max) * (f.B - f.T);
@@ -420,7 +452,7 @@ function dollarsChart(data) {
       const topY = f.B - hBase - 2 - hTop;
       const seg2 = el("path", {
         d: `M${cx - bw / 2},${f.B - hBase - 2}V${topY + 4}Q${cx - bw / 2},${topY} ${cx - bw / 2 + 4},${topY}H${cx + bw / 2 - 4}Q${cx + bw / 2},${topY} ${cx + bw / 2},${topY + 4}V${f.B - hBase - 2}Z`,
-        fill: css("--s2"), opacity: op,
+        fill: "url(#hatch-top3)", opacity: op,
       });
       f.svg.append(seg1, seg2);
       f.svg.append(el("text", { class: "axis-text", x: cx, y: f.B + 18, "text-anchor": "middle", text: "'" + String(r.fy).slice(2) + (partial ? "*" : "") }));
@@ -440,7 +472,8 @@ function dollarsChart(data) {
     });
   }
   render();
-  legend(card, [{ label: "All other awards", color: css("--s1") }, { label: "Top 3 awards", color: css("--s2") }], "swatch");
+  legend(card, [{ label: "All other awards", color: css("--s1") },
+    { label: "Top 3 awards", color: css("--s2"), hatch: true }], "swatch");
   addTable(card, ["Fiscal year", "Total intended", "Top 3 awards", "All other", "Median award"],
     rows.map(r => [`FY${r.fy}${r.partial ? " (to date)" : ""}`, fmtM(r.dollars),
       fmtM(r.dollars - r.exTop3Dollars), fmtM(r.exTop3Dollars), fmtMoney(r.median)]));
@@ -455,13 +488,15 @@ const fyDayLabel = d => new Date(2025, 9, 1 + Math.min(d, 364))
 
 function cumulativeChart(data, key, title, note, fmtVal, fmtEnd) {
   const { card, plot, tip } = makeCard(title, note);
-  // Newest year gets slot 1 and draws on top; older years recede down the fixed slot order.
+  // Newest year gets slot 1 and draws on top; older years recede down the fixed
+  // slot order, each with its own color and dash pattern.
   const series = data.fyCumulative.slice().sort((a, b) => b.fy - a.fy)
-    .map((s, i) => ({ ...s, v: ["--s1", "--s2", "--s3", "--s4", "--s5"][i] }));
+    .map((s, i) => ({ ...s, v: ["--s1", "--s2", "--s3", "--s4", "--s5"][i],
+      st: LINE_STYLES[i % LINE_STYLES.length] }));
   const DAYS = 365;
   function render() {
     plot.querySelector("svg")?.remove();
-    const f = frame(plot, 340, 56, 122);
+    const f = frame(plot, 340, 56, 134);
     const max = niceTicks(Math.max(...series.map(s => s.points.at(-1)[key]))).at(-1);
     yAxis(f.svg, f, max, fmtVal);
     const x = d => f.L + (Math.min(d, DAYS - 1) / (DAYS - 1)) * (f.R - f.L);
@@ -475,7 +510,8 @@ function cumulativeChart(data, key, title, note, fmtVal, fmtEnd) {
     for (const s of [...series].reverse()) {  // draw oldest first, current year on top
       const line = s.points.map((p, i) => `${i ? "L" : "M"}${x(p.d).toFixed(1)},${y(p[key]).toFixed(1)}`).join("");
       f.svg.append(el("path", { d: line, fill: "none", stroke: css(s.v),
-        "stroke-width": s.partial ? 3 : 2, "stroke-linejoin": "round", "stroke-linecap": "round" }));
+        "stroke-width": s.st.width, "stroke-dasharray": s.st.dash,
+        "stroke-linejoin": "round", "stroke-linecap": "round" }));
       const end = s.points.at(-1);
       f.svg.append(el("circle", { cx: x(end.d), cy: y(end[key]), r: s.partial ? 5 : 4,
         fill: css(s.v), stroke: css("--surface"), "stroke-width": 2 }));
@@ -484,15 +520,17 @@ function cumulativeChart(data, key, title, note, fmtVal, fmtEnd) {
           text: `FY${String(s.fy).slice(2)} · ${fmtEnd(end[key])}` }));
     }
     // Right-margin labels for completed years: sorted by endpoint so vertical
-    // order always matches the lines, with a color key against near-ties.
+    // order always matches the lines, keyed by each line's dash pattern (not
+    // just color) so ties resolve without color vision.
     let prevY = -Infinity;
     for (const s of series.filter(s => !s.partial).sort((a, b) => b.points.at(-1)[key] - a.points.at(-1)[key])) {
       const v = s.points.at(-1)[key];
       const ly = Math.max(y(v) + 4, prevY + 15);
       prevY = ly;
-      f.svg.append(el("line", { x1: f.R + 6, x2: f.R + 14, y1: ly - 4, y2: ly - 4,
-        stroke: css(s.v), "stroke-width": 2.5, "stroke-linecap": "round" }));
-      f.svg.append(el("text", { class: "dlabel", x: f.R + 18, y: ly,
+      f.svg.append(el("line", { x1: f.R + 6, x2: f.R + 28, y1: ly - 4, y2: ly - 4,
+        stroke: css(s.v), "stroke-width": s.st.width, "stroke-dasharray": s.st.dash,
+        "stroke-linecap": "round" }));
+      f.svg.append(el("text", { class: "dlabel", x: f.R + 32, y: ly,
         text: `FY${String(s.fy).slice(2)} · ${fmtEnd(v)}` }));
     }
     const cross = el("line", { y1: f.T, y2: f.B, stroke: css("--axis"), "stroke-width": 1, visibility: "hidden" });
@@ -512,7 +550,8 @@ function cumulativeChart(data, key, title, note, fmtVal, fmtEnd) {
     f.svg.addEventListener("pointerleave", () => { tip.style.display = "none"; cross.setAttribute("visibility", "hidden"); });
   }
   render();
-  legend(card, series.map(s => ({ label: `FY${s.fy}${s.partial ? " (to date)" : ""}`, color: css(s.v) })), "line");
+  legend(card, series.map(s => ({ label: `FY${s.fy}${s.partial ? " (to date)" : ""}`,
+    color: css(s.v), dash: s.st.dash, width: s.st.width })), "line");
   // Table rows: cumulative at each month end (for the year in progress, its
   // started months only — the last shows the total through the latest data).
   addTable(card, ["Through end of", ...series.map(s => `FY${s.fy}${s.partial ? " (to date)" : ""}`)],
