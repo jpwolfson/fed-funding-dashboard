@@ -1,9 +1,11 @@
 {
- "generated": "2026-10-26",
+ "generated": "2026-11-02",
  "source": "https://api.nsf.gov/services/v1/awards.json?org_code_div=03040000 (NSF Award Search API), month-by-month on Original Award Date",
  "totalAwards": 11622,
  "currentFY": 2027,
- "warnings": [],
+ "warnings": [
+  "4045 stored awards not returned by this full re-pull; retained from the store"
+ ],
  "monthly": [
   {
    "month": "2014-10",
@@ -1303,6 +1305,15 @@
   },
   {
    "month": "2026-10",
+   "awards": 0,
+   "dollars": 0,
+   "std": 0,
+   "cont": 0,
+   "fell": 0,
+   "other": 0
+  },
+  {
+   "month": "2026-11",
    "awards": 0,
    "dollars": 0,
    "std": 0,
